@@ -1,0 +1,89 @@
+@font-face
+{
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-Bold.ttf') format("truetype");
+  font-weight: theme("fontWeight.bold"); 
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face
+{
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-SemiBold.ttf') format("truetype");
+  font-weight: theme("fontWeight.semibold"); 
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face
+{
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-Medium.ttf') format("truetype");
+  font-weight: theme("fontWeight.medium"); 
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face
+{
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-Regular.ttf') format("truetype");
+  font-weight: theme("fontWeight.normal"); 
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face
+{
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-Light.ttf') format("truetype");
+  font-weight: theme("fontWeight.light"); 
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face
+{
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-Thin.ttf') format("truetype");
+  font-weight: theme("fontWeight.thin"); 
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face
+{
+  font-family: 'Roboto';
+  src: url('/src/assets/fonts/Roboto-Bold.ttf') format("truetype");
+  font-weight: theme("fontWeight.bold"); 
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face
+{
+  font-family: 'Roboto';
+  src: url('/src/assets/fonts/Roboto-Medium.ttf') format("truetype");
+  font-weight: theme("fontWeight.medium"); 
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face
+{
+  font-family: 'Roboto';
+  src: url('/src/assets/fonts/Roboto-Regular.ttf') format("truetype");
+  font-weight: theme("fontWeight.normal"); 
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face
+{
+  font-family: 'Roboto';
+  src: url('/src/assets/fonts/Roboto-Light.ttf') format("truetype");
+  font-weight: theme("fontWeight.light"); 
+  font-style: normal;
+  font-display: swap;
+}

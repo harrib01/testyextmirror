@@ -1,0 +1,41 @@
+{
+  "$id": "site-stream",
+  "filter": {
+    "entityIds": ["site-entity"]
+  },
+  "fields": [
+    "id",
+    "meta",
+    "name",
+    "c_facebook",
+    "c_pinterest",
+    "c_twitter",
+    "c_houzz",
+    "c_instagram",
+    "c_copyrightMessage",
+    "c_footerLinks",
+    "c_header",
+    "c_headerTop",
+    "c_footerBottom",
+    "c_headerBottomRight",
+    "c_headerLogoLink",
+    "c_nearbySectionAPIKey",
+    "c_searchExperienceAPIKey",
+    "c_promoParagraph",
+    "c_promoList",
+    "c_appleStore",
+    "c_googlePlay",
+    "c_emailSignUp",
+    "c_getCambriaApp",
+    "c_googleTagManager",
+    "c_breadcrumbAuthorized",
+    "c_breadcrumbGalleries",
+    "c_breadcrumbPremier",
+    "c_iframeURL",
+    "c_findCambria"
+  ],
+  "localization": {
+    "locales": ["en"],
+    "primary": false
+  }
+}

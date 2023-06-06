@@ -1,0 +1,20 @@
+.Expect
+{
+  &-image {
+    width: -webkit-fill-available;
+
+    @screen lg {
+      width: fit-content;
+    }
+  }
+
+  &-contentRight {
+    width: fit-content;
+  }
+
+  &-imageWrapper {
+    @screen md {
+      padding-right: 48px;
+    }
+  }
+}

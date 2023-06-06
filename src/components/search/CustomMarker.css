@@ -1,0 +1,8 @@
+.CustomMarker
+{
+  &-card
+  {
+    left: calc(50% - 165px);
+    margin-top: 50%;
+  }
+}

@@ -1,0 +1,14 @@
+.Gallery
+{
+  .carousel__slide--visible {
+    @screen md {
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+  
+      &:not(:first-child) {
+        margin-left: 16px;
+      }
+    }
+  }
+}

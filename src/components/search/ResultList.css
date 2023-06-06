@@ -1,0 +1,65 @@
+.ResultList {
+  background-color: theme(colors.brand-gray.100);
+  padding: 10px;
+
+  &-item {
+    background-color: white;
+    counter-increment: resultCount;
+    position: relative;
+    padding: theme(spacing.6);
+    margin-bottom: 16px;
+
+    @screen sm {
+      padding-left: theme(spacing.14);
+
+      &.is-hovered {
+        background-color: theme(colors.brand-gray.400);
+      }
+
+      &.is-selected {
+        background-color: theme(colors.brand-gray.100);
+      }
+
+      &::before {
+        content: counter(resultCount, decimal);
+        position: absolute;
+        left: theme(spacing.5);
+        color: black;
+        background-color: white;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid black;
+      }
+    }
+
+    &.yellowBorder {
+      border-left: 4px solid theme(colors.brand-primary);
+
+      @screen sm {
+        border-left: 8px solid theme(colors.brand-primary);
+
+        &::before {
+          border: none;
+          color: white;
+          background-color: theme(colors.brand-primary);
+        }
+      }
+    }
+
+    &.blackBorder {
+      border-left: 4px solid black;
+
+      @screen sm {
+        border-left: 8px solid black;
+
+        &::before {
+          border: none;
+          color: white;
+          background-color: black;
+        }
+      }
+    }
+  }
+}

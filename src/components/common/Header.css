@@ -1,0 +1,14 @@
+.Header
+{
+  background-color: black;
+
+  @screen lg
+  {
+    background-color: white;
+  }
+
+  &-container
+  {
+    z-index: 1;
+  }
+}
