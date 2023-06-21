@@ -124,7 +124,7 @@ export default function LocatorCard(props: LocatorCardProps & CardProps) {
               className="font-secondary font-medium leading-[22px] text-brand-gray-300 hover:underline ml-2"
               eventName="phone"
             >
-              {formatPhone(profile.mainPhone, profile.c_countryCode)}
+              {formatPhone(profile.mainPhone, profile.c_countryCode || "")}
             </Link>
           </div>
         )}

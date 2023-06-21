@@ -15,7 +15,7 @@ function dedupeStreamFields(allFields: string[]): string[] {
  * If you are looking to update the format of phones 
  * look inside src/templates/index.tsx's transformProps function
  **/
-function formatPhone(s: string | undefined, countryCode?: string): (string | undefined) {
+function formatPhone(s: string | undefined, countryCode: string): (string | undefined) {
   if (s) {
     try {
       const phone = parsePhoneNumberWithError(s, countryCode as CountryCode)
