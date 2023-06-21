@@ -36,7 +36,13 @@ function formatPhone(s: string | undefined, countryCode: string): (string | unde
   return s
 }
 
+const isPremierPartnerOrCambriaGallery = (locationType?: string): boolean => {
+  const isPremierPartnerOrCambriaGallery = locationType === 'Premier Partner' || locationType === "Cambria Gallery / Showroom" ?  true :  false;
+  return isPremierPartnerOrCambriaGallery;
+}
+
 export {
   dedupeStreamFields,
-  formatPhone
+  formatPhone,
+  isPremierPartnerOrCambriaGallery
 };

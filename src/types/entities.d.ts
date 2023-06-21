@@ -153,6 +153,7 @@ export interface LocationProfile extends BaseProfile {
   readonly c_customCategory?: string[]
   readonly c_cRMID?: string
   readonly c_aboutSectionTitle?: string
+  readonly c_countryCode?: string
 
   // Add custom fields here
   // c_myStringField: string
