@@ -8,6 +8,12 @@ import c from "classnames";
 import { Address } from "@yext/pages/components";
 import { addToDatalayer } from "src/components/common/GTMhelper";
 import { isProduction } from "@yext/pages/util";
+import {
+  formatPhone,
+  isPremierPartnerOrCambriaGallery,
+} from "src/common/helpers";
+import { LocationProfile } from "src/types/entities";
+import { FaPhone } from "react-icons/fa";
 
 export interface LocatorCardProps {
   useKilometers?: boolean;
@@ -15,7 +21,8 @@ export interface LocatorCardProps {
 
 export default function LocatorCard(props: LocatorCardProps & CardProps) {
   const { result, useKilometers = false } = props;
-  const { distanceFromFilter, link, rawData: profile } = result;
+  const { distanceFromFilter, link } = result;
+  const profile: LocationProfile = result.rawData as any;
   const address = profile.address as AddressType;
   const hours = profile.hours as Hours;
   const monday = hours?.monday as Day;
@@ -27,90 +34,167 @@ export default function LocatorCard(props: LocatorCardProps & CardProps) {
   const sunday = hours?.sunday as Day;
   const type = profile.c_cambriaType as string;
   const locationType = profile.c_locationType as string;
-  const geomodifier = profile.name ? profile.name as string : address.line1 as string;
+  const geomodifier = profile.name
+    ? (profile.name as string)
+    : (address.line1 as string);
   const isDesktopBreakpoint = useBreakpoint("sm");
   const slug = profile.slug as string;
   const salesforceURL = profile.c_salesforceCommunitiesSchedulerURL as string;
 
-  const renderTitle = () => <h3 className="Heading Heading--sub pb-2 sm:pb-4 tracking-[1.7px] uppercase">{geomodifier}</h3>;
-  const renderDistance = () => distanceFromFilter ? <div className={"LocatorCard-distance whitespace-nowrap pt-2 sm:pt-0 font-secondary font-[14px] leading-[22px] font-light text-brand-gray-300"}>{getDistance(distanceFromFilter, useKilometers)} {useKilometers ? 'km' : 'mi'}</div> : null;
+  const renderTitle = () => (
+    <h3 className="Heading Heading--sub pb-2 sm:pb-4 tracking-[1.7px] uppercase">
+      {geomodifier}
+    </h3>
+  );
+  const renderDistance = () =>
+    distanceFromFilter ? (
+      <div
+        className={
+          "LocatorCard-distance whitespace-nowrap pt-2 sm:pt-0 font-secondary font-[14px] leading-[22px] font-light text-brand-gray-300"
+        }
+      >
+        {getDistance(distanceFromFilter, useKilometers)}{" "}
+        {useKilometers ? "km" : "mi"}
+      </div>
+    ) : null;
 
   let isClosed = false;
-  if (monday?.isClosed && tuesday?.isClosed && wednesday?.isClosed && thursday?.isClosed && friday?.isClosed && saturday?.isClosed && sunday?.isClosed) {
+  if (
+    monday?.isClosed &&
+    tuesday?.isClosed &&
+    wednesday?.isClosed &&
+    thursday?.isClosed &&
+    friday?.isClosed &&
+    saturday?.isClosed &&
+    sunday?.isClosed
+  ) {
     isClosed = true;
   }
 
   return (
     <div className="LocatorCard">
       <div className="flex justify-between">
-        {slug &&  (
-          <Link 
-            href={slug} 
-            className={c({'text-brand-primary ': type == 'Premier Partner'}) + "LocatorCard-visitpage Link--underlineInverse"}
-            onClick={() => (addToDatalayer(
-              {
-                'event': 'dealer-profile_link_click',
-                'dealer_locator_link_url': isProduction(window.location.hostname) ? 'https://cambriausa.com/dealer-locator' + slug : 'https://devtrunk-www-cambriausa-com-pagescdn-com.preview.pagescdn.com' + slug,
-                'dealer_locator_link_name': geomodifier
-              }))}
-            >
+        {slug && (
+          <Link
+            href={slug}
+            className={
+              c({ "text-brand-primary ": type == "Premier Partner" }) +
+              "LocatorCard-visitpage Link--underlineInverse"
+            }
+            onClick={() =>
+              addToDatalayer({
+                event: "dealer-profile_link_click",
+                dealer_locator_link_url: isProduction(window.location.hostname)
+                  ? "https://cambriausa.com/dealer-locator" + slug
+                  : "https://devtrunk-www-cambriausa-com-pagescdn-com.preview.pagescdn.com" +
+                    slug,
+                dealer_locator_link_name: geomodifier,
+              })
+            }
+          >
             {renderTitle()}
           </Link>
         )}
         {renderDistance()}
       </div>
-      {(hours && !isClosed) && (
+      {hours && !isClosed && (
         <div className="pb-2 sm:pb-4 font-secondary font-light text-brand-gray-300 font-[14px] leading-[22px]">
           <HoursStatus
-            currentTemplate={(params: StatusParams) => <span className="HoursStatus-current--search">{params.isOpen ? 'Open Now' : 'Closed'}</span>}
+            currentTemplate={(params: StatusParams) => (
+              <span className="HoursStatus-current--search">
+                {params.isOpen ? "Open Now" : "Closed"}
+              </span>
+            )}
             hours={hours}
             separatorTemplate={() => <span className="bullet" />}
           />
         </div>
       )}
-      <Address 
-        className="pb-2 sm:pb-4 font-secondary font-light font-[14px] leading-[22px] text-brand-gray-300" 
+      <Address
+        className="pb-2 sm:pb-4 font-secondary font-light font-[14px] leading-[22px] text-brand-gray-300"
         address={address}
-        lines={[['line1'],['line2'], ['city', 'region', "postalCode"]]}
+        lines={[["line1"], ["line2"], ["city", "region", "postalCode"]]}
       />
+      {profile?.mainPhone &&
+        isPremierPartnerOrCambriaGallery(profile.c_locationType) && (
+          <div className="pb-4 flex items-center">
+            <FaPhone className="text-brand-gray-300" />
+            <Link
+              href={"tel:" + profile.mainPhone}
+              className="font-secondary font-medium leading-[22px] text-brand-gray-300 hover:underline ml-2"
+              eventName="phone"
+            >
+              {formatPhone(profile.mainPhone, profile.c_countryCode)}
+            </Link>
+          </div>
+        )}
       <div className="flex flex-col gap-3 pb-3">
         {type != null && type != "Home Depot" && (
-          <Link className={c({'hidden ': type == 'Premier Partner'}, {'Button Button--secondaryInv ': type != 'Premier Partner'}) + "uppercase"} href={salesforceURL ? salesforceURL : 'https://www.cambriausa.com/cambria-consultation'}
-            onClick={() => (addToDatalayer(
-              {
-                'event': 'dealerlocator_nav_appointment_click',
-                'dealerlocator_nav_appointment_url': salesforceURL ? salesforceURL : 'https://www.cambriausa.com/cambria-consultation',
-                'dealerlocator_nav_appointment_name': 'Schedule a Consultation',
-                'dealerlocator_details_acct_name': profile.name,
-                'dealerlocator_details_dealer_id': profile.id,
-                'dealerlocator_details_region_id': profile.c_salesRegionID,
-                'dealerlocator_details_region_name': profile.c_salesName,
-                'dealerlocator_details_category': profile.c_customCategory,
-              }))}
+          <Link
+            className={
+              c(
+                { "hidden ": type == "Premier Partner" },
+                { "Button Button--secondaryInv ": type != "Premier Partner" }
+              ) + "uppercase"
+            }
+            href={
+              salesforceURL
+                ? salesforceURL
+                : "https://www.cambriausa.com/cambria-consultation"
+            }
+            onClick={() =>
+              addToDatalayer({
+                event: "dealerlocator_nav_appointment_click",
+                dealerlocator_nav_appointment_url: salesforceURL
+                  ? salesforceURL
+                  : "https://www.cambriausa.com/cambria-consultation",
+                dealerlocator_nav_appointment_name: "Schedule a Consultation",
+                dealerlocator_details_acct_name: profile.name,
+                dealerlocator_details_dealer_id: profile.id,
+                dealerlocator_details_region_id: profile.c_salesRegionID,
+                dealerlocator_details_region_name: profile.c_salesName,
+                dealerlocator_details_category: profile.c_customCategory,
+              })
+            }
           >
             schedule a consultation
           </Link>
         )}
         {slug && (
-          <Link className={c({'Button Button--primary ': type == 'Premier Partner'}, {'Button Button--secondary ': type != 'Premier Partner'}) + "uppercase"} href={slug}
-            onClick={() => (addToDatalayer(
-              {
-                'event': 'dealerlocator_nav_viewdetails_click',
-                'dealerlocator_nav_viewdetails_url': isProduction(window.location.hostname) ? 'https://cambriausa.com/dealer-locator' + slug : 'https://devtrunk-www-cambriausa-com-pagescdn-com.preview.pagescdn.com' + slug,
-                'dealerlocator_nav_viewdetails_name': 'View Details',
-                'dealerlocator_details_acct_name': profile.name,
-                'dealerlocator_details_dealer_id': profile.id,
-                'dealerlocator_details_region_id': profile.c_salesRegionID,
-                'dealerlocator_details_region_name': profile.c_salesName,
-                'dealerlocator_details_category': profile.c_customCategory,
-              }))}
-            >
-            {type == 'Premier Partner' ? 'Schedule or View Details' : 'view details'}
+          <Link
+            className={
+              c(
+                { "Button Button--primary ": type == "Premier Partner" },
+                { "Button Button--secondary ": type != "Premier Partner" }
+              ) + "uppercase"
+            }
+            href={slug}
+            onClick={() =>
+              addToDatalayer({
+                event: "dealerlocator_nav_viewdetails_click",
+                dealerlocator_nav_viewdetails_url: isProduction(
+                  window.location.hostname
+                )
+                  ? "https://cambriausa.com/dealer-locator" + slug
+                  : "https://devtrunk-www-cambriausa-com-pagescdn-com.preview.pagescdn.com" +
+                    slug,
+                dealerlocator_nav_viewdetails_name: "View Details",
+                dealerlocator_details_acct_name: profile.name,
+                dealerlocator_details_dealer_id: profile.id,
+                dealerlocator_details_region_id: profile.c_salesRegionID,
+                dealerlocator_details_region_name: profile.c_salesName,
+                dealerlocator_details_category: profile.c_customCategory,
+              })
+            }
+          >
+            {type == "Premier Partner"
+              ? "Schedule or View Details"
+              : "view details"}
           </Link>
         )}
       </div>
     </div>
-  )
+  );
 }
 
 // convert meters to miles or kilometers
