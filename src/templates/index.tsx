@@ -19,23 +19,31 @@ import type {
 } from "@yext/pages";
 import "src/index.css";
 import { defaultHeadConfig } from "src/common/head";
-import type { TemplateRenderProps, LocationProfile, TemplateProps } from "src/types/entities";
+import type {
+  TemplateRenderProps,
+  LocationProfile,
+  TemplateProps,
+} from "src/types/entities";
 import { dedupeStreamFields } from "src/common/helpers";
-import { Main } from 'src/layouts/main';
+import { Main } from "src/layouts/main";
 
 import { Core, defaultFields as coreFields } from "src/components/entity/Core";
-import { Gallery, defaultFields as galleryFields } from "src/components/entity/Gallery";
-import { About, defaultFields as aboutFields } from "src/components/entity/About";
+import {
+  Gallery,
+  defaultFields as galleryFields,
+} from "src/components/entity/Gallery";
+import {
+  About,
+  defaultFields as aboutFields,
+} from "src/components/entity/About";
 import { VirtualTour } from "src/components/entity/VirtualTour";
 import { Expect } from "src/components/entity/Expect";
 import { Dropdown } from "src/components/entity/Dropdown";
-import { formatPhone } from 'src/common/helpers'
+import { formatPhone } from "src/common/helpers";
 import { useBreakpoint } from "src/common/useBreakpoints";
 import { CustomBreadcrumbs, Link } from "@yext/sites-react-components";
-import { SEARCH_PATH } from 'src/config';
-import {
-  AnalyticsScopeProvider,
-} from "@yext/pages/components";
+import { SEARCH_PATH } from "src/config";
+import { AnalyticsScopeProvider } from "@yext/pages/components";
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -82,11 +90,12 @@ export const config: TemplateConfig = {
       "c_locationStatus",
       "c_webType",
       "slug",
-      "c_aboutSectionTitle"
+      "c_aboutSectionTitle",
+      "additionalHoursText",
     ]),
     // Defines the scope of entities that qualify for this stream.
     filter: {
-      savedFilterIds:["pages_locations", "1315709305"],
+      savedFilterIds: ["pages_locations", "1315709305"],
     },
     // The entity language profiles that documents will be generated for.
     localization: {
@@ -94,10 +103,7 @@ export const config: TemplateConfig = {
       primary: false,
     },
   },
-  alternateLanguageFields: [
-    "name",
-    "slug"
-  ],
+  alternateLanguageFields: ["name", "slug"],
 };
 
 /**
@@ -107,7 +113,9 @@ export const config: TemplateConfig = {
  * This function will be run during generation and pass in directly as props to the default
  * exported function.
  */
- export const transformProps: TransformProps<TemplateRenderProps> = async (data: any) => {
+export const transformProps: TransformProps<TemplateRenderProps> = async (
+  data: any
+) => {
   const {
     mainPhone,
     fax,
@@ -130,7 +138,7 @@ export const config: TemplateConfig = {
       ttyPhone: formatPhone(ttyPhone, address.countryCode),
       localPhone: formatPhone(localPhone, address.countryCode),
       alternatePhone: formatPhone(alternatePhone, address.countryCode),
-    }
+    },
   };
 };
 
@@ -140,7 +148,7 @@ export const config: TemplateConfig = {
  * NOTE: This currently has no impact on the local dev path. Local dev urls currently
  * take on the form: featureName/entityId
  */
- export const getPath: GetPath<TemplateProps<LocationProfile>> = (data) => {
+export const getPath: GetPath<TemplateProps<LocationProfile>> = (data) => {
   return data.document.slug;
 };
 
@@ -150,7 +158,9 @@ export const config: TemplateConfig = {
  * will be used to generate the inner contents of the HTML document's <head> tag.
  * This can include the title, meta tags, script tags, etc.
  */
-export const getHeadConfig: GetHeadConfig<TemplateRenderProps<LocationProfile>> = (data): HeadConfig => {
+export const getHeadConfig: GetHeadConfig<
+  TemplateRenderProps<LocationProfile>
+> = (data): HeadConfig => {
   return defaultHeadConfig(data);
 };
 
@@ -175,53 +185,84 @@ const Index: Template<TemplateRenderProps<LocationProfile>> = (data) => {
     dm_directoryParents,
     _site,
     c_imageCarousel,
-    c_aboutSectionTitle
+    c_aboutSectionTitle,
 
     // About Section
   } = document;
 
-  const showAbout = name && (description || document.c_widenProfileDescription) && document.c_cambriaType != 'HOME_DEPOT';
+  const showAbout =
+    name &&
+    (description || document.c_widenProfileDescription) &&
+    document.c_cambriaType != "HOME_DEPOT";
   let directoryName = "Galleries & Showrooms";
   let directoryLink = data.relativePrefixToRoot + _site.c_breadcrumbGalleries;
   if (document.c_cambriaType == "PREMIER_PARTNER") {
     directoryName = "Premier Partners";
     directoryLink = data.relativePrefixToRoot + _site.c_breadcrumbPremier;
-  } else if (document.c_cambriaType == null || document.c_cambriaType == 'HOME_DEPOT' ) {
+  } else if (
+    document.c_cambriaType == null ||
+    document.c_cambriaType == "HOME_DEPOT"
+  ) {
     directoryName = "Authorized Sellers";
     directoryLink = data.relativePrefixToRoot + _site.c_breadcrumbAuthorized;
   }
-  const parents = [{name: "Find Cambria", slug: data.relativePrefixToRoot + SEARCH_PATH}, {name: directoryName, slug: directoryLink}, { name: name ? name : address.line1, slug: "" }];
+  const parents = [
+    { name: "Find Cambria", slug: data.relativePrefixToRoot + SEARCH_PATH },
+    { name: directoryName, slug: directoryLink },
+    { name: name ? name : address.line1, slug: "" },
+  ];
   let breadcrumbs = parents.map((parent) => {
-    return [parent.name, parent.slug] as unknown as [string, string]
+    return [parent.name, parent.slug] as unknown as [string, string];
   });
   const isDesktopBreakpoint = useBreakpoint("sm");
 
   return (
     <Main data={data}>
       {isDesktopBreakpoint && (
-        <CustomBreadcrumbs className="container text-brand-black py-4 font-primary" breadcrumbs={breadcrumbs} />
+        <CustomBreadcrumbs
+          className="container text-brand-black py-4 font-primary"
+          breadcrumbs={breadcrumbs}
+        />
       )}
       <AnalyticsScopeProvider name="core">
-        <Core profile={document} iframe={_site.c_iframeURL}/>
+        <Core profile={document} iframe={_site.c_iframeURL} />
       </AnalyticsScopeProvider>
       {(document.c_features || document.c_designType) && (
         <AnalyticsScopeProvider name="dropdown">
-          <Dropdown 
-            profile={document}
-            root={data.relativePrefixToRoot}
-          />
+          <Dropdown profile={document} root={data.relativePrefixToRoot} />
         </AnalyticsScopeProvider>
       )}
       <AnalyticsScopeProvider name="about">
-        {showAbout && <About title={c_aboutSectionTitle} coord={geocodedCoordinate} description={description ? description : document.c_widenProfileDescription} profile={document} />}
+        {showAbout && (
+          <About
+            title={c_aboutSectionTitle}
+            coord={geocodedCoordinate}
+            description={
+              description ? description : document.c_widenProfileDescription
+            }
+            profile={document}
+          />
+        )}
       </AnalyticsScopeProvider>
       <AnalyticsScopeProvider name="expect">
-        <Expect profile={document} promoParagraph={document.c_whatToExpectSectionText} promoTitle={document.c_whatToExpectSectionTitle} type={document.c_cambriaType}/>
+        <Expect
+          profile={document}
+          promoParagraph={document.c_whatToExpectSectionText}
+          promoTitle={document.c_whatToExpectSectionTitle}
+          type={document.c_cambriaType}
+        />
       </AnalyticsScopeProvider>
-      {document.c_virtualTourURL && (<VirtualTour url={document.c_virtualTourURL}/>)}
-      {c_imageCarousel && document.c_cambriaType != 'HOME_DEPOT' && <Gallery images={c_imageCarousel}/>}
+      {document.c_virtualTourURL && (
+        <VirtualTour url={document.c_virtualTourURL} />
+      )}
+      {c_imageCarousel && document.c_cambriaType != "HOME_DEPOT" && (
+        <Gallery images={c_imageCarousel} />
+      )}
       {!isDesktopBreakpoint && (
-        <CustomBreadcrumbs className="container text-brand-black py-4 font-primary" breadcrumbs={breadcrumbs} />
+        <CustomBreadcrumbs
+          className="container text-brand-black py-4 font-primary"
+          breadcrumbs={breadcrumbs}
+        />
       )}
     </Main>
   );
