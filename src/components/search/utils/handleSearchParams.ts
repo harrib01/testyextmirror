@@ -215,12 +215,9 @@ export function useLoadInitialSearchParams(
         }
       }
 
-      // If any of the above functions set a static filter in the search state and there are facet params available,
+      // If there are facet params available,
       // parse the facet params and add them to the search state.
-      if (
-        searchActions.state.filters.static?.find((filter) => filter.selected) &&
-        facetParams.length
-      ) {
+      if (facetParams.length) {
         for (const [fieldId, options] of facetParams) {
           const optionsArray = options.split(",");
           const optionsToAdd: DisplayableFacetOption[] = optionsArray.map(
@@ -264,7 +261,7 @@ export function useLoadInitialSearchParams(
       }
     };
     loadUrlParams();
-  }, [searchParams]);
+  }, []);
 }
 
 // When the search state facets are updated, add any facets with selected options to the URLSearchParams.
