@@ -1,90 +1,112 @@
 import type { TemplateRenderProps, HeadConfig, Tag } from "@yext/pages";
-import { SchemaBuilder } from 'src/common/schema';
+import { SchemaBuilder } from "src/common/schema";
 import favicon from "src/assets/images/favicon.ico";
 import { GoogleTagManagerHead } from "src/common/googleTagManager";
+import { vwoScriptTags } from "./vwoScript";
 
 const dnsPrefetchTags: Tag[] = [
-  { type: "meta", attributes: { rel: "dns-prefetch", href: "//www.yext-pixel.com" } },
-  { type: "meta", attributes: { rel: "dns-prefetch", href: "//a.cdnmktg.com" } },
-  { type: "meta", attributes: { rel: "dns-prefetch", href: "//a.mktgcdn.com" } },
-  { type: "meta", attributes: { rel: "dns-prefetch", href: "//dynl.mktgcdn.com" } },
-  { type: "meta", attributes: { rel: "dns-prefetch", href: "//dynm.mktgcdn.com" } },
-  { type: "meta", attributes: { rel: "dns-prefetch", href: "//www.google-analytics.com" } },
-]
+  {
+    type: "meta",
+    attributes: { rel: "dns-prefetch", href: "//www.yext-pixel.com" },
+  },
+  {
+    type: "meta",
+    attributes: { rel: "dns-prefetch", href: "//a.cdnmktg.com" },
+  },
+  {
+    type: "meta",
+    attributes: { rel: "dns-prefetch", href: "//a.mktgcdn.com" },
+  },
+  {
+    type: "meta",
+    attributes: { rel: "dns-prefetch", href: "//dynl.mktgcdn.com" },
+  },
+  {
+    type: "meta",
+    attributes: { rel: "dns-prefetch", href: "//dynm.mktgcdn.com" },
+  },
+  {
+    type: "meta",
+    attributes: { rel: "dns-prefetch", href: "//www.google-analytics.com" },
+  },
+];
 
 const defaultHeadTags: Tag[] = [
   {
     type: "meta",
     attributes: {
       "http-equiv": "X-UA-Compatible",
-      content: "IE=edge"
-    }
+      content: "IE=edge",
+    },
   },
   ...dnsPrefetchTags,
   {
     type: "meta",
     attributes: {
       name: "format-detection",
-      content: "telephone=no"
+      content: "telephone=no",
     },
   },
   {
     type: "meta",
     attributes: {
       property: "og:type",
-      content: "website"
+      content: "website",
     },
   },
   {
     type: "meta",
     attributes: {
       property: "twitter:card",
-      content: "summary"
+      content: "summary",
     },
   },
-]
+];
 
-export function defaultHeadConfig(data: TemplateRenderProps, additionalTags?: Tag[]): HeadConfig {
+export function defaultHeadConfig(
+  data: TemplateRenderProps,
+  additionalTags?: Tag[]
+): HeadConfig {
   const logoTags: Tag[] = data.document?.logo
     ? [
-      {
-        type: "meta",
-        attributes: {
-          property: "og:image",
-          content: data.document.logo.image.url,
-        }
-      }
-    ]
+        {
+          type: "meta",
+          attributes: {
+            property: "og:image",
+            content: data.document.logo.image.url,
+          },
+        },
+      ]
     : [];
 
   const geoTags: Tag[] = data.document?.yextDisplayCoordinate
     ? [
-      {
-        type: "meta",
-        attributes: {
-          name: "geo.position",
-          content: `${data.document.yextDisplayCoordinate.lat},${data.document.yextDisplayCoordinate.long}`,
-        }
-      }
-    ]
+        {
+          type: "meta",
+          attributes: {
+            name: "geo.position",
+            content: `${data.document.yextDisplayCoordinate.lat},${data.document.yextDisplayCoordinate.long}`,
+          },
+        },
+      ]
     : [];
   const addressTags: Tag[] = data.document.address
     ? [
-      {
-        type: "meta",
-        attributes: {
-          name: "geo.placename",
-          content: `${data.document.address.city},${data.document.address.region}`,
-        }
-      },
-      {
-        type: "meta",
-        attributes: {
-          name: "geo.region",
-          content: `${data.document.address.countryCode}-${data.document.address.region}`,
-        }
-      }
-    ]
+        {
+          type: "meta",
+          attributes: {
+            name: "geo.placename",
+            content: `${data.document.address.city},${data.document.address.region}`,
+          },
+        },
+        {
+          type: "meta",
+          attributes: {
+            name: "geo.region",
+            content: `${data.document.address.countryCode}-${data.document.address.region}`,
+          },
+        },
+      ]
     : [];
 
   return {
@@ -97,21 +119,21 @@ export function defaultHeadConfig(data: TemplateRenderProps, additionalTags?: Ta
         attributes: {
           name: "description",
           content: metaDescription(data),
-        }
+        },
       },
       {
         type: "meta",
         attributes: {
           property: "og:title",
           content: metaTitle(data),
-        }
+        },
       },
       {
         type: "meta",
         attributes: {
           property: "og:description",
           content: metaDescription(data),
-        }
+        },
       },
       {
         type: "meta",
@@ -126,7 +148,7 @@ export function defaultHeadConfig(data: TemplateRenderProps, additionalTags?: Ta
           rel: "canonical",
           href: canonicalUrl(data),
         },
-      },      
+      },
       {
         type: "link",
         attributes: {
@@ -140,9 +162,12 @@ export function defaultHeadConfig(data: TemplateRenderProps, additionalTags?: Ta
       ...geoTags,
       ...addressTags,
       ...alternates(data),
-      ...(additionalTags || [])
+      ...(additionalTags || []),
     ],
-    other: SchemaBuilder(data) + GoogleTagManagerHead(data.document._site?.c_googleTagManager),
+    other:
+      SchemaBuilder(data) +
+      GoogleTagManagerHead(data.document._site?.c_googleTagManager) +
+      vwoScriptTags(),
   };
 }
 
@@ -151,7 +176,7 @@ function metaTitle(data: TemplateRenderProps): string {
   const { c_pageMetaTitle: entityMeta } = data.document;
   if (entityMeta) return entityMeta;
 
-  return ""
+  return "";
 }
 
 function metaDescription(data: TemplateRenderProps): string {
@@ -162,23 +187,27 @@ function metaDescription(data: TemplateRenderProps): string {
   // 2. Check for breadcrumbs
   const { dm_directoryParents } = data.document;
   if (dm_directoryParents) {
-    return `${dm_directoryParents.map((crumb: { name: string }) => crumb.name).join(', ')}.`
+    return `${dm_directoryParents
+      .map((crumb: { name: string }) => crumb.name)
+      .join(", ")}.`;
   }
 
-  return ""
+  return "";
 }
 
 function canonicalUrl(data: TemplateRenderProps, locale?: string): string {
   let pagePath = data.path;
-  
+
   const alfs = data.document?.alternateLanguageFields;
   if (alfs && locale) {
     const altLocalePath = alfs[locale]?.slug;
-    if (altLocalePath) { pagePath = altLocalePath; }
+    if (altLocalePath) {
+      pagePath = altLocalePath;
+    }
   }
 
-  if (pagePath == 'index.html') {
-    pagePath = ''
+  if (pagePath == "index.html") {
+    pagePath = "";
   }
 
   return `https://${data.document.siteDomain}/${pagePath}`;
@@ -186,14 +215,18 @@ function canonicalUrl(data: TemplateRenderProps, locale?: string): string {
 
 function alternates(data: TemplateRenderProps): Tag[] {
   const thisLocale = data.document.locale;
-  const alternateLocales: string[] = Object.keys(data.document?.alternateLanguageFields || {});
-  const alternateLinks: Tag[] = alternateLocales.filter(locale => locale !== thisLocale).map(locale => ({
-    type: 'link',
-    attributes: {
-      rel: 'alternate',
-      hreflang: locale,
-      href: canonicalUrl(data, locale)
-    }
-  }))
+  const alternateLocales: string[] = Object.keys(
+    data.document?.alternateLanguageFields || {}
+  );
+  const alternateLinks: Tag[] = alternateLocales
+    .filter((locale) => locale !== thisLocale)
+    .map((locale) => ({
+      type: "link",
+      attributes: {
+        rel: "alternate",
+        hreflang: locale,
+        href: canonicalUrl(data, locale),
+      },
+    }));
   return alternateLinks;
 }
