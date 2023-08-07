@@ -125,7 +125,7 @@ export default function CustomMarker(props: CustomMarkerProps) {
                   onClick={() => (addToDatalayer(
                     {
                       'event': 'dealerlocator_nav_viewdetails_click',
-                      'dealerlocator_nav_viewdetails_url': isProduction(window.location.hostname) ? 'https://cambriausa.com/dealer-locator' + slug : 'https://devtrunk-www-cambriausa-com-pagescdn-com.preview.pagescdn.com' + slug,
+                      'dealerlocator_nav_viewdetails_url': isProduction(window.location.hostname) ? 'https://www.cambriausa.com/dealer-locator' + slug : 'https://devtrunk-www-cambriausa-com-pagescdn-com.preview.pagescdn.com' + slug,
                       'dealerlocator_nav_viewdetails_name': 'View Details',
                       'dealerlocator_details_acct_name': name,
                       'dealerlocator_details_dealer_id': id,

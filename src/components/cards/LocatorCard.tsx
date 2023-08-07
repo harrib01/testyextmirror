@@ -85,7 +85,7 @@ export default function LocatorCard(props: LocatorCardProps & CardProps) {
               addToDatalayer({
                 event: "dealer-profile_link_click",
                 dealer_locator_link_url: isProduction(window.location.hostname)
-                  ? "https://cambriausa.com/dealer-locator" + slug
+                  ? "https://www.cambriausa.com/dealer-locator" + slug
                   : "https://devtrunk-www-cambriausa-com-pagescdn-com.preview.pagescdn.com" +
                     slug,
                 dealer_locator_link_name: geomodifier,
@@ -175,7 +175,7 @@ export default function LocatorCard(props: LocatorCardProps & CardProps) {
                 dealerlocator_nav_viewdetails_url: isProduction(
                   window.location.hostname
                 )
-                  ? "https://cambriausa.com/dealer-locator" + slug
+                  ? "https://www.cambriausa.com/dealer-locator" + slug
                   : "https://devtrunk-www-cambriausa-com-pagescdn-com.preview.pagescdn.com" +
                     slug,
                 dealerlocator_nav_viewdetails_name: "View Details",
