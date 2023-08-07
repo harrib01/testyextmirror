@@ -210,7 +210,7 @@ function canonicalUrl(data: TemplateRenderProps, locale?: string): string {
     pagePath = "";
   }
 
-  return `https://${data.document.siteDomain}/${pagePath}`;
+  return `https://www.${data.document.siteDomain}/${pagePath}`;
 }
 
 function alternates(data: TemplateRenderProps): Tag[] {

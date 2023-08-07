@@ -24,8 +24,8 @@ export const getPath: GetPath<TemplateProps> = () => {
 export function render(data: TemplateRenderProps) {
   return `User-agent: *
   Disallow: /
-Sitemap: https://${data.document.siteDomain}/sitemap.xml
+Sitemap: https://www.${data.document.siteDomain}/sitemap.xml
 `;
-};
+}
 
 export default render;
