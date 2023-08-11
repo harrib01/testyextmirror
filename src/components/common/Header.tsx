@@ -88,14 +88,14 @@ const Header = (props: HeaderProps) => {
               {linksTop.map((item: CTA, idx) => (
                 <li key={item.label}>
                   <Link
-                    className="uppercase tracking-[1.7px] font-medium text-[12px] hover:underline mx-[26px]"
+                    className="uppercase tracking-[1.7px] font-medium text-[10px] hover:underline mx-[26px]"
                     cta={item}
                     eventName={`toplink${idx}`}
                   />
                 </li>
               ))}
             </ul>
-            <ul className="uppercase tracking-[1.7px] font-medium flex text-[12px] hover:underline mx-[26px]">
+            <ul className="uppercase tracking-[1.7px] font-medium flex text-[10px] hover:underline mx-[26px]">
               <a ng-href="tel:18662262742" target="" href="tel:18662262742">
                 1-866-CAMBRIA
               </a>
