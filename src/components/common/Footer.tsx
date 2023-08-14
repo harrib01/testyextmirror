@@ -7,7 +7,6 @@ import image from "src/assets/images/footerImage.png";
 import appStoreIcon from "src/assets/images/AppStoreButton.png";
 import playStoreIcon from "src/assets/images/GooglePlayButton.png";
 import pinterest from "src/assets/images/pinterest.png";
-import { MaybeLink } from "src/components/common/MaybeLink";
 
 interface FooterProps {
   copyrightMessage: string;
@@ -113,11 +112,13 @@ const Footer = (props: FooterProps) => {
               <div className="pb-6">
                 {props.logoLink && (
                   <Link href={props.logoLink} className="">
-                    <img
-                      className="max-w-[200px]"
-                      src="https://cambriausa.widen.net/content/pvruomyo8g/webp/cambria_V_AmerMade_REV_solid_RGB_1600x523.webp?crop=true&anchor=67,136&color=ffffffff&u=f5mkho&w=1101&h=396"
-                      alt="logo"
-                    />
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcSet="src/assets/images/CambriaFooterLogoWithFlag.webp"
+                      />
+                      <img className="max-w-[200px]" src={logo} alt="logo" />
+                    </picture>
                   </Link>
                 )}
               </div>
