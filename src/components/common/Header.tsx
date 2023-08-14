@@ -1,14 +1,11 @@
 import React, { useState } from "react";
-import { Image, Link } from "@yext/pages/components";
+import { Link } from "@yext/pages/components";
 import type { CTA, Image as ImageType } from "@yext/types";
-import { FaBars, FaTimes } from "react-icons/fa";
 import c from "classnames";
 import { MaybeLink } from "src/components/common/MaybeLink";
 import { useBreakpoint } from "src/common/useBreakpoints";
 import headerImage from "src/assets/images/headerImage.png";
 import headerImageInverted from "src/assets/images/AmericaInverted.png";
-import headerLogoMobile from "src/assets/images/headerLogoMobile.png";
-import logo2 from "src/assets/images/logo.png";
 import "src/components/common/Header.css";
 
 const defaultFields: string[] = [
@@ -58,7 +55,7 @@ const Header = (props: HeaderProps) => {
         width="24.5"
         height="3.5"
         stroke="white"
-        stroke-width="0.5"
+        strokeWidth="1"
       />
       <rect
         x="0.25"
@@ -66,7 +63,7 @@ const Header = (props: HeaderProps) => {
         width="24.5"
         height="3.5"
         stroke="white"
-        stroke-width="0.5"
+        strokeWidth="1"
       />
       <rect
         x="0.25"
@@ -74,7 +71,7 @@ const Header = (props: HeaderProps) => {
         width="24.5"
         height="4.16667"
         stroke="white"
-        stroke-width="0.5"
+        strokeWidth="1"
       />
     </svg>
   );
@@ -82,7 +79,7 @@ const Header = (props: HeaderProps) => {
   return (
     <header className="Header relative">
       {isDesktopBreakpoint && (
-        <div className="bg-black text-white py-[14px] px-[10px]">
+        <div className="bg-black text-white py-[14px] px-[50px]">
           <div className="hidden md:flex items-center justify-end">
             <ul className="flex">
               {linksTop.map((item: CTA, idx) => (
@@ -101,14 +98,14 @@ const Header = (props: HeaderProps) => {
               </a>
             </ul>
             <img
-              src={headerImage}
-              className="flex"
+              src="https://embed.widencdn.net/svg/cambriausa/4ihe2zsdg3/FOAM_4C_Rev-01.svg?u=encn7u"
+              className="flex w-[151px]"
               alt="family owned american"
             />
           </div>
         </div>
       )}
-      <div className="flex justify-start bg-black lg:bg-white h-[50px] lg:h-[91px]">
+      <div className="flex justify-start items-center p-[16px] lg:pb-[41px] lg:pt-[25px] bg-black lg:bg-white h-[69px] lg:h-[91px]">
         <div className="hidden lg:flex items-center whitespace-nowrap flex-1">
           <ul className="flex flex-wrap">
             {links.map((item: CTA, idx) => (
@@ -123,18 +120,19 @@ const Header = (props: HeaderProps) => {
           </ul>
         </div>
         {logo && (
-          <div className="bg-black lg:p-[15px] lg:pt-[7px] lg:pb-[21px]">
+          <div className="bg-black lg:p-[20px] lg:pb-[24px]">
             <MaybeLink className="Header-logoLink" linkUrl={logoLink}>
               <div className="flex bg-black">
                 {isDesktopBreakpoint ? (
                   <img
                     className="w-[111px]"
-                    src={
-                      "https://embed.widencdn.net/img/cambriausa/jwc8vggdfm/1280px/cambria_V_REV_PMS125.png?portal_shortcode=stiyhdoh"
-                    }
+                    src="https://embed.widencdn.net/img/cambriausa/jwc8vggdfm/1280px/cambria_V_REV_PMS125.png?portal_shortcode=stiyhdoh"
                   />
                 ) : (
-                  <img src={headerLogoMobile} />
+                  <img
+                    className="max-w-[192px]"
+                    src="https://cambriausa.widen.net/content/zrvlfmt9j4/png/CAMBRIA_H_Rev_rgb.png?crop=false&position=c&color=ffffff00&u=s5d92w&w=600&h=116"
+                  />
                 )}
               </div>
             </MaybeLink>
@@ -177,7 +175,7 @@ const Header = (props: HeaderProps) => {
           <div className="p-[10px] border-b border-black">
             <img
               src={headerImageInverted}
-              className="flex w-[30%]"
+              className="flex max-w-[126px]"
               alt="family owned american"
             />
           </div>
@@ -185,7 +183,7 @@ const Header = (props: HeaderProps) => {
             {links.map((item: CTA) => (
               <li key={item.label} className="flex border-b">
                 <Link
-                  className="Link--header py-[34.5px] uppercase block flex justify-center w-[100%] z-100"
+                  className="Link--header py-[30.5px] uppercase flex justify-center w-[100%] z-100"
                   cta={item}
                 />
                 <span className="ml-[-20px] my-auto">{iconRight}</span>
@@ -195,13 +193,13 @@ const Header = (props: HeaderProps) => {
               <li key={item.label} className="flex border-b">
                 {item.link == "https://www.google.com" ? (
                   <Link
-                    className="Link--header py-[34.5px] uppercase block flex justify-center w-[100%] z-100"
+                    className="Link--header py-[34.5px] uppercase flex justify-center w-[100%] z-100"
                     href={props.linkToLocator}>
                     {item.label}
                   </Link>
                 ) : (
                   <Link
-                    className="Link--header py-[34.5px] uppercase block flex justify-center w-[100%] z-100"
+                    className="Link--header py-[34.5px] uppercase flex justify-center w-[100%] z-100"
                     cta={item}
                   />
                 )}
