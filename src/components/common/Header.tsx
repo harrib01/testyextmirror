@@ -131,7 +131,7 @@ const Header = (props: HeaderProps) => {
         {logo && (
           <div className="bg-black lg:p-[18px] lg:pt-[24px] lg:h-[110px]">
             <MaybeLink className="Header-logoLink" linkUrl={logoLink}>
-              <div className="flex bg-black-0 lg:ml-[3px]">
+              <div className="flex bg-black lg:ml-[3px]">
                 {isDesktopBreakpoint ? (
                   <picture>
                     <source type="image/webp" srcSet={CambriaDesktopLogo} />
