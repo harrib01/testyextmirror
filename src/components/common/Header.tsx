@@ -8,6 +8,10 @@ import headerImage from "src/assets/images/headerImage.png";
 import headerLogoMobile from "src/assets/images/headerLogoMobile.png";
 import headerImageInverted from "src/assets/images/AmericaInverted.png";
 import logo2 from "src/assets/images/CambriaDesktopLogo.png";
+import AmericanMadeEmblem from "src/assets/images/InvertedAmericanMadeEmblem.webp";
+import CambriaDesktopLogo from "src/assets/images/CambriaDesktopLogo.webp";
+import CambriaMobileLogo from "src/assets/images/CambriaMobileLogo.webp";
+import InvertedAmericanMadeEmblem from "src/assets/images/InvertedAmericanMadeEmblem.webp";
 import "src/components/common/Header.css";
 
 const defaultFields: string[] = [
@@ -100,10 +104,7 @@ const Header = (props: HeaderProps) => {
               </a>
             </ul>
             <picture>
-              <source
-                type="image/webp"
-                srcSet="src/assets/images/AmericanMadeEmblem.webp"
-              />
+              <source type="image/webp" srcSet={AmericanMadeEmblem} />
               <img
                 src={headerImage}
                 className="flex w-[151px]"
@@ -135,7 +136,7 @@ const Header = (props: HeaderProps) => {
                   <picture>
                     <source
                       type="image/webp"
-                      srcSet="src/assets/images/CambriaDesktopLogo.webp"
+                      srcSet={CambriaDesktopLogo}
                     />
                     <img className="w-[111px]" src={logo2} />
                   </picture>
@@ -143,7 +144,7 @@ const Header = (props: HeaderProps) => {
                   <picture>
                     <source
                       type="image/webp"
-                      srcSet="src/assets/images/CambriaMobileLogo.webp"
+                      srcSet={CambriaMobileLogo}
                     />
                     <img className="max-w-[192px]" src={headerLogoMobile} />
                   </picture>
@@ -190,7 +191,7 @@ const Header = (props: HeaderProps) => {
             <picture>
               <source
                 type="image/webp"
-                srcSet="src/assets/images/InvertedAmericanMadeEmblem.webp"
+                srcSet={InvertedAmericanMadeEmblem}
               />
               <img
                 src={headerImageInverted}
