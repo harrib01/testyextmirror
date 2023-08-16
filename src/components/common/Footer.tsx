@@ -112,13 +112,7 @@ const Footer = (props: FooterProps) => {
               <div className="pb-6">
                 {props.logoLink && (
                   <Link href={props.logoLink} className="">
-                    <picture>
-                      <source
-                        type="image/webp"
-                        srcSet="src/assets/images/CambriaFooterLogoWithFlag.webp"
-                      />
-                      <img className="max-w-[200px]" src={logo} alt="logo" />
-                    </picture>
+                    <img className="max-w-[200px]" src={logo} alt="logo" />
                   </Link>
                 )}
               </div>
