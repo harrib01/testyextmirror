@@ -8,7 +8,7 @@ import headerImage from "src/assets/images/headerImage.png";
 import headerLogoMobile from "src/assets/images/headerLogoMobile.png";
 import headerImageInverted from "src/assets/images/AmericaInverted.png";
 import logo2 from "src/assets/images/CambriaDesktopLogo.png";
-import AmericanMadeEmblem from "src/assets/images/InvertedAmericanMadeEmblem.webp";
+import AmericanMadeEmblem from "src/assets/images/AmericanMadeEmblem.webp";
 import CambriaDesktopLogo from "src/assets/images/CambriaDesktopLogo.webp";
 import CambriaMobileLogo from "src/assets/images/CambriaMobileLogo.webp";
 import InvertedAmericanMadeEmblem from "src/assets/images/InvertedAmericanMadeEmblem.webp";
@@ -89,16 +89,16 @@ const Header = (props: HeaderProps) => {
           <div className="hidden md:flex items-center justify-end">
             <ul className="flex">
               {linksTop.map((item: CTA, idx) => (
-                <li key={item.label}>
+                <li className="flex" key={item.label}>
                   <Link
-                    className="uppercase tracking-[1.7px] font-medium text-[10px] hover:underline mx-[26px]"
+                    className="uppercase tracking-[0.7px] font-medium text-[10px] hover:underline mx-[15px] mt-[2px]"
                     cta={item}
                     eventName={`toplink${idx}`}
                   />
                 </li>
               ))}
             </ul>
-            <ul className="uppercase tracking-[1.7px] font-medium flex text-[10px] hover:underline mx-[26px]">
+            <ul className="uppercase tracking-[0.7px] font-medium flex text-[10px] hover:underline mx-[15px] mt-[2px]">
               <a ng-href="tel:18662262742" target="" href="tel:18662262742">
                 1-866-CAMBRIA
               </a>
@@ -107,20 +107,20 @@ const Header = (props: HeaderProps) => {
               <source type="image/webp" srcSet={AmericanMadeEmblem} />
               <img
                 src={headerImage}
-                className="flex w-[151px]"
+                className="flex w-[150px]"
                 alt="family owned american"
               />
             </picture>
           </div>
         </div>
       )}
-      <div className="flex justify-start items-center p-[16px] lg:pb-[41px] lg:pt-[25px] bg-black lg:bg-white h-[69px] lg:h-[91px]">
+      <div className="flex justify-start items-center p-[16px] pl-[26px] lg:px-[34px] lg:pb-[41px] lg:pt-[25px] bg-black lg:bg-white h-[69px] lg:h-[91px]">
         <div className="hidden lg:flex items-center whitespace-nowrap flex-1">
           <ul className="flex flex-wrap">
             {links.map((item: CTA, idx) => (
               <li key={item.label}>
                 <Link
-                  className="Link Link--primary Link--header mx-2 lg:mx-4"
+                  className="Link Link--primary Link--header mx-2 lg:mx-[0.9375rem] tracking-[0.7px]"
                   cta={item}
                   eventName={`bottomlink${idx}`}
                 />
@@ -129,24 +129,26 @@ const Header = (props: HeaderProps) => {
           </ul>
         </div>
         {logo && (
-          <div className="bg-black lg:p-[20px] lg:pb-[24px]">
+          <div className="bg-black lg:p-[18px] lg:pt-[24px] lg:h-[110px]">
             <MaybeLink className="Header-logoLink" linkUrl={logoLink}>
-              <div className="flex bg-black">
+              <div className="flex bg-black lg:ml-[3px]">
                 {isDesktopBreakpoint ? (
                   <picture>
-                    <source
-                      type="image/webp"
-                      srcSet={CambriaDesktopLogo}
+                    <source type="image/webp" srcSet={CambriaDesktopLogo} />
+                    <img
+                      className="w-[111px]"
+                      src={logo2}
+                      alt="Cambria quartz logo"
                     />
-                    <img className="w-[111px]" src={logo2} />
                   </picture>
                 ) : (
                   <picture>
-                    <source
-                      type="image/webp"
-                      srcSet={CambriaMobileLogo}
+                    <source type="image/webp" srcSet={CambriaMobileLogo} />
+                    <img
+                      className="max-w-[170px]"
+                      src={headerLogoMobile}
+                      alt="Cambria quartz logo"
                     />
-                    <img className="max-w-[192px]" src={headerLogoMobile} />
                   </picture>
                 )}
               </div>
@@ -159,13 +161,13 @@ const Header = (props: HeaderProps) => {
               <li key={item.label}>
                 {item.link == "https://www.google.com" ? (
                   <Link
-                    className="Link Link--primary Link--header mx-2 lg:mx-4"
+                    className="Link Link--primary Link--header mx-2 lg:mx-[0.9375rem] tracking-[0.7px]"
                     href={props.linkToLocator}>
                     {item.label}
                   </Link>
                 ) : (
                   <Link
-                    className="Link Link--primary Link--header mx-2 lg:mx-4"
+                    className="Link Link--primary Link--header mx-2 lg:mx-[0.9375rem] tracking-[0.7px]"
                     cta={item}
                   />
                 )}
@@ -189,10 +191,7 @@ const Header = (props: HeaderProps) => {
         <div className="p-[12px] h-[100vh] overflow-x-auto">
           <div className="p-[10px] border-b border-black">
             <picture>
-              <source
-                type="image/webp"
-                srcSet={InvertedAmericanMadeEmblem}
-              />
+              <source type="image/webp" srcSet={InvertedAmericanMadeEmblem} />
               <img
                 src={headerImageInverted}
                 className="flex max-w-[126px]"
