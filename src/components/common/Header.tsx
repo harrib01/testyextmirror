@@ -8,10 +8,6 @@ import headerImage from "src/assets/images/headerImage.png";
 import headerLogoMobile from "src/assets/images/headerLogoMobile.png";
 import headerImageInverted from "src/assets/images/AmericaInverted.png";
 import logo2 from "src/assets/images/CambriaDesktopLogo.png";
-import AmericanMadeEmblem from "src/assets/images/AmericanMadeEmblem.webp";
-import CambriaDesktopLogo from "src/assets/images/CambriaDesktopLogo.webp";
-import CambriaMobileLogo from "src/assets/images/CambriaMobileLogo.webp";
-import InvertedAmericanMadeEmblem from "src/assets/images/InvertedAmericanMadeEmblem.webp";
 import "src/components/common/Header.css";
 
 const defaultFields: string[] = [
@@ -103,14 +99,12 @@ const Header = (props: HeaderProps) => {
                 1-866-CAMBRIA
               </a>
             </ul>
-            <picture>
-              <source type="image/webp" srcSet={AmericanMadeEmblem} />
-              <img
-                src={headerImage}
-                className="flex w-[150px]"
-                alt="family owned american"
-              />
-            </picture>
+            <img
+              src={headerImage}
+              width={150}
+              className="flex"
+              alt="family owned american"
+            />
           </div>
         </div>
       )}
@@ -133,23 +127,13 @@ const Header = (props: HeaderProps) => {
             <MaybeLink className="Header-logoLink" linkUrl={logoLink}>
               <div className="flex bg-black lg:ml-[3px]">
                 {isDesktopBreakpoint ? (
-                  <picture>
-                    <source type="image/webp" srcSet={CambriaDesktopLogo} />
-                    <img
-                      className="w-[111px]"
-                      src={logo2}
-                      alt="Cambria quartz logo"
-                    />
-                  </picture>
+                  <img width={111} src={logo2} alt="Cambria quartz logo" />
                 ) : (
-                  <picture>
-                    <source type="image/webp" srcSet={CambriaMobileLogo} />
-                    <img
-                      className="max-w-[170px]"
-                      src={headerLogoMobile}
-                      alt="Cambria quartz logo"
-                    />
-                  </picture>
+                  <img
+                    width={170}
+                    src={headerLogoMobile}
+                    alt="Cambria quartz logo"
+                  />
                 )}
               </div>
             </MaybeLink>
@@ -190,14 +174,12 @@ const Header = (props: HeaderProps) => {
         }>
         <div className="p-[12px] h-[100vh] overflow-x-auto">
           <div className="p-[10px] border-b border-black">
-            <picture>
-              <source type="image/webp" srcSet={InvertedAmericanMadeEmblem} />
-              <img
-                src={headerImageInverted}
-                className="flex max-w-[126px]"
-                alt="family owned american"
-              />
-            </picture>
+            <img
+              width={126}
+              src={headerImageInverted}
+              className="flex"
+              alt="family owned american"
+            />
           </div>
           <ul className="flex flex-col">
             {links.map((item: CTA) => (

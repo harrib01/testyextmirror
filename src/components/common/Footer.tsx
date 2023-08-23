@@ -7,7 +7,6 @@ import image from "src/assets/images/footerImage.png";
 import appStoreIcon from "src/assets/images/AppStoreButton.png";
 import playStoreIcon from "src/assets/images/GooglePlayButton.png";
 import pinterest from "src/assets/images/pinterest.png";
-import CambriaFooterLogo from "src/assets/images/CambriaFooterLogoWithFlag.webp";
 
 interface FooterProps {
   copyrightMessage: string;
@@ -113,10 +112,7 @@ const Footer = (props: FooterProps) => {
               <div className="pb-6">
                 {props.logoLink && (
                   <Link href={props.logoLink} className="">
-                    <picture>
-                      <source type="image/webp" srcSet={CambriaFooterLogo} />
-                      <img className="max-w-[200px]" src={logo} alt="logo" />
-                    </picture>
+                    <img width={200} src={logo} alt="logo" />
                   </Link>
                 )}
               </div>
