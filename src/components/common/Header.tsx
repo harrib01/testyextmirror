@@ -8,7 +8,6 @@ import headerImage from "src/assets/images/headerImage.png";
 import headerLogoMobile from "src/assets/images/headerLogoMobile.png";
 import headerImageInverted from "src/assets/images/AmericaInverted.png";
 import logo2 from "src/assets/images/CambriaDesktopLogo.png";
-
 import "src/components/common/Header.css";
 
 const defaultFields: string[] = [
