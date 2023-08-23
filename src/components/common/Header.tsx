@@ -100,7 +100,6 @@ const Header = (props: HeaderProps) => {
                 1-866-CAMBRIA
               </a>
             </ul>
-
             <img
               src={headerImage}
               width={150}
