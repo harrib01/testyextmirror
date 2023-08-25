@@ -4,10 +4,10 @@ import type { CTA, Image as ImageType } from "@yext/types";
 import c from "classnames";
 import { MaybeLink } from "src/components/common/MaybeLink";
 import { useBreakpoint } from "src/common/useBreakpoints";
-import headerImage from "src/assets/images/headerImage.png";
-import headerLogoMobile from "src/assets/images/headerLogoMobile.png";
-import headerImageInverted from "src/assets/images/AmericaInverted.png";
-import logo2 from "src/assets/images/CambriaDesktopLogo.png";
+import americanMadeHeaderImage from "../../../static/assets/images/americanMadeHeader.png";
+import headerLogoMobile from "../../../static/assets/images/cambriaMobileLogo.png";
+import headerImageInverted from "../../../static/assets/images/americaInverted.png";
+import cambriaLogoDesktop from "../../../static/assets/images/cambriaLogoDesktop.png";
 import "src/components/common/Header.css";
 
 const defaultFields: string[] = [
@@ -100,8 +100,8 @@ const Header = (props: HeaderProps) => {
               </a>
             </ul>
             <img
-              src={headerImage}
-              width={150}
+              src={americanMadeHeaderImage}
+              width={115}
               className="flex"
               alt="family owned american"
             />
@@ -127,7 +127,11 @@ const Header = (props: HeaderProps) => {
             <MaybeLink className="Header-logoLink" linkUrl={logoLink}>
               <div className="flex bg-black lg:ml-[3px]">
                 {isDesktopBreakpoint ? (
-                  <img width={111} src={logo2} alt="Cambria quartz logo" />
+                  <img
+                    width={111}
+                    src={cambriaLogoDesktop}
+                    alt="Cambria quartz logo"
+                  />
                 ) : (
                   <img
                     width={170}

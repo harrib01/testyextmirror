@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "@yext/pages/components";
 import type { CTA } from "@yext/types";
 import { useBreakpoint } from "src/common/useBreakpoints";
-import logo from "src/assets/images/footerLogo.png";
+import cambriaFooterLogo from "../../../static/assets/images/cambriaFooterLogo.png";
 import image from "src/assets/images/footerImage.png";
 import appStoreIcon from "src/assets/images/AppStoreButton.png";
 import playStoreIcon from "src/assets/images/GooglePlayButton.png";
@@ -112,7 +112,7 @@ const Footer = (props: FooterProps) => {
               <div className="pb-6">
                 {props.logoLink && (
                   <Link href={props.logoLink} className="">
-                    <img width={200} src={logo} alt="logo" />
+                    <img width={200} src={cambriaFooterLogo} alt="logo" />
                   </Link>
                 )}
               </div>
