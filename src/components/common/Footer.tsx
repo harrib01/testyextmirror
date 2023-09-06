@@ -112,7 +112,11 @@ const Footer = (props: FooterProps) => {
               <div className="pb-6">
                 {props.logoLink && (
                   <Link href={props.logoLink} className="">
-                    <img width={200} src={cambriaFooterLogo} alt="logo" />
+                    <img
+                      width={200}
+                      src="https://cambriausa.widen.net/content/pvruomyo8g/webp/cambria_V_AmerMade_REV_solid_RGB_1600x523.webp?color=000000"
+                      alt="logo"
+                    />
                   </Link>
                 )}
               </div>

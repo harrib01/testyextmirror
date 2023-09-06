@@ -100,7 +100,7 @@ const Header = (props: HeaderProps) => {
               </a>
             </ul>
             <img
-              src={americanMadeHeaderImage}
+              src="https://cambriausa.widen.net/content/tqtexykrre/png/AMERICAN%20MADE_H_REV_RGB.png?crop=false&position=c&color=ffffff00&u=jjx44y&w=300"
               width={115}
               className="flex"
               alt="family owned american"
@@ -129,13 +129,13 @@ const Header = (props: HeaderProps) => {
                 {isDesktopBreakpoint ? (
                   <img
                     width={111}
-                    src={cambriaLogoDesktop}
+                    src="https://embed.widencdn.net/img/cambriausa/jwc8vggdfm/1280px/cambria_V_REV_PMS125.png?portal_shortcode=stiyhdoh"
                     alt="Cambria quartz logo"
                   />
                 ) : (
                   <img
                     width={170}
-                    src={headerLogoMobile}
+                    src="https://cambriausa.widen.net/content/zrvlfmt9j4/png/CAMBRIA_H_Rev_rgb.png?crop=false&position=c&color=ffffff00&u=s5d92w&w=600&h=116"
                     alt="Cambria quartz logo"
                   />
                 )}
@@ -180,7 +180,7 @@ const Header = (props: HeaderProps) => {
           <div className="p-[10px] border-b border-black">
             <img
               width={126}
-              src={headerImageInverted}
+              src="https://cambriausa.widen.net/content/2luyaylwsf/png/AMERICAN%20MADE_H_RGB.png?crop=false&position=c&color=ffffff00&u=jjx44y&w=300"
               className="flex"
               alt="family owned american"
             />
