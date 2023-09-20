@@ -1,10 +1,4 @@
-import {
-  Template,
-  GetPath,
-  TemplateConfig,
-  GetHeadConfig,
-  HeadConfig,
-} from "@yext/pages";
+import { Template, GetPath, TemplateConfig, GetHeadConfig, HeadConfig } from "@yext/pages";
 import "src/index.css";
 import "src/styles/search.css";
 import { defaultHeadConfig } from "src/common/head";
@@ -34,7 +28,7 @@ export const config: TemplateConfig = {
       "c_searchSubTitle",
       "c_searchPlaceholderText",
       "c_searchDescription",
-      "slug"
+      "slug",
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -46,10 +40,7 @@ export const config: TemplateConfig = {
       primary: false,
     },
   },
-  alternateLanguageFields: [
-    "name",
-    "slug"
-  ],
+  alternateLanguageFields: ["name", "slug"],
 };
 
 /**
@@ -68,12 +59,12 @@ export const getPath = (): string => {
  * will be used to generate the inner contents of the HTML document"s <head> tag.
  * This can include the title, meta tags, script tags, etc.
  */
- export const getHeadConfig: GetHeadConfig<TemplateRenderProps<SearchPageProfile>> = (data): HeadConfig => {
-  return {...defaultHeadConfig(data), 
-    title: 'Dealer Locator - Find Your Nearest Cambria Quartz Dealer Today - Cambria® Quartz Surfaces'
+export const getHeadConfig: GetHeadConfig<TemplateRenderProps<SearchPageProfile>> = (data): HeadConfig => {
+  return {
+    ...defaultHeadConfig(data),
+    title: "Dealer Locator - Find Your Nearest Cambria Quartz Dealer Today - Cambria® Quartz Surfaces",
   };
 };
-
 
 /**
  * This is the main template. It can have any name as long as it"s the default export.
@@ -81,17 +72,11 @@ export const getPath = (): string => {
  */
 const Search: Template<TemplateRenderProps<SearchPageProfile>> = (data) => {
   const { document } = data;
-  const {
-    c_searchTitle,
-    c_searchSubTitle,
-    c_searchPlaceholderText,
-    c_searchDescription,
-    _site,
-  } = document;
+  const { c_searchTitle, c_searchSubTitle, c_searchPlaceholderText, c_searchDescription, _site } = document;
 
   const runtime = getRuntime();
   const searcher = provideHeadless({
-    ...getSearchProviderConfig(_site.c_searchExperienceAPIKey ?? '', document.meta.locale),
+    ...getSearchProviderConfig(_site.c_searchExperienceAPIKey ?? "", document.meta.locale),
     // endpoints: SandboxEndpoints // Add if using a sandbox account
   });
 
@@ -102,13 +87,14 @@ const Search: Template<TemplateRenderProps<SearchPageProfile>> = (data) => {
   return (
     <Main data={data}>
       <SearchHeadlessProvider searcher={searcher}>
-        {runtime.name === 'browser' && (
+        {runtime.name === "browser" && (
           <BrowserRouter>
+            Testing Header and Footer Branch
             <Locator
-              title={ c_searchTitle }
-              subTitle={ c_searchSubTitle }
-              placeholderText={ c_searchPlaceholderText }
-              description={ c_searchDescription }
+              title={c_searchTitle}
+              subTitle={c_searchSubTitle}
+              placeholderText={c_searchPlaceholderText}
+              description={c_searchDescription}
             />
           </BrowserRouter>
         )}
