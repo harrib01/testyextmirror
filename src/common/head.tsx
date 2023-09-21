@@ -210,6 +210,10 @@ function canonicalUrl(data: TemplateRenderProps, locale?: string): string {
     pagePath = "";
   }
 
+  if (data.document.siteDomain.startsWith("www.")) {
+    return `https://${data.document.siteDomain}/${pagePath}`;
+  }
+
   return `https://www.${data.document.siteDomain}/${pagePath}`;
 }
 
