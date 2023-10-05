@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HoursTable } from "@yext/sites-react-components";
 import { Link, Address, getDirections, Image } from "@yext/pages/components";
 import type { LocationProfile } from "src/types/entities";
@@ -72,6 +72,18 @@ const Core = (props: CoreProps) => {
   ) {
     isClosed = true;
   }
+
+  useEffect(() => {
+    addToDatalayer({
+      event: "page load",
+      CRMID: profile.c_cRMID,
+      accountName: profile.name,
+      dealerID: profile.id,
+      salesRegionID: profile.c_salesRegionID,
+      salesRegionName: profile.c_salesName,
+      dealerCategory: profile.c_customCategory,
+    });
+  }, []);
 
   return (
     <div
@@ -228,7 +240,7 @@ const Core = (props: CoreProps) => {
                               salesRegionID: profile.c_salesRegionID,
                               salesRegionName: profile.c_salesName,
                               dealerCategory: profile.c_customCategory,
-                              CRMID: profile.c_cRMID
+                              CRMID: profile.c_cRMID,
                             })
                           }
                           className="Link Link--primary uppercase underline hover:no-underline mb-4"
