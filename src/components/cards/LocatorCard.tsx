@@ -78,20 +78,17 @@ export default function LocatorCard(props: LocatorCardProps & CardProps) {
           <Link
             href={slug}
             className={
-              c({ "text-brand-primary ": type == "Premier Partner" }) +
-              "LocatorCard-visitpage Link--underlineInverse"
+              c({ "text-brand-primary ": type == "Premier Partner" }) + "LocatorCard-visitpage Link--underlineInverse"
             }
             onClick={() =>
               addToDatalayer({
                 event: "dealer-profile_link_click",
                 dealer_locator_link_url: isProduction(window.location.hostname)
                   ? "https://www.cambriausa.com/dealer-locator" + slug
-                  : "https://devtrunk-www-cambriausa-com-pagescdn-com.preview.pagescdn.com" +
-                    slug,
+                  : "https://devtrunk-www-cambriausa-com-pagescdn-com.preview.pagescdn.com" + slug,
                 dealer_locator_link_name: geomodifier,
               })
-            }
-          >
+            }>
             {renderTitle()}
           </Link>
         )}
@@ -101,9 +98,7 @@ export default function LocatorCard(props: LocatorCardProps & CardProps) {
         <div className="pb-2 sm:pb-4 font-secondary font-light text-brand-gray-300 font-[14px] leading-[22px]">
           <HoursStatus
             currentTemplate={(params: StatusParams) => (
-              <span className="HoursStatus-current--search">
-                {params.isOpen ? "Open Now" : "Closed"}
-              </span>
+              <span className="HoursStatus-current--search">{params.isOpen ? "Open Now" : "Closed"}</span>
             )}
             hours={hours}
             separatorTemplate={() => <span className="bullet" />}
@@ -115,19 +110,17 @@ export default function LocatorCard(props: LocatorCardProps & CardProps) {
         address={address}
         lines={[["line1"], ["line2"], ["city", "region", "postalCode"]]}
       />
-      {profile?.mainPhone &&
-        isPremierPartnerOrCambriaGallery(profile.c_locationType) && (
-          <div className="pb-4 flex items-center">
-            <FaPhone className="text-brand-gray-300" />
-            <Link
-              href={"tel:" + profile.mainPhone}
-              className="font-secondary font-medium leading-[22px] text-brand-gray-300 hover:underline ml-2"
-              eventName="phone"
-            >
-              {formatPhone(profile.mainPhone, profile.c_countryCode || "")}
-            </Link>
-          </div>
-        )}
+      {profile?.mainPhone && isPremierPartnerOrCambriaGallery(profile.c_locationType) && (
+        <div className="pb-4 flex items-center">
+          <FaPhone className="text-brand-gray-300" />
+          <Link
+            href={"tel:" + profile.mainPhone}
+            className="font-secondary font-medium leading-[22px] text-brand-gray-300 hover:underline ml-2"
+            eventName="phone">
+            {formatPhone(profile.mainPhone, profile.c_countryCode || "")}
+          </Link>
+        </div>
+      )}
       <div className="flex flex-col gap-3 pb-3">
         {type != null && type != "Home Depot" && (
           <Link
@@ -137,26 +130,18 @@ export default function LocatorCard(props: LocatorCardProps & CardProps) {
                 { "Button Button--secondaryInv ": type != "Premier Partner" }
               ) + "uppercase"
             }
-            href={
-              salesforceURL
-                ? salesforceURL
-                : "https://www.cambriausa.com/cambria-consultation"
-            }
+            href={salesforceURL ? salesforceURL : "https://www.cambriausa.com/cambria-consultation"}
             onClick={() =>
               addToDatalayer({
-                event: "dealerlocator_nav_appointment_click",
-                dealerlocator_nav_appointment_url: salesforceURL
-                  ? salesforceURL
-                  : "https://www.cambriausa.com/cambria-consultation",
-                dealerlocator_nav_appointment_name: "Schedule a Consultation",
-                dealerlocator_details_acct_name: profile.name,
-                dealerlocator_details_dealer_id: profile.id,
-                dealerlocator_details_region_id: profile.c_salesRegionID,
-                dealerlocator_details_region_name: profile.c_salesName,
-                dealerlocator_details_category: profile.c_customCategory,
+                event: "dealer locator schedule appointment click",
+                accountName: profile.name,
+                dealerID: profile.id,
+                salesRegionID: profile.c_salesRegionID,
+                salesRegionName: profile.c_salesName,
+                dealerCategory: profile.c_customCategory,
+                CRMID: profile.c_cRMID,
               })
-            }
-          >
+            }>
             schedule a consultation
           </Link>
         )}
@@ -172,12 +157,9 @@ export default function LocatorCard(props: LocatorCardProps & CardProps) {
             onClick={() =>
               addToDatalayer({
                 event: "dealerlocator_nav_viewdetails_click",
-                dealerlocator_nav_viewdetails_url: isProduction(
-                  window.location.hostname
-                )
+                dealerlocator_nav_viewdetails_url: isProduction(window.location.hostname)
                   ? "https://www.cambriausa.com/dealer-locator" + slug
-                  : "https://devtrunk-www-cambriausa-com-pagescdn-com.preview.pagescdn.com" +
-                    slug,
+                  : "https://devtrunk-www-cambriausa-com-pagescdn-com.preview.pagescdn.com" + slug,
                 dealerlocator_nav_viewdetails_name: "View Details",
                 dealerlocator_details_acct_name: profile.name,
                 dealerlocator_details_dealer_id: profile.id,
@@ -185,11 +167,8 @@ export default function LocatorCard(props: LocatorCardProps & CardProps) {
                 dealerlocator_details_region_name: profile.c_salesName,
                 dealerlocator_details_category: profile.c_customCategory,
               })
-            }
-          >
-            {type == "Premier Partner"
-              ? "Schedule or View Details"
-              : "view details"}
+            }>
+            {type == "Premier Partner" ? "Schedule or View Details" : "view details"}
           </Link>
         )}
       </div>
