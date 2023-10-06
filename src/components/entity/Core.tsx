@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { HoursTable } from "@yext/sites-react-components";
-import { Link, Address, getDirections, Image } from "@yext/pages/components";
+import { Link, getDirections, Image } from "@yext/pages/components";
 import type { LocationProfile } from "src/types/entities";
 import { useBreakpoint } from "src/common/useBreakpoints";
 import { useRef } from "react";
@@ -8,6 +8,7 @@ import "src/components/entity/Core.css";
 import type { Day, Hours } from "@yext/types";
 import c from "classnames";
 import { addToDatalayer } from "src/components/common/GTMhelper";
+import useAdobeLaunchScript from "src/common/useAdobeLaunchScript";
 
 const defaultFields: string[] = [
   "address",
@@ -72,6 +73,8 @@ const Core = (props: CoreProps) => {
   ) {
     isClosed = true;
   }
+
+  useAdobeLaunchScript();
 
   useEffect(() => {
     addToDatalayer({

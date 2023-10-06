@@ -1,4 +1,4 @@
-import { Template, GetPath, TemplateConfig, GetHeadConfig, HeadConfig } from "@yext/pages";
+import { Template, TemplateConfig, GetHeadConfig, HeadConfig } from "@yext/pages";
 import "src/index.css";
 import "src/styles/search.css";
 import { defaultHeadConfig } from "src/common/head";
@@ -12,6 +12,7 @@ import { SearchPageProfile, TemplateRenderProps } from "src/types/entities";
 import { SEARCH_PATH, getSearchProviderConfig } from "src/config";
 import { useEffect } from "react";
 import { addToDatalayer } from "src/components/common/GTMhelper";
+import useAdobeLaunchScript from "src/common/useAdobeLaunchScript";
 
 /**
  * Not required depending on your use case.
@@ -85,6 +86,8 @@ const Search: Template<TemplateRenderProps<SearchPageProfile>> = (data) => {
   if (!_site.c_searchExperienceAPIKey) {
     console.error("Add the search experience API key to the Site Entity");
   }
+
+  useAdobeLaunchScript();
 
   useEffect(() => {
     addToDatalayer({
