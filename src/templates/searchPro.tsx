@@ -16,6 +16,8 @@ import {
   import { getRuntime } from "@yext/pages/util";
   import { SearchPageProfile, TemplateRenderProps } from "src/types/entities";
   import { SEARCH_PATH, getSearchProviderConfigPro } from "src/config";
+import { useEffect } from "react";
+import { addToDatalayer } from "src/components/common/GTMhelper";
   
   /**
    * Not required depending on your use case.
@@ -98,6 +100,12 @@ import {
     if (!_site.c_searchExperienceAPIKey) {
       console.error("Add the search experience API key to the Site Entity");
     }
+
+    useEffect(() => {
+      addToDatalayer({
+        event: "page load",
+      });
+    }, []);
   
     return (
       <Main data={data}>

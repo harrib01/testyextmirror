@@ -11,6 +11,7 @@ import {
 } from "@yext/pages/components";
 import { GoogleTagManagerBody } from "src/common/googleTagManager";
 import { SEARCH_PATH } from 'src/config';
+import useAdobeLaunchScript from 'src/common/useAdobeLaunchScript';
 
 interface MainProps {
   data: TemplateRenderProps<BaseProfile>;
@@ -24,6 +25,8 @@ const Main = (props: MainProps) => {
 
   const { children } = props;
   const linkToLocator = props.data.relativePrefixToRoot + SEARCH_PATH;
+
+  useAdobeLaunchScript();
 
   return (
     <ConfigurationProvider value={config}>
