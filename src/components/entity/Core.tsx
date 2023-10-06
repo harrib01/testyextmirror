@@ -74,8 +74,6 @@ const Core = (props: CoreProps) => {
     isClosed = true;
   }
 
-  useAdobeLaunchScript();
-
   useEffect(() => {
     addToDatalayer({
       event: "page load",

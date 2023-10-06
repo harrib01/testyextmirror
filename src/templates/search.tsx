@@ -87,8 +87,6 @@ const Search: Template<TemplateRenderProps<SearchPageProfile>> = (data) => {
     console.error("Add the search experience API key to the Site Entity");
   }
 
-  useAdobeLaunchScript();
-
   useEffect(() => {
     addToDatalayer({
       event: "page load",
