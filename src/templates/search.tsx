@@ -1,4 +1,4 @@
-import { Template, TemplateConfig, GetHeadConfig, HeadConfig } from "@yext/pages";
+import { Template, GetPath, TemplateConfig, GetHeadConfig, HeadConfig } from "@yext/pages";
 import "src/index.css";
 import "src/styles/search.css";
 import { defaultHeadConfig } from "src/common/head";
@@ -12,7 +12,6 @@ import { SearchPageProfile, TemplateRenderProps } from "src/types/entities";
 import { SEARCH_PATH, getSearchProviderConfig } from "src/config";
 import { useEffect } from "react";
 import { addToDatalayer } from "src/components/common/GTMhelper";
-import useAdobeLaunchScript from "src/common/useAdobeLaunchScript";
 
 /**
  * Not required depending on your use case.
