@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const useAdobeLaunchScript = () => {
   useEffect(() => {
-    const isProd = window.location.hostname === "www.cambriausa.com" ? true : false;
+    const isProd = window.location.hostname === "www.cambriausa.com";
     
     const script = document.createElement("script");
     script.src = isProd
