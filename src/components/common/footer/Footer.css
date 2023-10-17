@@ -1,0 +1,29 @@
+.footer-list-item {
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.6);
+  line-height: 1.875rem;
+}
+
+.footer-subtext-items {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 14px;
+}
+
+.copyright-list {
+  padding-bottom: 1.125rem;
+  &-item {
+    padding: 0px 15px;
+    &:before {
+      background-color: #fff;
+      content: " ";
+      height: 14px;
+      left: 0;
+      opacity: 0.6;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 2px;
+    }
+  }
+}

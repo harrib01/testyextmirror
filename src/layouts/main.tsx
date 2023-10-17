@@ -1,17 +1,14 @@
-import React from 'react';
-import { ConfigurationProvider } from '@yext/sites-react-components';
-import { TemplateDataProvider } from 'src/common/useTemplateData';
-import config from '../config';
-import { Header } from 'src/components/common/Header';
-import type { TemplateRenderProps, BaseProfile } from 'src/types/entities';
-import Footer from 'src/components/common/Footer';
-import {
-  AnalyticsProvider,
-  AnalyticsScopeProvider,
-} from "@yext/pages/components";
+import React from "react";
+import { ConfigurationProvider } from "@yext/sites-react-components";
+import { TemplateDataProvider } from "src/common/useTemplateData";
+import config from "../config";
+import { Header } from "src/components/common/Header";
+import type { TemplateRenderProps, BaseProfile } from "src/types/entities";
+import Footer from "src/components/common/footer/Footer";
+import { AnalyticsProvider, AnalyticsScopeProvider } from "@yext/pages/components";
 import { GoogleTagManagerBody } from "src/common/googleTagManager";
-import { SEARCH_PATH } from 'src/config';
-import useAdobeLaunchScript from 'src/common/useAdobeLaunchScript';
+import { SEARCH_PATH } from "src/config";
+import useAdobeLaunchScript from "src/common/useAdobeLaunchScript";
 
 interface MainProps {
   data: TemplateRenderProps<BaseProfile>;
@@ -19,9 +16,7 @@ interface MainProps {
 }
 
 const Main = (props: MainProps) => {
-  const {
-    _site
-  } = props.data.document;
+  const { _site } = props.data.document;
 
   const { children } = props;
   const linkToLocator = props.data.relativePrefixToRoot + SEARCH_PATH;
@@ -66,7 +61,7 @@ const Main = (props: MainProps) => {
         </TemplateDataProvider>
       </AnalyticsProvider>
     </ConfigurationProvider>
-  )
-}
+  );
+};
 
 export { Main };
