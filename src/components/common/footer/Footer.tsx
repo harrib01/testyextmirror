@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "@yext/pages/components";
 import type { CTA } from "@yext/types";
 import { useBreakpoint } from "src/common/useBreakpoints";
@@ -83,9 +83,33 @@ const Footer = (props: FooterProps) => {
 
   const isDesktopBreakpoint = useBreakpoint("lg");
 
+  const [getInTouchIsOpen, setGetInTouchIsOpen] = useState(false);
+  const [getCambriaIsOpen, setGetCambriaIsOpen] = useState(false);
+  const [forProIsOpen, setForProIsOpen] = useState(false);
+
+  type PanelOptions = "getInTouch" | "getCambria" | "forPros";
+  const handlePanelOpening = (panelToOpen: PanelOptions) => {
+    setGetInTouchIsOpen(false);
+    setGetCambriaIsOpen(false);
+    setForProIsOpen(false);
+
+    if (panelToOpen === "getInTouch" && !getInTouchIsOpen) {
+      setGetInTouchIsOpen(true);
+      return;
+    }
+    if (panelToOpen === "getCambria" && !getCambriaIsOpen) {
+      setGetCambriaIsOpen(true);
+      return;
+    }
+    if (panelToOpen === "forPros" && !forProIsOpen) {
+      setForProIsOpen(true);
+      return;
+    }
+  };
+
   return (
-    <footer className="Footer lg:py-[26px] lg:py-[28px] bg-black lg:border-b-[10px] md:border-brand-primary">
-      <div className="flex lg:px-[4.375rem] lg:py-[70px] justify-center">
+    <footer className="Footer lg:py-[1.625rem] bg-black lg:border-b-[0.625rem] md:border-brand-primary">
+      <div className="flex lg:px-[4.375rem] lg:py-[4.375rem] justify-center">
         {isDesktopBreakpoint ? (
           // Desktop
           <div className="desktop-footer-container flex flex-col text-white w-full">
@@ -93,38 +117,38 @@ const Footer = (props: FooterProps) => {
               <div className="container-left flex flex-col">
                 <div className="flex">
                   <div className="flex flex-col mr-[4.875rem]">
-                    <div className="font-medium mb-[20px]">Get in Touch</div>
+                    <div className="font-medium mb-[1.25rem]">Get in Touch</div>
                     <div>
                       <ul>
-                        <li className="mb-[20px]">
+                        <li className="mb-[1.25rem]">
                           <a
                             href="https://publish-p108958-e1076754.adobeaemcloud.com/contact.html"
                             className="footer-list-item">
                             Contact Us
                           </a>
                         </li>
-                        <li className="mb-[20px]">
+                        <li className="mb-[1.25rem]">
                           <a
                             href="https://publish-p108958-e1076754.adobeaemcloud.com/careers"
                             className="footer-list-item">
                             Careers
                           </a>
                         </li>
-                        <li className="mb-[20px]">
+                        <li className="mb-[1.25rem]">
                           <a
                             href="https://publish-p108958-e1076754.adobeaemcloud.com/cambriacares"
                             className="footer-list-item">
                             CambriaCares
                           </a>
                         </li>
-                        <li className="mb-[20px]">
+                        <li className="mb-[1.25rem]">
                           <a
                             href="https://publish-p108958-e1076754.adobeaemcloud.com/email-subscribe"
                             className="footer-list-item">
                             Subscribe to Emails
                           </a>
                         </li>
-                        <li className="mb-[20px]">
+                        <li className="mb-[1.25rem]">
                           <a
                             href="https://publish-p108958-e1076754.adobeaemcloud.com/legend-of-cambria"
                             className="footer-list-item italic">
@@ -135,34 +159,34 @@ const Footer = (props: FooterProps) => {
                     </div>
                   </div>
                   <div className="flex flex-col mr-[4.875rem]">
-                    <div className="font-medium mb-[20px]">Get Cambria</div>
+                    <div className="font-medium mb-[1.25rem]">Get Cambria</div>
                     <div>
                       <ul>
-                        <li className="mb-[20px]">
+                        <li className="mb-[1.25rem]">
                           <a href="https://shop.cambriausa.com" className="footer-list-item">
                             Order a Sample
                           </a>
                         </li>
-                        <li className="mb-[20px]">
+                        <li className="mb-[1.25rem]">
                           <a href="https://shop.cambriausa.com/collections/home-decor" className="footer-list-item">
                             Shop Home Decor
                           </a>
                         </li>
-                        <li className="mb-[20px]">
+                        <li className="mb-[1.25rem]">
                           <a
                             href="https://publish-p108958-e1076754.adobeaemcloud.com/dealer-locator"
                             className="footer-list-item">
                             Find a Dealer
                           </a>
                         </li>
-                        <li className="mb-[20px]">
+                        <li className="mb-[1.25rem]">
                           <a
                             href="https://publish-p108958-e1076754.adobeaemcloud.com/dealer-locator/galleries-showrooms"
                             className="footer-list-item">
                             Galleries & Showrooms
                           </a>
                         </li>
-                        <li className="mb-[20px]">
+                        <li className="mb-[1.25rem]">
                           <a
                             href="https://publish-p108958-e1076754.adobeaemcloud.com/consultation"
                             className="footer-list-item">
@@ -173,43 +197,43 @@ const Footer = (props: FooterProps) => {
                     </div>
                   </div>
                   <div className="flex flex-col mr-[9.25rem]">
-                    <div className="font-medium mb-[20px]">For Professionals</div>
+                    <div className="font-medium mb-[1.25rem]">For Professionals</div>
                     <div>
                       <ul>
-                        <li className="mb-[20px]">
+                        <li className="mb-[1.25rem]">
                           <a
                             href="https://cambriausa.widencollective.com/portals/zybivkom/cambriaportal"
                             className="footer-list-item">
                             Trade Portal
                           </a>
                         </li>
-                        <li className="mb-[20px]">
+                        <li className="mb-[1.25rem]">
                           <a
                             href="https://cambriausa.widencollective.com/portals/view/access-code/?portalShortcode=cnm8kccc&returnUri=%2Fportals%2Fcnm8kccc%2FPremierDealerPortal"
                             className="footer-list-item">
                             Premier Partner Portal
                           </a>
                         </li>
-                        <li className="mb-[20px]">
+                        <li className="mb-[1.25rem]">
                           <a href="https://commerce.cambriausa.com/" className="footer-list-item">
                             The CambriaExchange
                           </a>
                         </li>
-                        <li className="mb-[20px]">
+                        <li className="mb-[1.25rem]">
                           <a
                             href="https://publish-p108958-e1076754.adobeaemcloud.com/professionals/silica-safety"
                             className="footer-list-item">
                             Silica Safety
                           </a>
                         </li>
-                        <li className="mb-[20px]">
+                        <li className="mb-[1.25rem]">
                           <a
                             href="https://www.cambriausa.com/dealer-locator/pro-locations"
                             className="footer-list-item">
                             Find a Fabricator
                           </a>
                         </li>
-                        <li className="mb-[20px]">
+                        <li className="mb-[1.25rem]">
                           <a
                             href="https://publish-p108958-e1076754.adobeaemcloud.com/quartz-countertops/submit-project"
                             className="footer-list-item">
@@ -220,7 +244,7 @@ const Footer = (props: FooterProps) => {
                     </div>
                   </div>
                 </div>
-                <div className="flex copyright-list footer-subtext-items mt-[70px]">
+                <div className="flex copyright-list footer-subtext-items mt-[4.375rem]">
                   <ul className="flex">
                     <li>
                       <a href="https://publish-p108958-e1076754.adobeaemcloud.com">© 2023 Cambria</a>
@@ -261,7 +285,7 @@ const Footer = (props: FooterProps) => {
                   </div>
                 </div>
                 <div className="flex justify-between">
-                  <div className="flex flex-col pr-[32px]">
+                  <div className="flex flex-col pr-[2rem]">
                     <div>Follow</div>
                     <div className="flex items-center mt-[0.5rem]">
                       <a href="https://www.pinterest.com/cambriasurfaces/">
@@ -324,19 +348,142 @@ const Footer = (props: FooterProps) => {
         ) : (
           // Mobile
           <div className="text-white flex flex-col w-full">
-            <div className="mobile-footer-menu-option">
+            <div className="mobile-footer-menu-option" onClick={() => handlePanelOpening("getInTouch")}>
               <div className="flex justify-between">
-                Get in Touch <i className="material-symbols-outlined">keyboard_arrow_right</i>
+                Get in Touch{" "}
+                <i className="material-symbols-outlined">
+                  {getInTouchIsOpen ? "keyboard_arrow_down" : "keyboard_arrow_right"}
+                </i>
+              </div>
+              <div className="footer-dropdown-menu-panel mt-[2rem] pl-[2rem]" hidden={!getInTouchIsOpen}>
+                <ul>
+                  <li className="mb-[2rem]">
+                    <a
+                      href="https://publish-p108958-e1076754.adobeaemcloud.com/contact.html"
+                      className="footer-list-item">
+                      Contact Us
+                    </a>
+                  </li>
+                  <li className="mb-[2rem]">
+                    <a href="https://publish-p108958-e1076754.adobeaemcloud.com/careers" className="footer-list-item">
+                      Careers
+                    </a>
+                  </li>
+                  <li className="mb-[2rem]">
+                    <a
+                      href="https://publish-p108958-e1076754.adobeaemcloud.com/cambriacares"
+                      className="footer-list-item">
+                      CambriaCares
+                    </a>
+                  </li>
+                  <li className="mb-[2rem]">
+                    <a
+                      href="https://publish-p108958-e1076754.adobeaemcloud.com/email-subscribe"
+                      className="footer-list-item">
+                      Subscribe to Emails
+                    </a>
+                  </li>
+                  <li className="mb-[2rem]">
+                    <a
+                      href="https://publish-p108958-e1076754.adobeaemcloud.com/legend-of-cambria"
+                      className="footer-list-item italic">
+                      Legend of Cambria Film
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div className="mobile-footer-menu-option">
+            <div className="mobile-footer-menu-option" onClick={() => handlePanelOpening("getCambria")}>
               <div className="flex justify-between">
-                Get Cambria<i className="material-symbols-outlined">keyboard_arrow_right</i>
+                Get Cambria
+                <i className="material-symbols-outlined">
+                  {getCambriaIsOpen ? "keyboard_arrow_down" : "keyboard_arrow_right"}
+                </i>
+              </div>
+              <div hidden={!getCambriaIsOpen} className="footer-dropdown-menu-panel mt-[2rem] pl-[2rem]">
+                <ul>
+                  <li className="mb-[2rem]">
+                    <a href="https://shop.cambriausa.com" className="footer-list-item">
+                      Order a Sample
+                    </a>
+                  </li>
+                  <li className="mb-[2rem]">
+                    <a href="https://shop.cambriausa.com/collections/home-decor" className="footer-list-item">
+                      Shop Home Decor
+                    </a>
+                  </li>
+                  <li className="mb-[2rem]">
+                    <a
+                      href="https://publish-p108958-e1076754.adobeaemcloud.com/dealer-locator"
+                      className="footer-list-item">
+                      Find a Dealer
+                    </a>
+                  </li>
+                  <li className="mb-[2rem]">
+                    <a
+                      href="https://publish-p108958-e1076754.adobeaemcloud.com/dealer-locator/galleries-showrooms"
+                      className="footer-list-item">
+                      Galleries & Showrooms
+                    </a>
+                  </li>
+                  <li className="mb-[2rem]">
+                    <a
+                      href="https://publish-p108958-e1076754.adobeaemcloud.com/consultation"
+                      className="footer-list-item">
+                      Schedule a Consultation
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div className="mobile-footer-menu-option">
+            <div className="mobile-footer-menu-option" onClick={() => handlePanelOpening("forPros")}>
               <div className="flex justify-between">
-                For Professionals<i className="material-symbols-outlined">keyboard_arrow_right</i>
+                For Professionals
+                <i className="material-symbols-outlined">
+                  {forProIsOpen ? "keyboard_arrow_down" : "keyboard_arrow_right"}
+                </i>
+              </div>
+              <div hidden={!forProIsOpen} className="footer-dropdown-menu-panel mt-[2rem] pl-[2rem]">
+                <ul>
+                  <li className="mb-[2rem]">
+                    <a
+                      href="https://cambriausa.widencollective.com/portals/zybivkom/cambriaportal"
+                      className="footer-list-item">
+                      Trade Portal
+                    </a>
+                  </li>
+                  <li className="mb-[2rem]">
+                    <a
+                      href="https://cambriausa.widencollective.com/portals/view/access-code/?portalShortcode=cnm8kccc&returnUri=%2Fportals%2Fcnm8kccc%2FPremierDealerPortal"
+                      className="footer-list-item">
+                      Premier Partner Portal
+                    </a>
+                  </li>
+                  <li className="mb-[2rem]">
+                    <a href="https://commerce.cambriausa.com/" className="footer-list-item">
+                      The CambriaExchange
+                    </a>
+                  </li>
+                  <li className="mb-[2rem]">
+                    <a
+                      href="https://publish-p108958-e1076754.adobeaemcloud.com/professionals/silica-safety"
+                      className="footer-list-item">
+                      Silica Safety
+                    </a>
+                  </li>
+                  <li className="mb-[2rem]">
+                    <a href="https://www.cambriausa.com/dealer-locator/pro-locations" className="footer-list-item">
+                      Find a Fabricator
+                    </a>
+                  </li>
+                  <li className="mb-[2rem]">
+                    <a
+                      href="https://publish-p108958-e1076754.adobeaemcloud.com/quartz-countertops/submit-project"
+                      className="footer-list-item">
+                      Submit Your Project
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="mobile-copyright-container">
@@ -344,7 +491,7 @@ const Footer = (props: FooterProps) => {
                 <a href="https://publish-p108958-e1076754.adobeaemcloud.com">© 2023 Cambria</a>
               </div>
               <div className="flex copyright-list justify-center footer-subtext-items mt-[1rem]">
-                <div className="flex">
+                <div className="flex mr-[0.5rem]">
                   <ul className="flex">
                     <li>
                       <a href="https://publish-p108958-e1076754.adobeaemcloud.com/privacy">Privacy Notice</a>
@@ -356,7 +503,7 @@ const Footer = (props: FooterProps) => {
                     </li>
                   </ul>
                 </div>
-                <div className="flex">
+                <div className="flex ml-[0.5rem]">
                   <ul className="flex">
                     <li>
                       <a href="https://publish-p108958-e1076754.adobeaemcloud.com/accessibility">Accessibility</a>
@@ -370,7 +517,7 @@ const Footer = (props: FooterProps) => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-center py-[50px] px-[30px]">
+            <div className="flex flex-col items-center py-[3.125rem] px-[1.875rem]">
               <div className="mb-[3rem]">
                 <a href="https://publish-p108958-e1076754.adobeaemcloud.com">
                   <img
@@ -386,7 +533,7 @@ const Footer = (props: FooterProps) => {
                   <a className="email-signup-btn">Sign up for Cambria emails today</a>
                 </div>
               </div>
-              <div className="flex flex-col pr-[32px] w-full">
+              <div className="flex flex-col pr-[2rem] w-full">
                 <div className="footer-subtext-items">Follow</div>
                 <div className="flex justify-items-start mt-[0.5rem]">
                   <a href="https://www.pinterest.com/cambriasurfaces/">
