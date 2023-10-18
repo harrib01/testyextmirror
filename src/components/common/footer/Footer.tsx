@@ -108,7 +108,7 @@ const Footer = (props: FooterProps) => {
   };
 
   return (
-    <footer className="Footer lg:py-[1.625rem] bg-black lg:border-b-[0.625rem] md:border-brand-primary">
+    <footer className="Footer bg-black">
       <div className="flex lg:px-[4.375rem] lg:py-[4.375rem] justify-center">
         {isDesktopBreakpoint ? (
           // Desktop
@@ -119,7 +119,7 @@ const Footer = (props: FooterProps) => {
                   <div className="flex flex-col mr-[4.875rem]">
                     <div className="font-medium mb-[1.25rem]">Get in Touch</div>
                     <div>
-                      <ul>
+                      <ul className="text-[1.125rem]">
                         <li className="mb-[1.25rem]">
                           <a
                             href="https://publish-p108958-e1076754.adobeaemcloud.com/contact.html"
@@ -161,7 +161,7 @@ const Footer = (props: FooterProps) => {
                   <div className="flex flex-col mr-[4.875rem]">
                     <div className="font-medium mb-[1.25rem]">Get Cambria</div>
                     <div>
-                      <ul>
+                      <ul className="text-[1.125rem]">
                         <li className="mb-[1.25rem]">
                           <a href="https://shop.cambriausa.com" className="footer-list-item">
                             Order a Sample
@@ -199,7 +199,7 @@ const Footer = (props: FooterProps) => {
                   <div className="flex flex-col mr-[9.25rem]">
                     <div className="font-medium mb-[1.25rem]">For Professionals</div>
                     <div>
-                      <ul>
+                      <ul className="text-[1.125rem]">
                         <li className="mb-[1.25rem]">
                           <a
                             href="https://cambriausa.widencollective.com/portals/zybivkom/cambriaportal"
@@ -284,58 +284,65 @@ const Footer = (props: FooterProps) => {
                     <a className="email-signup-btn">Sign up for Cambria emails today</a>
                   </div>
                 </div>
-                <div className="flex justify-between">
+                <div className="">
+                  <div className="footer-subtext-items">Get the Cambria AR App</div>
+                  <div className="flex mt-[0.5rem]">
+                    <img className="mr-[1rem]" width={107} src={playStoreIcon} />
+                    <img width={107} src={appStoreIcon} />
+                  </div>
+                </div>
+                <div className="flex ">
                   <div className="flex flex-col pr-[2rem]">
                     <div>Follow</div>
                     <div className="flex items-center mt-[0.5rem]">
                       <a href="https://www.pinterest.com/cambriasurfaces/">
                         <img
                           className="mr-[1.125rem]"
-                          width={15}
+                          width={17}
                           src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/pinterest-logo.coreimg.svg/1692909190892/icon-pinterest.svg"
                         />
                       </a>
                       <a href="https://www.instagram.com/cambriasurfaces/">
                         <img
                           className="mr-[1.125rem]"
-                          width={15}
+                          width={17}
                           src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/instagram-logo.coreimg.svg/1692909235938/icon-instagram.svg"
                         />
                       </a>
                       <a href="https://www.facebook.com/CambriaSurfaces">
                         <img
                           className="mr-[1.125rem]"
-                          width={15}
+                          width={17}
                           src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/facebook-logo.coreimg.svg/1692909262633/icon-facebook.svg"
                         />
                       </a>
                       <a href="https://www.linkedin.com/company/cambria">
                         <img
                           className="mr-[1.125rem]"
-                          width={15}
+                          width={17}
                           src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/linkedin-logo.coreimg.svg/1692909313073/icon-linkedin.svg"
                         />
                       </a>
                       <a href="https://twitter.com/CambriaSurfaces">
                         <img
                           className="mr-[1.125rem]"
-                          width={15}
+                          width={17}
                           src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/twitter-logo.coreimg.svg/1692909366238/icon-twitter.svg"
                         />
                       </a>
                       <a href="https://www.youtube.com/channel/UCrNUaYClqpTTJEDkKIH2vKw">
                         <img
                           className="mr-[1.125rem]"
-                          width={15}
+                          width={17}
                           src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/youtube-logo.coreimg.svg/1692909414423/icon-youtube.svg"
                         />
                       </a>
                     </div>
                   </div>
-                  <div>
+                  <div className="flex items-end">
                     <a href="https://publish-p108958-e1076754.adobeaemcloud.com">
                       <img
-                        width={193}
+                        width={110}
                         alt="Made in America Logo"
                         src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/american-made-logo.coreimg.svg/1692909426039/american-made-h-rev-rgb.svg"
                       />
@@ -529,50 +536,66 @@ const Footer = (props: FooterProps) => {
               </div>
               <div className="mb-[3rem]">
                 <div className="footer-subtext-items">Cambria inspiration delivered</div>
-                <div className="mt-[1rem]">
+                <div className="mt-[0.5rem]">
                   <a className="email-signup-btn">Sign up for Cambria emails today</a>
                 </div>
               </div>
-              <div className="flex flex-col pr-[2rem] w-full">
-                <div className="footer-subtext-items">Follow</div>
-                <div className="flex justify-items-start mt-[0.5rem]">
+              <div className="mb-[2.8125rem]">
+                <div className="footer-subtext-items">Get the Cambria AR App</div>
+                <div className="flex mt-[0.5rem]">
+                  <img className="mr-[1rem]" width={107} src={playStoreIcon} />
+                  <img width={107} src={appStoreIcon} />
+                </div>
+              </div>
+              <div className="flex flex-col w-full items-center">
+                <div className="footer-subtext-items w-full ml-[0.5rem]">Follow</div>
+                <div className="flex mt-[0.5rem] items-center">
                   <a href="https://www.pinterest.com/cambriasurfaces/">
                     <img
-                      className="mr-[2rem] w-[1rem] sm:w-[1.25rem]"
+                      className="mr-[2.5rem] w-[1.25rem]"
                       src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/pinterest-logo.coreimg.svg/1692909190892/icon-pinterest.svg"
                     />
                   </a>
                   <a href="https://www.instagram.com/cambriasurfaces/">
                     <img
-                      className="mr-[2rem] w-[1rem] sm:w-[1.25rem]"
+                      className="mr-[2.5rem] w-[1.25rem]"
                       src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/instagram-logo.coreimg.svg/1692909235938/icon-instagram.svg"
                     />
                   </a>
                   <a href="https://www.facebook.com/CambriaSurfaces">
                     <img
-                      className="mr-[2rem] w-[1rem] sm:w-[1.25rem]"
+                      className="mr-[2.5rem] w-[1.25rem]"
                       src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/facebook-logo.coreimg.svg/1692909262633/icon-facebook.svg"
                     />
                   </a>
                   <a href="https://www.linkedin.com/company/cambria">
                     <img
-                      className="mr-[2rem] w-[1rem] sm:w-[1.25rem]"
+                      className="mr-[2.5rem] w-[1.25rem]"
                       src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/linkedin-logo.coreimg.svg/1692909313073/icon-linkedin.svg"
                     />
                   </a>
                   <a href="https://twitter.com/CambriaSurfaces">
                     <img
-                      className="mr-[2rem] w-[1rem] sm:w-[1.25rem]"
+                      className="mr-[2.5rem] w-[1.25rem]"
                       src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/twitter-logo.coreimg.svg/1692909366238/icon-twitter.svg"
                     />
                   </a>
                   <a href="https://www.youtube.com/channel/UCrNUaYClqpTTJEDkKIH2vKw">
                     <img
-                      className="mr-[2rem] w-[1rem] sm:w-[1.25rem]"
+                      className="w-[1.25rem]"
                       src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/youtube-logo.coreimg.svg/1692909414423/icon-youtube.svg"
                     />
                   </a>
                 </div>
+              </div>
+              <div className="mt-[3.12rem] flex justify-start w-full">
+                <a href="https://publish-p108958-e1076754.adobeaemcloud.com">
+                  <img
+                    width={112}
+                    alt="Made in America Logo"
+                    src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/american-made-logo.coreimg.svg/1692909426039/american-made-h-rev-rgb.svg"
+                  />
+                </a>
               </div>
             </div>
           </div>

@@ -11,10 +11,11 @@
 .footer-subtext-items {
   color: hsla(0, 0%, 100%, 0.6);
   font-size: 0.875rem;
+  font-weight: 300;
 }
 
 .copyright-list {
-  padding-bottom: 1.125rem;
+  padding-bottom: 0.125rem;
   &-item {
     /* padding-right: 1rem;
     padding-left: 1rem; */
