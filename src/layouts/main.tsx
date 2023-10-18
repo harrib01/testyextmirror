@@ -40,23 +40,7 @@ const Main = (props: MainProps) => {
           </AnalyticsScopeProvider>
           {children}
           <AnalyticsScopeProvider name="footer">
-            <Footer
-              copyrightMessage={_site.c_copyrightMessage || ""}
-              facebook={_site.c_facebook}
-              instagram={_site.c_instagram}
-              pinterest={_site.c_pinterest}
-              twitter={_site.c_twitter}
-              houzz={_site.c_houzz}
-              footerLinks={_site.c_footerLinks || []}
-              linksBottom={_site.c_footerBottom || []}
-              linksTop={_site.c_headerTop?.links || []}
-              cta1={_site.c_emailSignUp}
-              cta2={_site.c_getCambriaApp}
-              googlePlay={_site.c_googlePlay}
-              appleStore={_site.c_appleStore}
-              logoLink={_site?.c_headerLogoLink}
-              linkToLocator={linkToLocator}
-            />
+            <Footer />
           </AnalyticsScopeProvider>
         </TemplateDataProvider>
       </AnalyticsProvider>
