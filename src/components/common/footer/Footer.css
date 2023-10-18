@@ -17,8 +17,6 @@
 .copyright-list {
   padding-bottom: 0.125rem;
   &-item {
-    /* padding-right: 1rem;
-    padding-left: 1rem; */
     display: flex;
     align-items: center;
 
