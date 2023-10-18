@@ -43,37 +43,27 @@ const Footer = () => {
                     <div>
                       <ul className="text-[1.125rem]">
                         <li className="mb-[1.25rem]">
-                          <a
-                            href="https://publish-p108958-e1076754.adobeaemcloud.com/contact.html"
-                            className="footer-list-item">
+                          <a href="/contact.html" className="footer-list-item">
                             Contact Us
                           </a>
                         </li>
                         <li className="mb-[1.25rem]">
-                          <a
-                            href="https://publish-p108958-e1076754.adobeaemcloud.com/careers"
-                            className="footer-list-item">
+                          <a href="/careers" className="footer-list-item">
                             Careers
                           </a>
                         </li>
                         <li className="mb-[1.25rem]">
-                          <a
-                            href="https://publish-p108958-e1076754.adobeaemcloud.com/cambriacares"
-                            className="footer-list-item">
+                          <a href="/cambriacares" className="footer-list-item">
                             CambriaCares
                           </a>
                         </li>
                         <li className="mb-[1.25rem]">
-                          <a
-                            href="https://publish-p108958-e1076754.adobeaemcloud.com/email-subscribe"
-                            className="footer-list-item">
+                          <a href="/email-subscribe" className="footer-list-item">
                             Subscribe to Emails
                           </a>
                         </li>
                         <li className="mb-[1.25rem]">
-                          <a
-                            href="https://publish-p108958-e1076754.adobeaemcloud.com/legend-of-cambria"
-                            className="footer-list-item italic">
+                          <a href="/legend-of-cambria" className="footer-list-item italic">
                             Legend of Cambria Film
                           </a>
                         </li>
@@ -95,23 +85,17 @@ const Footer = () => {
                           </a>
                         </li>
                         <li className="mb-[1.25rem]">
-                          <a
-                            href="https://publish-p108958-e1076754.adobeaemcloud.com/dealer-locator"
-                            className="footer-list-item">
+                          <a href="/dealer-locator" className="footer-list-item">
                             Find a Dealer
                           </a>
                         </li>
                         <li className="mb-[1.25rem]">
-                          <a
-                            href="https://publish-p108958-e1076754.adobeaemcloud.com/dealer-locator/galleries-showrooms"
-                            className="footer-list-item">
+                          <a href="/dealer-locator/galleries-showrooms" className="footer-list-item">
                             Galleries & Showrooms
                           </a>
                         </li>
                         <li className="mb-[1.25rem]">
-                          <a
-                            href="https://publish-p108958-e1076754.adobeaemcloud.com/consultation"
-                            className="footer-list-item">
+                          <a href="/consultation" className="footer-list-item">
                             Schedule a Consultation
                           </a>
                         </li>
@@ -142,9 +126,7 @@ const Footer = () => {
                           </a>
                         </li>
                         <li className="mb-[1.25rem]">
-                          <a
-                            href="https://publish-p108958-e1076754.adobeaemcloud.com/professionals/silica-safety"
-                            className="footer-list-item">
+                          <a href="/professionals/silica-safety" className="footer-list-item">
                             Silica Safety
                           </a>
                         </li>
@@ -156,9 +138,7 @@ const Footer = () => {
                           </a>
                         </li>
                         <li className="mb-[1.25rem]">
-                          <a
-                            href="https://publish-p108958-e1076754.adobeaemcloud.com/quartz-countertops/submit-project"
-                            className="footer-list-item">
+                          <a href="/quartz-countertops/submit-project" className="footer-list-item">
                             Submit Your Project
                           </a>
                         </li>
@@ -169,30 +149,26 @@ const Footer = () => {
                 <div className="flex copyright-list footer-subtext-items mt-[4.375rem]">
                   <ul className="flex">
                     <li>
-                      <a href="https://publish-p108958-e1076754.adobeaemcloud.com">© 2023 Cambria</a>
+                      <a href="/">© 2023 Cambria</a>
                     </li>
                     <li className="copyright-list-item">
-                      <a href="https://publish-p108958-e1076754.adobeaemcloud.com/privacy">Privacy Notice</a>
+                      <a href="/privacy">Privacy Notice</a>
                     </li>
                     <li className="copyright-list-item">
-                      <a href="https://publish-p108958-e1076754.adobeaemcloud.com/terms-conditions">
-                        Terms & Conditions
-                      </a>
+                      <a href="/terms-conditions">Terms & Conditions</a>
                     </li>
                     <li className="copyright-list-item">
-                      <a href="https://publish-p108958-e1076754.adobeaemcloud.com/accessibility">Accessibility</a>
+                      <a href="/accessibility">Accessibility</a>
                     </li>
                     <li className="copyright-list-item">
-                      <a href="https://publish-p108958-e1076754.adobeaemcloud.com/transparency-in-coverage">
-                        Transparency in Coverage
-                      </a>
+                      <a href="/transparency-in-coverage">Transparency in Coverage</a>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className="container-right footer-subtext-items flex flex-col w-1/3 justify-between">
                 <div>
-                  <a href="https://publish-p108958-e1076754.adobeaemcloud.com">
+                  <a href="/">
                     <img
                       width={253}
                       alt="Cambria USA Logo"
@@ -266,7 +242,7 @@ const Footer = () => {
                     </div>
                   </div>
                   <div className="flex items-end">
-                    <a href="https://publish-p108958-e1076754.adobeaemcloud.com">
+                    <a href="/">
                       <img
                         width={110}
                         alt="Made in America Logo"
@@ -290,35 +266,27 @@ const Footer = () => {
               <div className="footer-dropdown-menu-panel mt-[2rem] pl-[2rem]" hidden={!getInTouchIsOpen}>
                 <ul>
                   <li className="mb-[2rem]">
-                    <a
-                      href="https://publish-p108958-e1076754.adobeaemcloud.com/contact.html"
-                      className="footer-list-item">
+                    <a href="/contact.html" className="footer-list-item">
                       Contact Us
                     </a>
                   </li>
                   <li className="mb-[2rem]">
-                    <a href="https://publish-p108958-e1076754.adobeaemcloud.com/careers" className="footer-list-item">
+                    <a href="/careers" className="footer-list-item">
                       Careers
                     </a>
                   </li>
                   <li className="mb-[2rem]">
-                    <a
-                      href="https://publish-p108958-e1076754.adobeaemcloud.com/cambriacares"
-                      className="footer-list-item">
+                    <a href="/cambriacares" className="footer-list-item">
                       CambriaCares
                     </a>
                   </li>
                   <li className="mb-[2rem]">
-                    <a
-                      href="https://publish-p108958-e1076754.adobeaemcloud.com/email-subscribe"
-                      className="footer-list-item">
+                    <a href="/email-subscribe" className="footer-list-item">
                       Subscribe to Emails
                     </a>
                   </li>
                   <li className="mb-[2rem]">
-                    <a
-                      href="https://publish-p108958-e1076754.adobeaemcloud.com/legend-of-cambria"
-                      className="footer-list-item italic">
+                    <a href="/legend-of-cambria" className="footer-list-item italic">
                       Legend of Cambria Film
                     </a>
                   </li>
@@ -345,23 +313,17 @@ const Footer = () => {
                     </a>
                   </li>
                   <li className="mb-[2rem]">
-                    <a
-                      href="https://publish-p108958-e1076754.adobeaemcloud.com/dealer-locator"
-                      className="footer-list-item">
+                    <a href="/dealer-locator" className="footer-list-item">
                       Find a Dealer
                     </a>
                   </li>
                   <li className="mb-[2rem]">
-                    <a
-                      href="https://publish-p108958-e1076754.adobeaemcloud.com/dealer-locator/galleries-showrooms"
-                      className="footer-list-item">
+                    <a href="/dealer-locator/galleries-showrooms" className="footer-list-item">
                       Galleries & Showrooms
                     </a>
                   </li>
                   <li className="mb-[2rem]">
-                    <a
-                      href="https://publish-p108958-e1076754.adobeaemcloud.com/consultation"
-                      className="footer-list-item">
+                    <a href="/consultation" className="footer-list-item">
                       Schedule a Consultation
                     </a>
                   </li>
@@ -397,9 +359,7 @@ const Footer = () => {
                     </a>
                   </li>
                   <li className="mb-[2rem]">
-                    <a
-                      href="https://publish-p108958-e1076754.adobeaemcloud.com/professionals/silica-safety"
-                      className="footer-list-item">
+                    <a href="/professionals/silica-safety" className="footer-list-item">
                       Silica Safety
                     </a>
                   </li>
@@ -409,9 +369,7 @@ const Footer = () => {
                     </a>
                   </li>
                   <li className="mb-[2rem]">
-                    <a
-                      href="https://publish-p108958-e1076754.adobeaemcloud.com/quartz-countertops/submit-project"
-                      className="footer-list-item">
+                    <a href="/quartz-countertops/submit-project" className="footer-list-item">
                       Submit Your Project
                     </a>
                   </li>
@@ -420,30 +378,26 @@ const Footer = () => {
             </div>
             <div className="mobile-copyright-container">
               <div className="footer-subtext-items">
-                <a href="https://publish-p108958-e1076754.adobeaemcloud.com">© 2023 Cambria</a>
+                <a href="/">© 2023 Cambria</a>
               </div>
               <div className="flex copyright-list justify-center footer-subtext-items mt-[1rem]">
                 <div className="flex mr-[0.5rem]">
                   <ul className="flex">
                     <li>
-                      <a href="https://publish-p108958-e1076754.adobeaemcloud.com/privacy">Privacy Notice</a>
+                      <a href="/privacy">Privacy Notice</a>
                     </li>
                     <li className="copyright-list-item">
-                      <a href="https://publish-p108958-e1076754.adobeaemcloud.com/terms-conditions">
-                        Terms & Conditions
-                      </a>
+                      <a href="/terms-conditions">Terms & Conditions</a>
                     </li>
                   </ul>
                 </div>
                 <div className="flex ml-[0.5rem]">
                   <ul className="flex">
                     <li>
-                      <a href="https://publish-p108958-e1076754.adobeaemcloud.com/accessibility">Accessibility</a>
+                      <a href="/accessibility">Accessibility</a>
                     </li>
                     <li className="copyright-list-item">
-                      <a href="https://publish-p108958-e1076754.adobeaemcloud.com/transparency-in-coverage">
-                        Transparency in Coverage
-                      </a>
+                      <a href="/transparency-in-coverage">Transparency in Coverage</a>
                     </li>
                   </ul>
                 </div>
@@ -451,7 +405,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-col items-center py-[3.125rem] px-[1.875rem]">
               <div className="mb-[3rem]">
-                <a href="https://publish-p108958-e1076754.adobeaemcloud.com">
+                <a href="/">
                   <img
                     width={253}
                     alt="Cambria USA Logo"
@@ -468,8 +422,12 @@ const Footer = () => {
               <div className="mb-[2.8125rem]">
                 <div className="footer-subtext-items">Get the Cambria AR App</div>
                 <div className="flex mt-[0.5rem]">
-                  <img className="mr-[1rem]" width={107} src={playStoreIcon} />
-                  <img width={107} src={appStoreIcon} />
+                  <a href="/">
+                    <img className="mr-[1rem]" width={107} src={playStoreIcon} />
+                  </a>
+                  <a href="/trends-articles/blog">
+                    <img width={107} src={appStoreIcon} />
+                  </a>
                 </div>
               </div>
               <div className="flex flex-col w-full items-center">
@@ -514,7 +472,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="mt-[3.12rem] flex justify-start w-full">
-                <a href="https://publish-p108958-e1076754.adobeaemcloud.com">
+                <a href="/">
                   <img
                     width={112}
                     alt="Made in America Logo"
