@@ -131,9 +131,7 @@ const Footer = () => {
                           </a>
                         </li>
                         <li className="mb-[1.25rem]">
-                          <a
-                            href="https://www.cambriausa.com/dealer-locator/pro-locations"
-                            className="footer-list-item">
+                          <a href="/dealer-locator/pro-locations" className="footer-list-item">
                             Find a Fabricator
                           </a>
                         </li>
@@ -364,7 +362,7 @@ const Footer = () => {
                     </a>
                   </li>
                   <li className="mb-[2rem]">
-                    <a href="https://www.cambriausa.com/dealer-locator/pro-locations" className="footer-list-item">
+                    <a href="/dealer-locator/pro-locations" className="footer-list-item">
                       Find a Fabricator
                     </a>
                   </li>
