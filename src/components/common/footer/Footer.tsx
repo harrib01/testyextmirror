@@ -177,10 +177,12 @@ const Footer = () => {
                 <div>
                   <div>Cambria inspiration delivered</div>
                   <div className="mt-[1rem]">
-                    <a className="email-signup-btn">Sign up for Cambria emails today</a>
+                    <a className="email-signup-btn" href="/email-subscribe">
+                      Sign up for Cambria emails today
+                    </a>
                   </div>
                 </div>
-                <div className="">
+                <div>
                   <div className="footer-subtext-items">Get the Cambria AR App</div>
                   <div className="flex mt-[0.5rem]">
                     <a href="/">
@@ -414,7 +416,9 @@ const Footer = () => {
               <div className="mb-[3rem]">
                 <div className="footer-subtext-items">Cambria inspiration delivered</div>
                 <div className="mt-[0.5rem]">
-                  <a className="email-signup-btn">Sign up for Cambria emails today</a>
+                  <a className="email-signup-btn" href="/email-subscribe">
+                    Sign up for Cambria emails today
+                  </a>
                 </div>
               </div>
               <div className="mb-[2.8125rem]">
