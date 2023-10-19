@@ -1,17 +1,14 @@
-import React from 'react';
-import { ConfigurationProvider } from '@yext/sites-react-components';
-import { TemplateDataProvider } from 'src/common/useTemplateData';
-import config from '../config';
-import { Header } from 'src/components/common/Header';
-import type { TemplateRenderProps, BaseProfile } from 'src/types/entities';
-import Footer from 'src/components/common/Footer';
-import {
-  AnalyticsProvider,
-  AnalyticsScopeProvider,
-} from "@yext/pages/components";
+import React from "react";
+import { ConfigurationProvider } from "@yext/sites-react-components";
+import { TemplateDataProvider } from "src/common/useTemplateData";
+import config from "../config";
+import { Header } from "src/components/common/Header";
+import type { TemplateRenderProps, BaseProfile } from "src/types/entities";
+import Footer from "src/components/common/footer/Footer";
+import { AnalyticsProvider, AnalyticsScopeProvider } from "@yext/pages/components";
 import { GoogleTagManagerBody } from "src/common/googleTagManager";
-import { SEARCH_PATH } from 'src/config';
-import useAdobeLaunchScript from 'src/common/useAdobeLaunchScript';
+import { SEARCH_PATH } from "src/config";
+import useAdobeLaunchScript from "src/common/useAdobeLaunchScript";
 
 interface MainProps {
   data: TemplateRenderProps<BaseProfile>;
@@ -19,9 +16,7 @@ interface MainProps {
 }
 
 const Main = (props: MainProps) => {
-  const {
-    _site
-  } = props.data.document;
+  const { _site } = props.data.document;
 
   const { children } = props;
   const linkToLocator = props.data.relativePrefixToRoot + SEARCH_PATH;
@@ -45,28 +40,12 @@ const Main = (props: MainProps) => {
           </AnalyticsScopeProvider>
           {children}
           <AnalyticsScopeProvider name="footer">
-            <Footer
-              copyrightMessage={_site.c_copyrightMessage || ""}
-              facebook={_site.c_facebook}
-              instagram={_site.c_instagram}
-              pinterest={_site.c_pinterest}
-              twitter={_site.c_twitter}
-              houzz={_site.c_houzz}
-              footerLinks={_site.c_footerLinks || []}
-              linksBottom={_site.c_footerBottom || []}
-              linksTop={_site.c_headerTop?.links || []}
-              cta1={_site.c_emailSignUp}
-              cta2={_site.c_getCambriaApp}
-              googlePlay={_site.c_googlePlay}
-              appleStore={_site.c_appleStore}
-              logoLink={_site?.c_headerLogoLink}
-              linkToLocator={linkToLocator}
-            />
+            <Footer />
           </AnalyticsScopeProvider>
         </TemplateDataProvider>
       </AnalyticsProvider>
     </ConfigurationProvider>
-  )
-}
+  );
+};
 
 export { Main };
