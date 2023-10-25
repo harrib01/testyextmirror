@@ -74,7 +74,7 @@ const Core = (props: CoreProps) => {
     isClosed = true;
   }
 
-    useEffect(() => {
+  useEffect(() => {
     addToDatalayer({
       event: "page load",
       CRMID: profile.c_cRMID,
