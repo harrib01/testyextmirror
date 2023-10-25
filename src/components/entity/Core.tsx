@@ -292,8 +292,7 @@ const Core = (props: CoreProps) => {
                   )}
                 </div>
                 <ConsultationForm
-                    profile={profile}>
-                </ConsultationForm>
+                    profile={profile} />
               </div>
             ))}
         </div>

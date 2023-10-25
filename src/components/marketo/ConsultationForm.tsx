@@ -19,14 +19,18 @@ const ConsultationForm = (props: consultationFormProps) => {
 
     useEffect(() => {
         if (scriptLoaded) {
-            MktoForms2.loadForm("https://landing.go.cambriausa.com", "423-TGU-525", 1104, function (form) {
+            // Including the Marketo form via Script tag
+            // It is not a module, and don't want it loaded unless used
+            // Therefore need to ignore this reference for check-types
+            // @ts-ignore
+            MktoForms2.loadForm("https://landing.go.cambriausa.com", "423-TGU-525", 1104, function (form: any) {
                 form.vals({
                     "Pardot_PD_Account_Id__c": props.profile.id,
                     "Pardot_PD_Web_Locator_Id__c": props.profile.c_cRMID
                 });
 
-                form.onSuccess(function (values) {
-                    addToDataLayer({
+                form.onSuccess(function (values: any) {
+                    addToDatalayer({
                         ...values,
                         event: "formSubmitted"
                     });
@@ -35,7 +39,7 @@ const ConsultationForm = (props: consultationFormProps) => {
         }
     }, [scriptLoaded]);
 
-    const loadMarketoScript = (callback) => {
+    const loadMarketoScript = (callback: any) => {
         const alreadyExists = document.getElementById('mktoScript');
 
         if (!alreadyExists) {

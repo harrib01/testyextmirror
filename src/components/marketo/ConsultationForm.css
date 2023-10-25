@@ -27,9 +27,9 @@
     font-size: 16px;
 }
 
-.marketo-form-component .mktoForm .mktoRequiredField label.mktoLabel {
+.marketo-form-component .mktoForm label.mktoLabel {
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 500 !important;
     width: unset !important;
     font-size: 11px;
 }
