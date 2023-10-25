@@ -8,6 +8,7 @@ import "src/components/entity/Core.css";
 import type { Day, Hours } from "@yext/types";
 import c from "classnames";
 import { addToDatalayer } from "src/components/common/GTMhelper";
+import ConsultationForm from "src/components/marketo/ConsultationForm"
 
 const defaultFields: string[] = [
   "address",
@@ -290,26 +291,8 @@ const Core = (props: CoreProps) => {
                     </div>
                   )}
                 </div>
-                <iframe
-                  className="bg-white"
-                  src={
-                    profile.c_cRMID
-                      ? props.iframe +
-                        "?Salesforce_Web_Locator_Id=" +
-                        profile.id +
-                        "&Salesforce_Account_Id=" +
-                        profile.c_cRMID
-                      : props.iframe + "?Salesforce_Web_Locator_Id=" + profile.id
-                  }
-                  data-dealerlocations-id={profile.id}
-                  data-dealerlocations-accountName={profile.name}
-                  data-dealerlocations-category={profile.c_customCategory}
-                  data-dealerlocations-salesregionid={profile.c_salesRegionID}
-                  data-dealerlocations-salesregionname={profile.c_salesName}
-                  crm-account-id={profile.c_cRMID}
-                  width="100%"
-                  height="500"
-                />
+                <ConsultationForm
+                    profile={profile} />
               </div>
             ))}
         </div>
