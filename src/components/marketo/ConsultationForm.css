@@ -85,3 +85,8 @@
 .marketo-form-component .mktoForm .mktoButton:hover {
     outline: 1px solid rgb(172, 131, 20);
 }
+
+.marketo-form-component #confirmform {
+    visibility: hidden;
+    font-weight: bold;
+}
