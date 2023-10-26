@@ -31,9 +31,23 @@ const ConsultationForm = (props: consultationFormProps) => {
 
                 form.onSuccess(function (values: any) {
                     addToDatalayer({
-                        ...values,
-                        event: "formSubmitted"
+                        event: "formSubmitted",
+                        accountName: props.profile.name,
+                        dealerID: props.profile.id,
+                        salesRegionID: props.profile.c_salesRegionID,
+                        salesRegionName: props.profile.c_salesName,
+                        dealerCategory: props.profile.c_customCategory,
+                        CRMID: props.profile.c_cRMID
                     });
+
+                    form.getFormElem().hide();
+                    const confirmForm = document.getElementById('confirmform');
+                    if (confirmForm) {
+                        confirmForm.style.visibility = 'visible';
+                    }
+
+                    // Returning false prevents form from navigating away
+                    return false;
                 });
             });
         }
@@ -62,6 +76,7 @@ const ConsultationForm = (props: consultationFormProps) => {
     return (
         <div className="marketo-form-component">
             <form id="mktoForm_1104"></form>
+            <div id="confirmform"><p>Thank you for your submission.</p></div>
         </div>
     );
 };
