@@ -63,10 +63,7 @@ const defaultHeadTags: Tag[] = [
   },
 ];
 
-export function defaultHeadConfig(
-  data: TemplateRenderProps,
-  additionalTags?: Tag[]
-): HeadConfig {
+export function defaultHeadConfig(data: TemplateRenderProps, additionalTags?: Tag[]): HeadConfig {
   const logoTags: Tag[] = data.document?.logo
     ? [
         {
@@ -167,7 +164,8 @@ export function defaultHeadConfig(
     other:
       SchemaBuilder(data) +
       GoogleTagManagerHead(data.document._site?.c_googleTagManager) +
-      vwoScriptTags(),
+      vwoScriptTags() +
+      "<link href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined' rel='stylesheet' />",
   };
 }
 
@@ -187,9 +185,7 @@ function metaDescription(data: TemplateRenderProps): string {
   // 2. Check for breadcrumbs
   const { dm_directoryParents } = data.document;
   if (dm_directoryParents) {
-    return `${dm_directoryParents
-      .map((crumb: { name: string }) => crumb.name)
-      .join(", ")}.`;
+    return `${dm_directoryParents.map((crumb: { name: string }) => crumb.name).join(", ")}.`;
   }
 
   return "";
@@ -210,14 +206,16 @@ function canonicalUrl(data: TemplateRenderProps, locale?: string): string {
     pagePath = "";
   }
 
+  if (data.document.siteDomain.startsWith("www.")) {
+    return `https://${data.document.siteDomain}/${pagePath}`;
+  }
+
   return `https://www.${data.document.siteDomain}/${pagePath}`;
 }
 
 function alternates(data: TemplateRenderProps): Tag[] {
   const thisLocale = data.document.locale;
-  const alternateLocales: string[] = Object.keys(
-    data.document?.alternateLanguageFields || {}
-  );
+  const alternateLocales: string[] = Object.keys(data.document?.alternateLanguageFields || {});
   const alternateLinks: Tag[] = alternateLocales
     .filter((locale) => locale !== thisLocale)
     .map((locale) => ({
