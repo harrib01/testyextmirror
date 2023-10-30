@@ -5,7 +5,7 @@
 .footer-list-item {
   font-weight: 400;
   color: hsla(0, 0%, 100%, 0.6);
-  line-height: 1.875rem;
+  line-height: 1.125rem;
 }
 
 .footer-subtext-items {
@@ -15,7 +15,6 @@
 }
 
 .copyright-list {
-  padding-bottom: 0.125rem;
   &-item {
     display: flex;
     align-items: center;

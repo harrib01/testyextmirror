@@ -31,229 +31,227 @@ const Footer = () => {
   };
 
   return (
-    <footer className="Footer bg-black">
-      <div className="flex lg:px-[4.375rem] lg:py-[4.375rem] justify-center">
+    <footer className="Footer bg-black flex justify-center">
+      <div className="flex lg:py-[4.375rem] justify-between desktop-footer-container w-full">
         {isDesktopBreakpoint ? (
-          <div className="desktop-footer-container flex flex-col text-white w-full">
-            <div className="flex w-full justify-between">
-              <div className="container-left flex flex-col">
-                <div className="flex">
-                  <div className="flex flex-col mr-[4.875rem]">
-                    <div className="font-medium mb-[1.25rem]">Get in Touch</div>
-                    <div>
-                      <ul className="text-[1.125rem]">
-                        <li className="mb-[1.25rem]">
-                          <a href="/contact.html" className="footer-list-item">
-                            Contact Us
-                          </a>
-                        </li>
-                        <li className="mb-[1.25rem]">
-                          <a href="/careers" className="footer-list-item">
-                            Careers
-                          </a>
-                        </li>
-                        <li className="mb-[1.25rem]">
-                          <a href="/cambriacares" className="footer-list-item">
-                            CambriaCares
-                          </a>
-                        </li>
-                        <li className="mb-[1.25rem]">
-                          <a href="/email-subscribe" className="footer-list-item">
-                            Subscribe to Emails
-                          </a>
-                        </li>
-                        <li className="mb-[1.25rem]">
-                          <a href="/legend-of-cambria" className="footer-list-item">
-                            Legend of Cambria Film
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="flex flex-col mr-[4.875rem]">
-                    <div className="font-medium mb-[1.25rem]">Get Cambria</div>
-                    <div>
-                      <ul className="text-[1.125rem]">
-                        <li className="mb-[1.25rem]">
-                          <a href="https://shop.cambriausa.com" className="footer-list-item">
-                            Order a Sample
-                          </a>
-                        </li>
-                        <li className="mb-[1.25rem]">
-                          <a href="https://shop.cambriausa.com/collections/home-decor" className="footer-list-item">
-                            Shop Home Decor
-                          </a>
-                        </li>
-                        <li className="mb-[1.25rem]">
-                          <a href="/dealer-locator" className="footer-list-item">
-                            Find a Dealer
-                          </a>
-                        </li>
-                        <li className="mb-[1.25rem]">
-                          <a href="/dealer-locator/galleries-showrooms" className="footer-list-item">
-                            Galleries & Showrooms
-                          </a>
-                        </li>
-                        <li className="mb-[1.25rem]">
-                          <a href="/consultation" className="footer-list-item">
-                            Schedule a Consultation
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="flex flex-col mr-[9.25rem]">
-                    <div className="font-medium mb-[1.25rem]">For Professionals</div>
-                    <div>
-                      <ul className="text-[1.125rem]">
-                        <li className="mb-[1.25rem]">
-                          <a
-                            href="https://cambriausa.widencollective.com/portals/zybivkom/cambriaportal"
-                            className="footer-list-item">
-                            Trade Portal
-                          </a>
-                        </li>
-                        <li className="mb-[1.25rem]">
-                          <a
-                            href="https://cambriausa.widencollective.com/portals/view/access-code/?portalShortcode=cnm8kccc&returnUri=%2Fportals%2Fcnm8kccc%2FPremierDealerPortal"
-                            className="footer-list-item">
-                            Premier Partner Portal
-                          </a>
-                        </li>
-                        <li className="mb-[1.25rem]">
-                          <a href="https://commerce.cambriausa.com/" className="footer-list-item">
-                            The CambriaExchange
-                          </a>
-                        </li>
-                        <li className="mb-[1.25rem]">
-                          <a href="/professionals/silica-safety" className="footer-list-item">
-                            Silica Safety
-                          </a>
-                        </li>
-                        <li className="mb-[1.25rem]">
-                          <a href="/dealer-locator/pro-locations" className="footer-list-item">
-                            Find a Fabricator
-                          </a>
-                        </li>
-                        <li className="mb-[1.25rem]">
-                          <a href="/quartz-countertops/submit-project" className="footer-list-item">
-                            Submit Your Project
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+          <>
+            <div className="container-left flex flex-col text-white">
+              <div className="flex">
+                <div className="flex flex-col mr-[4.875rem]">
+                  <div className="font-medium mb-[1.25rem]">Get in Touch</div>
+                  <div>
+                    <ul className="text-[1rem]">
+                      <li className="mb-[1.25rem]">
+                        <a href="/contact.html" className="footer-list-item">
+                          Contact Us
+                        </a>
+                      </li>
+                      <li className="mb-[1.25rem]">
+                        <a href="/careers" className="footer-list-item">
+                          Careers
+                        </a>
+                      </li>
+                      <li className="mb-[1.25rem]">
+                        <a href="/cambriacares" className="footer-list-item">
+                          CambriaCares
+                        </a>
+                      </li>
+                      <li className="mb-[1.25rem]">
+                        <a href="/email-subscribe" className="footer-list-item">
+                          Subscribe to Emails
+                        </a>
+                      </li>
+                      <li className="mb-[1.25rem]">
+                        <a href="/legend-of-cambria" className="footer-list-item">
+                          Legend of Cambria Film
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div className="flex copyright-list footer-subtext-items mt-[4.375rem]">
-                  <ul className="flex">
-                    <li>
-                      <a href="/">© 2023 Cambria</a>
-                    </li>
-                    <li className="copyright-list-item">
-                      <a href="/privacy">Privacy Notice</a>
-                    </li>
-                    <li className="copyright-list-item">
-                      <a href="/terms-conditions">Terms & Conditions</a>
-                    </li>
-                    <li className="copyright-list-item">
-                      <a href="/accessibility">Accessibility</a>
-                    </li>
-                    <li className="copyright-list-item">
-                      <a href="/transparency-in-coverage">Transparency in Coverage</a>
-                    </li>
-                  </ul>
+                <div className="flex flex-col mr-[4.875rem]">
+                  <div className="font-medium mb-[1.25rem]">Get Cambria</div>
+                  <div>
+                    <ul className="text-[1rem]">
+                      <li className="mb-[1.25rem]">
+                        <a href="https://shop.cambriausa.com" className="footer-list-item">
+                          Order a Sample
+                        </a>
+                      </li>
+                      <li className="mb-[1.25rem]">
+                        <a href="https://shop.cambriausa.com/collections/home-decor" className="footer-list-item">
+                          Shop Home Decor
+                        </a>
+                      </li>
+                      <li className="mb-[1.25rem]">
+                        <a href="/dealer-locator" className="footer-list-item">
+                          Find a Dealer
+                        </a>
+                      </li>
+                      <li className="mb-[1.25rem]">
+                        <a href="/dealer-locator/galleries-showrooms" className="footer-list-item">
+                          Galleries & Showrooms
+                        </a>
+                      </li>
+                      <li className="mb-[1.25rem]">
+                        <a href="/consultation" className="footer-list-item">
+                          Schedule a Consultation
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="flex flex-col mr-[9.25rem]">
+                  <div className="font-medium mb-[1.25rem]">For Professionals</div>
+                  <div>
+                    <ul className="text-[1rem]">
+                      <li className="mb-[1.25rem]">
+                        <a
+                          href="https://cambriausa.widencollective.com/portals/zybivkom/cambriaportal"
+                          className="footer-list-item">
+                          Trade Portal
+                        </a>
+                      </li>
+                      <li className="mb-[1.25rem]">
+                        <a
+                          href="https://cambriausa.widencollective.com/portals/view/access-code/?portalShortcode=cnm8kccc&returnUri=%2Fportals%2Fcnm8kccc%2FPremierDealerPortal"
+                          className="footer-list-item">
+                          Premier Partner Portal
+                        </a>
+                      </li>
+                      <li className="mb-[1.25rem]">
+                        <a href="https://commerce.cambriausa.com/" className="footer-list-item">
+                          The CambriaExchange
+                        </a>
+                      </li>
+                      <li className="mb-[1.25rem]">
+                        <a href="/professionals/silica-safety" className="footer-list-item">
+                          Silica Safety
+                        </a>
+                      </li>
+                      <li className="mb-[1.25rem]">
+                        <a href="/dealer-locator/pro-locations" className="footer-list-item">
+                          Find a Fabricator
+                        </a>
+                      </li>
+                      <li className="mb-[1.25rem]">
+                        <a href="/quartz-countertops/submit-project" className="footer-list-item">
+                          Submit Your Project
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              <div className="container-right footer-subtext-items flex flex-col w-1/3 justify-between">
-                <div>
-                  <a href="/">
-                    <img
-                      width={253}
-                      alt="Cambria USA Logo"
-                      src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/logo.coreimg.svg/1697136034845/cambria-h-rev-rgb.svg"
-                    />
+              <div className="flex copyright-list footer-subtext-items mt-[2.225rem]">
+                <ul className="flex">
+                  <li>
+                    <a href="/">© 2023 Cambria</a>
+                  </li>
+                  <li className="copyright-list-item">
+                    <a href="/privacy">Privacy Notice</a>
+                  </li>
+                  <li className="copyright-list-item">
+                    <a href="/terms-conditions">Terms & Conditions</a>
+                  </li>
+                  <li className="copyright-list-item">
+                    <a href="/accessibility">Accessibility</a>
+                  </li>
+                  <li className="copyright-list-item">
+                    <a href="/transparency-in-coverage">Transparency in Coverage</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="container-right footer-subtext-items flex flex-col justify-between">
+              <div>
+                <a href="/">
+                  <img
+                    width={253}
+                    alt="Cambria USA Logo"
+                    src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/logo.coreimg.svg/1697136034845/cambria-h-rev-rgb.svg"
+                  />
+                </a>
+              </div>
+              <div>
+                <div>Cambria inspiration delivered</div>
+                <div className="mt-[1rem]">
+                  <a className="email-signup-btn" href="/email-subscribe">
+                    Sign up for Cambria emails today
                   </a>
                 </div>
-                <div>
-                  <div>Cambria inspiration delivered</div>
-                  <div className="mt-[1rem]">
-                    <a className="email-signup-btn" href="/email-subscribe">
-                      Sign up for Cambria emails today
-                    </a>
-                  </div>
+              </div>
+              <div>
+                <div className="footer-subtext-items">Get the Cambria AR App</div>
+                <div className="flex mt-[0.5rem]">
+                  <a href="/">
+                    <img className="mr-[1rem]" width={107} src={playStoreIcon} />
+                  </a>
+                  <a href="/trends-articles/blog">
+                    <img width={107} src={appStoreIcon} />
+                  </a>
                 </div>
-                <div>
-                  <div className="footer-subtext-items">Get the Cambria AR App</div>
-                  <div className="flex mt-[0.5rem]">
-                    <a href="/">
-                      <img className="mr-[1rem]" width={107} src={playStoreIcon} />
-                    </a>
-                    <a href="/trends-articles/blog">
-                      <img width={107} src={appStoreIcon} />
-                    </a>
-                  </div>
-                </div>
-                <div className="flex ">
-                  <div className="flex flex-col pr-[2rem]">
-                    <div>Follow</div>
-                    <div className="flex items-center mt-[0.5rem]">
-                      <a href="https://www.pinterest.com/cambriasurfaces/">
-                        <img
-                          className="mr-[1.125rem]"
-                          width={17}
-                          src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/pinterest-logo.coreimg.svg/1692909190892/icon-pinterest.svg"
-                        />
-                      </a>
-                      <a href="https://www.instagram.com/cambriasurfaces/">
-                        <img
-                          className="mr-[1.125rem]"
-                          width={17}
-                          src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/instagram-logo.coreimg.svg/1692909235938/icon-instagram.svg"
-                        />
-                      </a>
-                      <a href="https://www.facebook.com/CambriaSurfaces">
-                        <img
-                          className="mr-[1.125rem]"
-                          width={17}
-                          src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/facebook-logo.coreimg.svg/1692909262633/icon-facebook.svg"
-                        />
-                      </a>
-                      <a href="https://www.linkedin.com/company/cambria">
-                        <img
-                          className="mr-[1.125rem]"
-                          width={17}
-                          src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/linkedin-logo.coreimg.svg/1692909313073/icon-linkedin.svg"
-                        />
-                      </a>
-                      <a href="https://twitter.com/CambriaSurfaces">
-                        <img
-                          className="mr-[1.125rem]"
-                          width={17}
-                          src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/twitter-logo.coreimg.svg/1692909366238/icon-twitter.svg"
-                        />
-                      </a>
-                      <a href="https://www.youtube.com/channel/UCrNUaYClqpTTJEDkKIH2vKw">
-                        <img
-                          className="mr-[1.125rem]"
-                          width={17}
-                          src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/youtube-logo.coreimg.svg/1692909414423/icon-youtube.svg"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-end">
-                    <a href="/">
+              </div>
+              <div className="flex ">
+                <div className="flex flex-col pr-[2rem]">
+                  <div>Follow</div>
+                  <div className="flex items-center mt-[0.5rem]">
+                    <a href="https://www.pinterest.com/cambriasurfaces/">
                       <img
-                        width={110}
-                        alt="Made in America Logo"
-                        src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/american-made-logo.coreimg.svg/1692909426039/american-made-h-rev-rgb.svg"
+                        className="mr-[1.125rem]"
+                        width={17}
+                        src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/pinterest-logo.coreimg.svg/1692909190892/icon-pinterest.svg"
+                      />
+                    </a>
+                    <a href="https://www.instagram.com/cambriasurfaces/">
+                      <img
+                        className="mr-[1.125rem]"
+                        width={17}
+                        src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/instagram-logo.coreimg.svg/1692909235938/icon-instagram.svg"
+                      />
+                    </a>
+                    <a href="https://www.facebook.com/CambriaSurfaces">
+                      <img
+                        className="mr-[1.125rem]"
+                        width={17}
+                        src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/facebook-logo.coreimg.svg/1692909262633/icon-facebook.svg"
+                      />
+                    </a>
+                    <a href="https://www.linkedin.com/company/cambria">
+                      <img
+                        className="mr-[1.125rem]"
+                        width={17}
+                        src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/linkedin-logo.coreimg.svg/1692909313073/icon-linkedin.svg"
+                      />
+                    </a>
+                    <a href="https://twitter.com/CambriaSurfaces">
+                      <img
+                        className="mr-[1.125rem]"
+                        width={17}
+                        src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/twitter-logo.coreimg.svg/1692909366238/icon-twitter.svg"
+                      />
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCrNUaYClqpTTJEDkKIH2vKw">
+                      <img
+                        className="mr-[1.125rem]"
+                        width={17}
+                        src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/youtube-logo.coreimg.svg/1692909414423/icon-youtube.svg"
                       />
                     </a>
                   </div>
                 </div>
+                <div className="flex items-end">
+                  <a href="/">
+                    <img
+                      width={110}
+                      alt="Made in America Logo"
+                      src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/american-made-logo.coreimg.svg/1692909426039/american-made-h-rev-rgb.svg"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          </>
         ) : (
           <div className="text-white flex flex-col w-full">
             <div className="mobile-footer-menu-option" onClick={() => handlePanelOpening("getInTouch")}>
