@@ -63,7 +63,7 @@ const Footer = () => {
                           </a>
                         </li>
                         <li className="mb-[1.25rem]">
-                          <a href="/legend-of-cambria" className="footer-list-item italic">
+                          <a href="/legend-of-cambria" className="footer-list-item">
                             Legend of Cambria Film
                           </a>
                         </li>
