@@ -37,9 +37,7 @@ const Footer = () => {
             <div className="container-left flex flex-col text-white">
               <div className="flex">
                 <div className="flex flex-col mr-[4.8rem]">
-                  <div>
-                    <h6 className="font-medium mb-[1.25rem] leading-[1.5rem]">Get in Touch</h6>
-                  </div>
+                  <h6 className="font-medium mb-[1.25rem] leading-[1.5rem]">Get in Touch</h6>
                   <div>
                     <ul className="text-[1rem]">
                       <li className="mb-[1.25rem] leading-[1.125rem]">

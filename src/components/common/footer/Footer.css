@@ -22,7 +22,7 @@
   &-item {
     display: flex;
     align-items: center;
-    font-weight:400;
+    font-weight: 400;
     color: #999;
 
     &:before {
@@ -46,7 +46,7 @@
   color: white;
   font-size: 0.75rem;
   max-width: 15.313rem;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
