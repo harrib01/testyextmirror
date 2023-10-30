@@ -259,8 +259,8 @@ const Footer = () => {
             <div className="mobile-footer-menu-option" onClick={() => handlePanelOpening("getInTouch")}>
               <div className="flex justify-between">
                 Get in Touch
-                <i className="material-symbols-outlined">
-                  {getInTouchIsOpen ? "keyboard_arrow_down" : "keyboard_arrow_right"}
+                <i className={`material-symbols-outlined ${getInTouchIsOpen ? 'rotate-arrow-down' : ''}`}>
+                  arrow_forward_ios
                 </i>
               </div>
               <div className="footer-dropdown-menu-panel mt-[2rem] pl-[2rem]" hidden={!getInTouchIsOpen}>
@@ -286,7 +286,7 @@ const Footer = () => {
                     </a>
                   </li>
                   <li className="mb-[2rem]">
-                    <a href="/legend-of-cambria" className="footer-list-item italic">
+                    <a href="/legend-of-cambria" className="footer-list-item">
                       Legend of Cambria Film
                     </a>
                   </li>
@@ -296,8 +296,8 @@ const Footer = () => {
             <div className="mobile-footer-menu-option" onClick={() => handlePanelOpening("getCambria")}>
               <div className="flex justify-between">
                 Get Cambria
-                <i className="material-symbols-outlined">
-                  {getCambriaIsOpen ? "keyboard_arrow_down" : "keyboard_arrow_right"}
+                <i className={`material-symbols-outlined ${getCambriaIsOpen ? 'rotate-arrow-down' : ''}`}>
+                  arrow_forward_ios
                 </i>
               </div>
               <div hidden={!getCambriaIsOpen} className="footer-dropdown-menu-panel mt-[2rem] pl-[2rem]">
@@ -333,8 +333,8 @@ const Footer = () => {
             <div className="mobile-footer-menu-option" onClick={() => handlePanelOpening("forPros")}>
               <div className="flex justify-between">
                 For Professionals
-                <i className="material-symbols-outlined">
-                  {forProIsOpen ? "keyboard_arrow_down" : "keyboard_arrow_right"}
+                <i className={`material-symbols-outlined ${forProIsOpen ? 'rotate-arrow-down' : ''}`}>
+                  arrow_forward_ios
                 </i>
               </div>
               <div hidden={!forProIsOpen} className="footer-dropdown-menu-panel mt-[2rem] pl-[2rem]">
