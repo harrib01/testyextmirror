@@ -432,8 +432,8 @@ const Footer = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex flex-col w-full items-center">
-                <div className="footer-subtext-items w-full ml-[0.5rem]">Follow</div>
+              <div className="flex flex-col w-fit items-center">
+                <div className="footer-subtext-items w-full lg:ml-[0.5rem]">Follow</div>
                 <div className="flex mt-[0.5rem] items-center">
                   <a href="https://www.pinterest.com/cambriasurfaces/">
                     <img
