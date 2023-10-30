@@ -380,8 +380,8 @@ const Footer = () => {
               <div className="footer-subtext-items">
                 <a href="/">© 2023 Cambria</a>
               </div>
-              <div className="flex copyright-list justify-center footer-subtext-items mt-[1rem]">
-                <div className="flex mr-[0.5rem]">
+              <div className="flex copyright-list justify-center footer-subtext-items">
+                <div className="flex mr-[0.4375rem]">
                   <ul className="flex">
                     <li>
                       <a href="/privacy">Privacy Notice</a>
@@ -391,7 +391,7 @@ const Footer = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="flex ml-[0.5rem]">
+                <div className="flex ml-[0.4375rem]">
                   <ul className="flex">
                     <li>
                       <a href="/accessibility">Accessibility</a>
@@ -472,15 +472,15 @@ const Footer = () => {
                     />
                   </a>
                 </div>
-              </div>
-              <div className="mt-[3.12rem] flex justify-start w-full">
-                <a href="/">
-                  <img
-                    width={112}
-                    alt="Made in America Logo"
-                    src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/american-made-logo.coreimg.svg/1692909426039/american-made-h-rev-rgb.svg"
-                  />
-                </a>
+                <div className="mt-[3.12rem] flex justify-start w-full">
+                  <a href="/">
+                    <img
+                      width={112}
+                      alt="Made in America Logo"
+                      src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/american-made-logo.coreimg.svg/1692909426039/american-made-h-rev-rgb.svg"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
