@@ -69,10 +69,10 @@
   }
 }
 
-.material-symbols-outlined {
+.material-symbols-outlined.rotate-arrow-down,
+.material-symbols-outlined.arrow-right {
   font-size: 1rem;
 }
-
 .rotate-arrow-down {
   transform: rotate(90deg);
 }

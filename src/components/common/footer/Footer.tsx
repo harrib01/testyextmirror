@@ -259,7 +259,7 @@ const Footer = () => {
             <div className="mobile-footer-menu-option" onClick={() => handlePanelOpening("getInTouch")}>
               <div className="flex justify-between">
                 Get in Touch
-                <i className={`material-symbols-outlined ${getInTouchIsOpen ? 'rotate-arrow-down' : ''}`}>
+                <i className={`material-symbols-outlined ${getInTouchIsOpen ? 'rotate-arrow-down' : 'arrow-right'}`}>
                   arrow_forward_ios
                 </i>
               </div>
@@ -296,7 +296,7 @@ const Footer = () => {
             <div className="mobile-footer-menu-option" onClick={() => handlePanelOpening("getCambria")}>
               <div className="flex justify-between">
                 Get Cambria
-                <i className={`material-symbols-outlined ${getCambriaIsOpen ? 'rotate-arrow-down' : ''}`}>
+                <i className={`material-symbols-outlined ${getCambriaIsOpen ? 'rotate-arrow-down' : 'arrow-right'}`}>
                   arrow_forward_ios
                 </i>
               </div>
@@ -333,7 +333,7 @@ const Footer = () => {
             <div className="mobile-footer-menu-option" onClick={() => handlePanelOpening("forPros")}>
               <div className="flex justify-between">
                 For Professionals
-                <i className={`material-symbols-outlined ${forProIsOpen ? 'rotate-arrow-down' : ''}`}>
+                <i className={`material-symbols-outlined ${forProIsOpen ? 'rotate-arrow-down' : 'arrow-right'}`}>
                   arrow_forward_ios
                 </i>
               </div>
