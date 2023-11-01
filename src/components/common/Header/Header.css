@@ -1,0 +1,95 @@
+.Header {
+  .header-utility {
+    background-color: white;
+    height: 2.375rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &__wrapper {
+      padding-left: 4.575rem;
+      padding-right: 4.375rem;
+      display: flex;
+      justify-content: flex-end;
+      .utility-links-logo {
+        display: flex;
+        &:hover {
+          cursor: pointer;
+        }
+        .links-container {
+          display: flex;
+          align-items: center;
+          .cmp-text {
+            font-size: 0.75rem;
+            line-height: 1rem;
+            color: #4f4e4e;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            li {
+              margin-left: 2rem;
+              color: #000;
+              font-weight: 400;
+
+              &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .logo-container {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+  .header-bar {
+    background-color: black;
+    height: 90px;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &__wrapper {
+      padding-left: 4.575rem;
+      padding-right: 4.375rem;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: calc(90pc + 0.75rem);
+    }
+    &__logo {
+      display: flex;
+      align-items: center;
+      &:hover {
+        cursor: pointer;
+      }
+      .logo-image {
+      }
+    }
+    &__nav {
+      &-container {
+        display: flex;
+        .nav-list-container {
+          display: flex;
+          font-size: 0.75rem;
+          font-weight: 500;
+          align-items: center;
+          li {
+            letter-spacing: 0.5px;
+            margin: 0 0.625rem;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

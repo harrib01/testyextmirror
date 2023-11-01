@@ -2,7 +2,7 @@ import React from "react";
 import { ConfigurationProvider } from "@yext/sites-react-components";
 import { TemplateDataProvider } from "src/common/useTemplateData";
 import config from "../config";
-import { Header } from "src/components/common/Header";
+import Header from "src/components/common/Header/Header";
 import type { TemplateRenderProps, BaseProfile } from "src/types/entities";
 import Footer from "src/components/common/footer/Footer";
 import { AnalyticsProvider, AnalyticsScopeProvider } from "@yext/pages/components";
@@ -29,14 +29,7 @@ const Main = (props: MainProps) => {
       <AnalyticsProvider templateData={props.data}>
         <TemplateDataProvider value={props.data}>
           <AnalyticsScopeProvider name="header">
-            <Header
-              logo={_site?.c_header?.logo}
-              logoLink={_site?.c_headerLogoLink}
-              links={_site?.c_header?.links || []}
-              linksTop={_site?.c_headerTop?.links || []}
-              linksBottomRight={_site?.c_headerBottomRight?.links || []}
-              linkToLocator={linkToLocator}
-            />
+            <Header />
           </AnalyticsScopeProvider>
           {children}
           <AnalyticsScopeProvider name="footer">
