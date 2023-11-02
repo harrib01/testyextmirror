@@ -1,4 +1,5 @@
 export type MenuOption = { text: string; link: string };
+export type DropdownPicture = { imageUrl?: string; imageLabel?: string; imageLink?: string };
 
 export const DropdownMenuOptions = {
   ourProducts: [
@@ -54,4 +55,50 @@ export const DropdownMenuOptions = {
     { text: "Order a Sample", link: "x.com" },
     { text: "Find a Professional", link: "www.cambriausa.com" },
   ],
+};
+
+export const DropdownPictureOptions = {
+  ourProducts: {
+    imageUrl:
+      "https://s7d9.scene7.com//is/image/cambriacompanyllc/crop-windsor-brass-satin-ridge-kitchen-modern-001-23",
+    imageLabel: "New Designs",
+    imageLink: "/quartz-countertops/new-designs",
+  },
+  kitchensAndBaths: {
+    imageUrl:
+      "https://s7d9.scene7.com//is/image/cambriacompanyllc/crop-skara-brae-carrick-kitchen-eymeric-widing-cs24-002-22",
+    imageLabel: "Kitchen & Bath Inspiration",
+    imageLink: "/quartz-countertops/kitchens-baths",
+  },
+  uniqueInstalls: {
+    imageUrl:
+      "https://s7d9.scene7.com//is/image/cambriacompanyllc/crop-brittanicca-living-room-henke-dpdsm-cs16-004-17",
+    imageLabel: "Fireplaces",
+    imageLink: "/unique-installs/quartz-fireplaces",
+  },
+  planningAndCare: {
+    imageUrl: "https://s7d9.scene7.com//is/image/cambriacompanyllc/crop-brittanicca-kitchen-lee-001-21",
+    imageLabel: "What to Expect",
+    imageLink: "/quartz-countertops/planning",
+  },
+  trendsAndArticles: {
+    imageUrl: "https://s7d9.scene7.com//is/image/cambriacompanyllc/crop-brittanicca-gold-warm-entertaining",
+    imageLabel: "Cambria Style Blog",
+    imageLink: "/cambria-style/blog",
+  },
+  whyCambria: {
+    imageUrl: "https://s7d9.scene7.com//is/image/cambriacompanyllc/crop-2-cambria-mine-a-drone-008-23",
+    imageLabel: "The Cambria Difference",
+    imageLink: "/quartz-countertops/why-cambria",
+  },
+  commercial: {
+    imageUrl: "https://s7d9.scene7.com//is/image/cambriacompanyllc/crop-seacourt-salon-dodd-001-23",
+    imageLabel: "Commercial Resources",
+    imageLink: "/professionals/commercial/technical-resources",
+  },
+  whereToBuy: {
+    imageUrl: "https://s7d9.scene7.com//is/image/cambriacompanyllc/crop-3x3-samples-006-23",
+    imageLabel: "Order a Sample",
+    imageLink: "https://shop.cambriausa.com/collections/samples.html",
+  },
 };

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import type { CTA, Image as ImageType } from "@yext/types";
 import { useBreakpoint } from "src/common/useBreakpoints";
 import "src/components/common/Header/Header.css";
-import NavigationBar from "./NavigationBar/NavigationBar";
+import NavigationBar from "./NavigationBar/Desktop/DesktopNavigationBar";
 import UtilityBar from "./UtilityBar/UtilityBar";
+import MobileNavigationBar from "./NavigationBar/Mobile/MobileNavigationBar";
 
 const Header = () => {
   const isDesktopBreakpoint = useBreakpoint("lg");
@@ -16,7 +16,9 @@ const Header = () => {
           <NavigationBar />
         </>
       ) : (
-        <div></div>
+        <>
+          <MobileNavigationBar />
+        </>
       )}
     </header>
   );

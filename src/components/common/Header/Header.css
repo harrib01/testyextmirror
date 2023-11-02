@@ -58,6 +58,11 @@
       justify-content: space-between;
       width: 100%;
       max-width: calc(90pc + 0.75rem);
+
+      @media (max-width: 1200px) {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+      }
     }
     &__logo {
       display: flex;
@@ -84,12 +89,71 @@
             justify-content: center;
             align-items: center;
             &:hover {
+              cursor: pointer;
+              &::after {
+                border-bottom: 0.9pt solid #fff;
+                content: " ";
+                display: inline-block;
+                height: 1px;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .header-bar-mobile {
+    background-color: black;
+    width: 100%;
+    height: 65px;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: calc(90pc + 0.75rem);
+    }
+    &__logo {
+      display: flex;
+      align-items: center;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &__nav {
+      &-container {
+        display: flex;
+        align-items: center;
+        .nav-list-container {
+          display: flex;
+          font-size: 0.75rem;
+          font-weight: 500;
+          align-items: center;
+          li {
+            letter-spacing: 0.5px;
+            margin: 0 0.625rem;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover {
               text-decoration: underline;
               cursor: pointer;
             }
           }
         }
       }
+    }
+  }
+  .material-symbols-outlined {
+    font-size: 1.6rem;
+    &:hover {
+      cursor: pointer;
     }
   }
 }

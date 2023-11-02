@@ -1,0 +1,22 @@
+.mobile-menu-dropdown {
+  font-size: 1.125rem;
+  /* margin: 0 1.25rem; */
+  padding: 1rem 0;
+  color: #000;
+  width: 100%;
+  letter-spacing: 0.5px;
+
+  &-list {
+    padding: 0 2rem;
+    &-item {
+      width: 100%;
+      font-size: 0.875rem;
+      padding: 0.5rem 0 !important;
+    }
+  }
+}
+.dropdown-body-container {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e9e9e9;
+}
