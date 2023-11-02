@@ -39,7 +39,7 @@
           }
         }
         .logo-container {
-          margin-left: 1rem;
+          margin-left: 1.25rem;
         }
       }
     }
@@ -112,6 +112,10 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    padding: 1rem 2.5rem;
+    @media (max-width: 768px) {
+      padding: 1.25rem 1rem;
+    }
     &__wrapper {
       display: flex;
       justify-content: space-between;

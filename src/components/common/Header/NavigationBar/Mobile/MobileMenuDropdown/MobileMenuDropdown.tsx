@@ -13,24 +13,22 @@ const MobileMenuDropdown = ({ dropdownLabel, dropdownOptions, boldLabel }: Mobil
 
   return (
     <>
-      <div
-        className={`mobile-menu-dropdown ${isOpen ? "underline" : ""} ${boldLabel ? "font-bold" : ""}`}
-        onClick={() => setIsOpen(!isOpen)}>
-        {dropdownLabel}
+      <div className="mobile-menu-dropdown" onClick={() => setIsOpen(!isOpen)}>
+        <a className={`${isOpen ? "underline" : ""} ${boldLabel ? "font-bold" : ""}`}>{dropdownLabel}</a>
+        {isOpen && (
+          <div className="w-full dropdown-body-container">
+            <ul className="mobile-menu-dropdown-list w-full">
+              {dropdownOptions.map((option: MenuOption, i) => {
+                return (
+                  <li key={i} className="mobile-menu-dropdown-list-item">
+                    <a href={option.link}>{option.text}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        )}
       </div>
-      {isOpen && (
-        <div className="w-full dropdown-body-container">
-          <ul className="mobile-menu-dropdown-list w-full">
-            {dropdownOptions.map((option: MenuOption, i) => {
-              return (
-                <li key={i} className="mobile-menu-dropdown-list-item">
-                  <a href={option.link}>{option.text}</a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      )}
     </>
   );
 };

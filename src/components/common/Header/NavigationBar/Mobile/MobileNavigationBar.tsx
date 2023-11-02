@@ -8,7 +8,7 @@ const MobileNavigationBar = () => {
 
   return (
     <>
-      <div className="header-bar-mobile px-[1rem] py-[1.25rem]">
+      <div className="header-bar-mobile">
         <div className="header-bar-mobile__wrapper">
           <div className="header-bar-mobile__logo">
             <a className="logo-image">
@@ -39,7 +39,7 @@ const MobileNavigationBar = () => {
         <>
           <div className="dropdown-body-mobile">
             <div className="header-bar-mobile">
-              <div className="header-bar-mobile__wrapper px-[1.25rem]">
+              <div className="header-bar-mobile__wrapper">
                 <div className="header-bar-mobile__logo">
                   <a className="logo-image mr-[3rem]">
                     <img
@@ -50,7 +50,7 @@ const MobileNavigationBar = () => {
                       alt="Cambria Logo"
                     />
                   </a>
-                  <a className="font-bold text-[13.2px]">1-800-CAMBRIA</a>
+                  <a className="font-bold text-[13.2px]">1-866-CAMBRIA</a>
                 </div>
                 <div className="header-bar__nav flex">
                   <div className="header-bar-mobile__nav-container">

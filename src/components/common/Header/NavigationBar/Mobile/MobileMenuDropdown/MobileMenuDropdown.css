@@ -7,16 +7,18 @@
   letter-spacing: 0.5px;
 
   &-list {
-    padding: 0 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 1.2rem;
     &-item {
       width: 100%;
       font-size: 0.875rem;
-      padding: 0.5rem 0 !important;
+      padding: 0.6rem 0 !important;
     }
   }
 }
 .dropdown-body-container {
   padding-bottom: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border-bottom: 1px solid #e9e9e9;
 }
