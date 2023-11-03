@@ -52,7 +52,7 @@
 }
 
 .mobile-footer-menu-option {
-  border-bottom: 0.125rem solid rgba(255, 255, 255, 0.6);
+  border-bottom: 0.125rem solid hsla(0, 0%, 40%, 0.25);
   padding: 1.875rem 2.5rem 1.875rem 2.25rem;
 }
 
@@ -61,7 +61,7 @@
   align-items: center;
   flex-direction: column;
   padding: 2.5rem;
-  border-bottom: 0.125rem solid rgba(255, 255, 255, 0.6);
+  border-bottom: 0.125rem solid hsla(0, 0%, 40%, 0.25);
   .copyright-list {
     flex-wrap: wrap;
   }
