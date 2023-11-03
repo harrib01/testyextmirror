@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useBreakpoint } from "src/common/useBreakpoints";
 import "src/components/common/Header/Header.css";
 import NavigationBar from "./NavigationBar/Desktop/DesktopNavigationBar";
@@ -16,9 +16,7 @@ const Header = () => {
           <NavigationBar />
         </>
       ) : (
-        <>
-          <MobileNavigationBar />
-        </>
+        <MobileNavigationBar />
       )}
     </header>
   );

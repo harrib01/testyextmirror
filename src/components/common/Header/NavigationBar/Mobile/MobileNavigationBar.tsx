@@ -22,7 +22,7 @@ const MobileNavigationBar = () => {
             </a>
           </div>
           <div className="header-bar__nav flex">
-            <div className="header-bar-mobile__nav-container">
+            <button className="header-bar-mobile__nav-container">
               <span
                 onClick={() => {
                   document.body.classList.add("disable-scroll");
@@ -31,7 +31,7 @@ const MobileNavigationBar = () => {
                 className="material-symbols-outlined">
                 menu
               </span>
-            </div>
+            </button>
           </div>
         </div>
       </div>
