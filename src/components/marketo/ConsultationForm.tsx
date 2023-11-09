@@ -25,13 +25,13 @@ const ConsultationForm = (props: consultationFormProps) => {
             // @ts-ignore
             MktoForms2.loadForm("https://landing.go.cambriausa.com", "423-TGU-525", 1104, function (form: any) {
                 form.vals({
-                    "Pardot_PD_Account_Id__c": props.profile.id,
-                    "Pardot_PD_Web_Locator_Id__c": props.profile.c_cRMID
+                    "Pardot_PD_Account_Id__c": props.profile.c_cRMID,
+                    "Pardot_PD_Web_Locator_Id__c": props.profile.id
                 });
 
                 form.onSuccess(function (values: any) {
                     addToDatalayer({
-                        event: "formSubmitted",
+                        event: "dealer locator lead form submit",
                         accountName: props.profile.name,
                         dealerID: props.profile.id,
                         salesRegionID: props.profile.c_salesRegionID,
