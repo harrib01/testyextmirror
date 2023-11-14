@@ -1,5 +1,11 @@
 .desktop-footer-container {
   max-width: calc(975pt + 0.75rem);
+  @media (max-width: 1440px) {
+    padding: 4.375rem;
+  }
+  @media (max-width: 1200px) {
+    padding: 4.375rem 2.5rem;
+  }
 }
 
 .footer-list-item {
@@ -34,6 +40,9 @@
       margin-left: 0.9375em;
       width: 0.125rem;
     }
+  }
+  &-links {
+    flex-wrap: wrap;
   }
 }
 

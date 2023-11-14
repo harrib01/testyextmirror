@@ -144,6 +144,8 @@ const Footer = () => {
                       © 2023 Cambria
                     </a>
                   </li>
+                </ul>
+                <ul className="flex copyright-list-links">
                   <li className="copyright-list-item">
                     <a href="/privacy">Privacy Notice</a>
                   </li>
@@ -193,21 +195,21 @@ const Footer = () => {
                       <img
                         className="mr-[1.25rem]"
                         width={20}
-                        src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/instagram-logo.coreimg.svg/1692909235938/icon-instagram.svg"
+                        src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-instagram.svg"
                       />
                     </a>
                     <a href="https://www.facebook.com/CambriaSurfaces">
                       <img
                         className="mr-[1.25rem]"
                         width={20}
-                        src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/facebook-logo.coreimg.svg/1692909262633/icon-facebook.svg"
+                        src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-facebook.svg"
                       />
                     </a>
                     <a href="https://www.linkedin.com/company/cambria">
                       <img
                         className="mr-[1.25rem]"
                         width={20}
-                        src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/linkedin-logo.coreimg.svg/1692909313073/icon-linkedin.svg"
+                        src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-linkedin.svg"
                       />
                     </a>
                     <a href="https://x.com/CambriaSurfaces">
@@ -221,14 +223,14 @@ const Footer = () => {
                       <img
                         className="mr-[1.25rem]"
                         width={20}
-                        src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/youtube-logo.coreimg.svg/1692909414423/icon-youtube.svg"
+                        src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-youtube.svg"
                       />
                     </a>
                     <a href="https://www.pinterest.com/cambriasurfaces/">
                       <img
                         className="mr-[1.25rem]"
                         width={20}
-                        src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/pinterest-logo.coreimg.svg/1692909190892/icon-pinterest.svg"
+                        src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-pinterest.svg"
                       />
                     </a>
                   </div>
@@ -426,19 +428,19 @@ const Footer = () => {
                   <a href="https://www.instagram.com/cambriasurfaces/">
                     <img
                       className="mr-[2.5rem] w-[1.25rem]"
-                      src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/instagram-logo.coreimg.svg/1692909235938/icon-instagram.svg"
+                      src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-instagram.svg"
                     />
                   </a>
                   <a href="https://www.facebook.com/CambriaSurfaces">
                     <img
                       className="mr-[2.5rem] w-[1.25rem]"
-                      src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/facebook-logo.coreimg.svg/1692909262633/icon-facebook.svg"
+                      src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-facebook.svg"
                     />
                   </a>
                   <a href="https://www.linkedin.com/company/cambria">
                     <img
                       className="mr-[2.5rem] w-[1.25rem]"
-                      src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/linkedin-logo.coreimg.svg/1692909313073/icon-linkedin.svg"
+                      src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-linkedin.svg"
                     />
                   </a>
                   <a href="https://x.com/CambriaSurfaces">
@@ -450,13 +452,13 @@ const Footer = () => {
                   <a href="https://www.youtube.com/channel/UCrNUaYClqpTTJEDkKIH2vKw">
                     <img
                       className="mr-[2.5rem] w-[1.25rem]"
-                      src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/youtube-logo.coreimg.svg/1692909414423/icon-youtube.svg"
+                      src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-youtube.svg"
                     />
                   </a>
                   <a href="https://www.pinterest.com/cambriasurfaces/">
                     <img
                       className="w-[1.25rem]"
-                      src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/footer/master/_jcr_content/root/footer/pinterest-logo.coreimg.svg/1692909190892/icon-pinterest.svg"
+                      src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-pinterest.svg"
                     />
                   </a>
                 </div>
