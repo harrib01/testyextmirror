@@ -1,4 +1,8 @@
 .Header {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100vw;
   .header-utility {
     background-color: white;
     height: 2.375rem;
@@ -140,6 +144,10 @@
     flex-direction: column;
     justify-content: center;
     padding: 1rem 2.5rem;
+    @media (max-width: 1024px) {
+      position: sticky;
+      top: 0;
+    }
     @media (max-width: 768px) {
       padding: 1.25rem 1rem;
     }
