@@ -220,7 +220,7 @@ const Index: Template<TemplateRenderProps<LocationProfile>> = (data) => {
     <Main data={data}>
       {isDesktopBreakpoint && (
         <CustomBreadcrumbs
-          className="container text-brand-black py-4 font-primary"
+          className="container text-brand-black py-4 font-primary lg:mt-[8rem] md:mt-[4rem] mt-[4rem]"
           breadcrumbs={breadcrumbs}
         />
       )}
