@@ -9,7 +9,7 @@
 html,
 body {
   height: 100%;
-  font-family: theme('fontFamily.primary');
+  font-family: theme("fontFamily.primary");
 }
 
 #reactele,
@@ -19,8 +19,19 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-.Breadcrumbs-link
-{
+.Breadcrumbs {
+  margin-top: 8rem;
+
+  @media (max-width: 1024px) {
+    margin-top: 4.063rem;
+  }
+
+  @media (max-width: 640px) {
+    margin-top: 4.063rem;
+  }
+}
+
+.Breadcrumbs-link {
   font-size: 14px;
   line-height: 22px;
   color: white;
@@ -29,8 +40,8 @@ body {
   font-weight: theme(fontWeight.medium);
 
   &:hover {
-		text-decoration: none;
-	}
+    text-decoration: none;
+  }
 }
 
 html {
@@ -38,13 +49,11 @@ html {
   --yxt-hoursTable-col2-width: 192px;
 }
 
-.Breadcrumbs-label
-{
+.Breadcrumbs-label {
   font-size: 14px;
   line-height: 22px;
 }
 
-.Breadcrumbs-list
-{
+.Breadcrumbs-list {
   flex-wrap: wrap;
 }

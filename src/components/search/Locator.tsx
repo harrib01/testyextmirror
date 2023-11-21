@@ -185,7 +185,7 @@ export default function Locator(props: LocatorProps) {
       hoveredId: hoveredEntityId,
       setHoveredId: setHoveredEntityId,
     }}>
-      <div className="border-b border-brand-gray-200 lg:mt-[8rem] md:mt-[4rem] mt-[4rem]">
+      <div className="border-b border-brand-gray-200 mt-[4.063rem] lg:mt-[8rem]">
         <div className="container my-6 md:my-[40px] flex flex-col md:w-[70%]">
           <h1 className="Heading--locator mb-4 text-center tracking-[1.7px] uppercase font-thin">
             {title}
