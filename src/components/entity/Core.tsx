@@ -87,7 +87,7 @@ const Core = (props: CoreProps) => {
 
   return (
     <div
-      className="Core relative"
+      className="Core relative mobile-nav-margin"
       data-dealerlocations-id={profile.c_cambriaType != "PREMIER_PARTNER" ? profile.id : null}
       data-dealerlocations-accountName={profile.c_cambriaType != "PREMIER_PARTNER" ? profile.name : null}
       data-dealerlocations-category={profile.c_cambriaType != "PREMIER_PARTNER" ? profile.c_customCategory : null}
