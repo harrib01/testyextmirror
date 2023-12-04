@@ -44,7 +44,7 @@ const MobileNavigationBar = () => {
                   <a className="logo-image mr-[3rem]">
                     <img
                       width={110}
-                      src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/logos/foam/AMERICAN%20MADE_H_REV_RGB.png"
+                      src="https://cambriausa.scene7.com/is/content/cambriacompanyllc/foam-h-rev-rgb?ts=1701720872898&dpr=off"
                       loading="lazy"
                       className="cmp-image__image"
                       alt="Cambria Logo"
