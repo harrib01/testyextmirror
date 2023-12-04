@@ -17,7 +17,9 @@ const UtilityBar = () => {
                 <a href="/contact">Contact Us</a>
               </li>
               <li>
-                <a href="tel:tel:18662262742">1-866-CAMBRIA</a>
+                <a href="tel:tel:18662262742" className="font-bold">
+                  1-866-CAMBRIA
+                </a>
               </li>
             </ul>
           </div>
