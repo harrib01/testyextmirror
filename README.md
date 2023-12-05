@@ -137,3 +137,15 @@ The rest of the files are basic config setup common to many other React projects
 ### .npmrc
 
 This file is necessary while this repository is private. You will need to add an environment variable called `NPM_TOKEN` in your branch settings in the Yext Sites UI. You can create the token via the https://npmjs.org 'Access Tokens' section. You will also need to export `NPM_TOKEN` in ~/.bash_profile locally as well (`npm login` doesn't seem to work when this file exists in the repo).
+
+# Cambria Notes
+
+## Managing Local Entities
+
+### Using a Premier Partner
+
+Test data is generated in the ./localData folder.
+To generate a Premeir Partner entity, run `sites generate-test-data --entityIds a0g4u000033m3couaa`.
+
+Running `npx pages dev` has been rebuilding teh localData. To add a specific entity you've otherwise generated, copy the `locations_en_{hex code}.json` file ,into /localData, then add a record in `mapping.json` for it. This way you can add additional Locations.
+
