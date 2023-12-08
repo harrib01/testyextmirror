@@ -1,6 +1,5 @@
 import type { TemplateRenderProps, HeadConfig, Tag } from "@yext/pages";
 import { SchemaBuilder } from "src/common/schema";
-import favicon from "src/assets/images/favicon.ico";
 import { GoogleTagManagerHead } from "src/common/googleTagManager";
 import { vwoScriptTags } from "./vwoScript";
 
@@ -144,14 +143,6 @@ export function defaultHeadConfig(data: TemplateRenderProps, additionalTags?: Ta
         attributes: {
           rel: "canonical",
           href: canonicalUrl(data),
-        },
-      },
-      {
-        type: "link",
-        attributes: {
-          rel: "shortcut icon",
-          type: "image/ico",
-          href: `${data.relativePrefixToRoot}favicon-e9b099f8.ico`,
         },
       },
       ...logoTags,
