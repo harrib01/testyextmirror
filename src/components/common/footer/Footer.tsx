@@ -241,7 +241,7 @@ const Footer = () => {
                   </div>
                 </div>
                 <div className="flex items-end">
-                  <a href="/">
+                  <a>
                     <img
                       width={110}
                       alt="Made in America Logo"
@@ -468,7 +468,7 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className="mt-[3.12rem] flex justify-start w-full">
-                  <a href="/">
+                  <a>
                     <img
                       width={112}
                       alt="Made in America Logo"
