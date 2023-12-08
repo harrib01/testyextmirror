@@ -41,7 +41,7 @@ const Footer = () => {
                   <div>
                     <ul className="text-[1rem]">
                       <li className="mb-[1.25rem] leading-[1.125rem]">
-                        <a href="/contact.html" className="footer-list-item">
+                        <a href="/contact" className="footer-list-item">
                           Contact Us
                         </a>
                       </li>
@@ -60,6 +60,11 @@ const Footer = () => {
                           Subscribe to Emails
                         </a>
                       </li>
+                      <li className="mb-[1.25rem] leading-[1.125rem]">
+                        <a href="/quartz-countertops/faq" className="footer-list-item">
+                          FAQs
+                        </a>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -68,7 +73,7 @@ const Footer = () => {
                   <div>
                     <ul className="text-[1rem]">
                       <li className="mb-[1.25rem] leading-[1.125rem]">
-                        <a href="https://shop.cambriausa.com" className="footer-list-item">
+                        <a href="https://shop.cambriausa.com/collections/samples" className="footer-list-item">
                           Order a Sample
                         </a>
                       </li>
@@ -78,8 +83,8 @@ const Footer = () => {
                         </a>
                       </li>
                       <li className="mb-[1.25rem] leading-[1.125rem]">
-                        <a href="/dealer-locator" className="footer-list-item">
-                          Find a Dealer
+                        <a href="/dealer-locator/locations" className="footer-list-item">
+                          Find a Retailer
                         </a>
                       </li>
                       <li className="mb-[1.25rem] leading-[1.125rem]">
@@ -182,7 +187,7 @@ const Footer = () => {
               <div>
                 <div className="footer-subtext-items">Get the Cambria AR App</div>
                 <div className="flex mt-[0.5rem]">
-                  <a href="/trends-articles/blog">
+                  <a href="https://apps.apple.com/us/app/cambria-ar/id1280782938?ls=1">
                     <img width={107} src={appStoreIcon} />
                   </a>
                 </div>
@@ -259,7 +264,7 @@ const Footer = () => {
               <div className="footer-dropdown-menu-panel mt-[2rem] pl-[2rem]" hidden={!getInTouchIsOpen}>
                 <ul>
                   <li className="mb-[2rem]">
-                    <a href="/contact.html" className="footer-list-item">
+                    <a href="/contact" className="footer-list-item">
                       Contact Us
                     </a>
                   </li>
@@ -279,8 +284,8 @@ const Footer = () => {
                     </a>
                   </li>
                   <li className="mb-[2rem]">
-                    <a href="/legend-of-cambria" className="footer-list-item">
-                      Legend of Cambria Film
+                    <a href="/quartz-countertops/faq" className="footer-list-item">
+                      FAQs
                     </a>
                   </li>
                 </ul>
@@ -296,7 +301,7 @@ const Footer = () => {
               <div hidden={!getCambriaIsOpen} className="footer-dropdown-menu-panel mt-[2rem] pl-[2rem]">
                 <ul>
                   <li className="mb-[2rem]">
-                    <a href="https://shop.cambriausa.com" className="footer-list-item">
+                    <a href="https://shop.cambriausa.com/collections/samples" className="footer-list-item">
                       Order a Sample
                     </a>
                   </li>
@@ -306,8 +311,8 @@ const Footer = () => {
                     </a>
                   </li>
                   <li className="mb-[2rem]">
-                    <a href="/dealer-locator" className="footer-list-item">
-                      Find a Dealer
+                    <a href="/dealer-locator/locations" className="footer-list-item">
+                      Find a Retailer
                     </a>
                   </li>
                   <li className="mb-[2rem]">
@@ -417,7 +422,7 @@ const Footer = () => {
               <div className="mb-[2.8125rem]">
                 <div className="footer-subtext-items">Get the Cambria AR App</div>
                 <div className="flex mt-[0.5rem]">
-                  <a href="/trends-articles/blog">
+                  <a href="https://apps.apple.com/us/app/cambria-ar/id1280782938?ls=1">
                     <img width={107} src={appStoreIcon} />
                   </a>
                 </div>

@@ -165,7 +165,8 @@ export function defaultHeadConfig(data: TemplateRenderProps, additionalTags?: Ta
       SchemaBuilder(data) +
       GoogleTagManagerHead(data.document._site?.c_googleTagManager) +
       vwoScriptTags() +
-      "<link href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined' rel='stylesheet' />",
+      "<link href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined' rel='stylesheet' />" +
+      "<link rel='icon' href='https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/logos/favicon/cambria-dragon-favicon.png' type='image/x-icon'>",
   };
 }
 

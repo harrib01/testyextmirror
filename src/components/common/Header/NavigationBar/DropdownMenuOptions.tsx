@@ -12,12 +12,12 @@ export const DropdownMenuOptions = {
   kitchensAndBaths: [
     { text: "Cambria Kitchens & Baths", link: "/quartz-countertops/kitchens-baths" },
     { text: "Kitchen Countertops", link: "/quartz-countertops/kitchens-baths/kitchen-countertops" },
-    { text: "Kitchen Backsplashes", link: "/quartz-countertops/kitchens-baths/kitchen-backsplash" },
+    { text: "Kitchen Backsplashes", link: "/quartz-countertops/kitchens-baths/kitchen-backsplashes" },
     { text: "Bathroom Vanities", link: "/quartz-countertops/kitchens-baths/bathroom-vanities" },
-    { text: "Shower Walls", link: "/quartz-countertops/kitchens-baths/bathroom-shower-walls" },
+    { text: "Shower Walls", link: "/quartz-countertops/kitchens-baths/shower-walls" },
     {
       text: "Kitchens & Baths Inspiration Gallery",
-      link: "/inspiration-gallery-residential",
+      link: "/inspiration-gallery-residential?cusa-inspiration-images%5BrefinementList%5D%5BroomType%5D%5B0%5D=kitchen&cusa-inspiration-images%5BrefinementList%5D%5BroomType%5D%5B1%5D=bathroom",
     },
   ],
   uniqueInstalls: [
@@ -26,12 +26,16 @@ export const DropdownMenuOptions = {
     { text: "Furniture", link: "/unique-installs/quartz-furniture" },
     { text: "Wall Cladding", link: "/unique-installs/quartz-wall-cladding" },
     { text: "Custom Applications", link: "/unique-installs/quartz-custom" },
+    {
+      text: "Unique Install Inspiration Gallery",
+      link: "/inspiration-gallery-residential?cusa-inspiration-images%5BrefinementList%5D%5BapplicationType%5D%5B0%5D=custom&cusa-inspiration-images%5BrefinementList%5D%5BapplicationType%5D%5B1%5D=fireplace&cusa-inspiration-images%5BrefinementList%5D%5BapplicationType%5D%5B2%5D=flooring&cusa-inspiration-images%5BrefinementList%5D%5BapplicationType%5D%5B3%5D=furniture&cusa-inspiration-images%5BrefinementList%5D%5BapplicationType%5D%5B4%5D=shelving&cusa-inspiration-images%5BrefinementList%5D%5BapplicationType%5D%5B5%5D=shower&cusa-inspiration-images%5BrefinementList%5D%5BapplicationType%5D%5B6%5D=stair%20treads&cusa-inspiration-images%5BrefinementList%5D%5BapplicationType%5D%5B7%5D=tabletop&cusa-inspiration-images%5BrefinementList%5D%5BapplicationType%5D%5B8%5D=wall%20cladding",
+    },
   ],
   planningAndCare: [
-    { text: "What to Expect", link: "/quartz-countertops/product-expectation" },
+    { text: "What to Expect", link: "/quartz-countertops/planning" },
     { text: "Project Planning Tools", link: "/quartz-countertops/planning/tools" },
-    { text: "Finance by Cambria", link: "/finance-by-cambria" },
-    { text: "Product Care", link: "/quartz-countertops/faq/product-care" },
+    { text: "Finance by Cambria", link: "/quartz-countertops/planning/finance-by-cambria" },
+    { text: "Product Care", link: "/quartz-countertops/product-care" },
     { text: "Warranty", link: "/warranty" },
   ],
   trendsAndArticles: [
