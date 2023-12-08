@@ -11,7 +11,7 @@ const DesktopNavigationBar = () => {
     <div className="header-bar">
       <div className="header-bar__wrapper">
         <div className="header-bar__logo">
-          <a className="logo-image">
+          <a className="logo-image" href="/">
             <img
               width={180}
               src="https://publish-p108958-e1076754.adobeaemcloud.com/content/experience-fragments/cusa/us/en/site/header/master/_jcr_content/root/header/logo.coreimg.svg/1693941653530/cambria-h-rev-rgb.svg"
