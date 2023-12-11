@@ -153,7 +153,7 @@ const Footer = () => {
               <div className="flex copyright-list footer-subtext-items mt-[3.225rem]">
                 <ul className="flex">
                   <li>
-                    <a className="cambria-copyright-text" href="/">
+                    <a className="hover:underline cambria-copyright-text" href="/">
                       © 2023 Cambria
                     </a>
                   </li>
@@ -391,14 +391,14 @@ const Footer = () => {
               </div>
             </div>
             <div className="mobile-copyright-container">
-              <div className="footer-subtext-items leading-[1.125rem]">
+              <div className="hover:underline footer-subtext-items leading-[1.125rem]">
                 <a href="/">© 2023 Cambria</a>
               </div>
               <div className="flex copyright-list justify-center footer-subtext-items">
                 <div className="flex mr-[0.4375rem]">
                   <ul className="flex leading-[1.125rem]">
                     <li>
-                      <a href="/privacy">Privacy Notice</a>
+                      <a className="hover:underline" href="/privacy">Privacy Notice</a>
                     </li>
                     <li className="copyright-list-item">
                       <a href="/terms-conditions">Terms & Conditions</a>
@@ -408,7 +408,7 @@ const Footer = () => {
                 <div className="flex ml-[0.4375rem]">
                   <ul className="flex leading-[1.125rem]">
                     <li>
-                      <a href="/accessibility">Accessibility</a>
+                      <a className="hover:underline" href="/accessibility">Accessibility</a>
                     </li>
                     <li className="copyright-list-item">
                       <a href="/transparency-in-coverage">Transparency in Coverage</a>
