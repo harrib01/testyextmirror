@@ -72,7 +72,7 @@ export const DropdownPictureOptions = {
     imageUrl:
       "https://s7d9.scene7.com//is/image/cambriacompanyllc/crop-skara-brae-carrick-kitchen-eymeric-widing-cs24-002-22",
     imageLabel: "Kitchen & Bath Inspiration",
-    imageLink: "/quartz-countertops/kitchens-baths",
+    imageLink: "/inspiration-gallery-residential?cusa-inspiration-images%5BrefinementList%5D%5BroomType%5D%5B0%5D=kitchen&cusa-inspiration-images%5BrefinementList%5D%5BroomType%5D%5B1%5D=bathroom",
   },
   uniqueInstalls: {
     imageUrl:
