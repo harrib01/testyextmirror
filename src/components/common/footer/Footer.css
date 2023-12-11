@@ -27,6 +27,10 @@
     align-items: center;
     font-weight: 400;
     color: #999;
+    
+    &:hover {
+      text-decoration: underline;
+    }
 
     &:before {
       background-color: #fff;
