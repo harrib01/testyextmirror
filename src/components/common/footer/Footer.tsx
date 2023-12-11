@@ -398,7 +398,7 @@ const Footer = () => {
                 <div className="flex mr-[0.4375rem]">
                   <ul className="flex leading-[1.125rem]">
                     <li>
-                      <a href="/privacy">Privacy Notice</a>
+                      <a className="hover:underline" href="/privacy">Privacy Notice</a>
                     </li>
                     <li className="copyright-list-item">
                       <a href="/terms-conditions">Terms & Conditions</a>
@@ -408,7 +408,7 @@ const Footer = () => {
                 <div className="flex ml-[0.4375rem]">
                   <ul className="flex leading-[1.125rem]">
                     <li>
-                      <a href="/accessibility">Accessibility</a>
+                      <a className="hover:underline" href="/accessibility">Accessibility</a>
                     </li>
                     <li className="copyright-list-item">
                       <a href="/transparency-in-coverage">Transparency in Coverage</a>
