@@ -73,12 +73,18 @@ const Footer = () => {
                   <div>
                     <ul className="text-[1rem]">
                       <li className="mb-[1.25rem] leading-[1.125rem]">
-                        <a href="https://shop.cambriausa.com/collections/samples" className="footer-list-item">
+                        <a
+                          target="_blank"
+                          href="https://shop.cambriausa.com/collections/samples"
+                          className="footer-list-item">
                           Order a Sample
                         </a>
                       </li>
                       <li className="mb-[1.25rem] leading-[1.125rem]">
-                        <a href="https://shop.cambriausa.com/collections/home-decor" className="footer-list-item">
+                        <a
+                          target="_blank"
+                          href="https://shop.cambriausa.com/collections/home-decor"
+                          className="footer-list-item">
                           Shop Home Decor
                         </a>
                       </li>
@@ -106,6 +112,7 @@ const Footer = () => {
                     <ul className="text-[1rem]">
                       <li className="mb-[1.25rem] leading-[1.125rem]">
                         <a
+                          target="_blank"
                           href="https://cambriausa.widencollective.com/portals/zybivkom/cambriaportal"
                           className="footer-list-item">
                           Trade Portal
@@ -113,13 +120,14 @@ const Footer = () => {
                       </li>
                       <li className="mb-[1.25rem] leading-[1.125rem]">
                         <a
+                          target="_blank"
                           href="https://cambriausa.widencollective.com/portals/view/access-code/?portalShortcode=cnm8kccc&returnUri=%2Fportals%2Fcnm8kccc%2FPremierDealerPortal"
                           className="footer-list-item">
                           Premier Partner Portal
                         </a>
                       </li>
                       <li className="mb-[1.25rem] leading-[1.125rem]">
-                        <a href="https://commerce.cambriausa.com/" className="footer-list-item">
+                        <a target="_blank" href="https://commerce.cambriausa.com/" className="footer-list-item">
                           The CambriaExchange
                         </a>
                       </li>
@@ -187,7 +195,7 @@ const Footer = () => {
               <div>
                 <div className="footer-subtext-items">Get the Cambria AR App</div>
                 <div className="flex mt-[0.5rem]">
-                  <a href="https://apps.apple.com/us/app/cambria-ar/id1280782938?ls=1">
+                  <a target="_blank" href="https://apps.apple.com/us/app/cambria-ar/id1280782938?ls=1">
                     <img width={107} src={appStoreIcon} />
                   </a>
                 </div>
@@ -196,42 +204,42 @@ const Footer = () => {
                 <div className="flex flex-col pr-[2rem]">
                   <div>Follow</div>
                   <div className="flex items-center mt-[0.5rem]">
-                    <a href="https://www.instagram.com/cambriasurfaces/">
+                    <a target="_blank" href="https://www.instagram.com/cambriasurfaces/">
                       <img
                         className="mr-[1.25rem]"
                         width={20}
                         src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-instagram.svg"
                       />
                     </a>
-                    <a href="https://www.facebook.com/CambriaSurfaces">
+                    <a target="_blank" href="https://www.facebook.com/CambriaSurfaces">
                       <img
                         className="mr-[1.25rem]"
                         width={20}
                         src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-facebook.svg"
                       />
                     </a>
-                    <a href="https://www.linkedin.com/company/cambria">
+                    <a target="_blank" href="https://www.linkedin.com/company/cambria">
                       <img
                         className="mr-[1.25rem]"
                         width={20}
                         src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-linkedin.svg"
                       />
                     </a>
-                    <a href="https://x.com/CambriaSurfaces">
+                    <a target="_blank" href="https://x.com/CambriaSurfaces">
                       <img
                         className="mr-[1.25rem]"
                         width={20}
                         src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-twitter-x.svg"
                       />
                     </a>
-                    <a href="https://www.youtube.com/channel/UCrNUaYClqpTTJEDkKIH2vKw">
+                    <a target="_blank" href="https://www.youtube.com/channel/UCrNUaYClqpTTJEDkKIH2vKw">
                       <img
                         className="mr-[1.25rem]"
                         width={20}
                         src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-youtube.svg"
                       />
                     </a>
-                    <a href="https://www.pinterest.com/cambriasurfaces/">
+                    <a target="_blank" href="https://www.pinterest.com/cambriasurfaces/">
                       <img
                         className="mr-[1.25rem]"
                         width={20}
@@ -301,12 +309,18 @@ const Footer = () => {
               <div hidden={!getCambriaIsOpen} className="footer-dropdown-menu-panel mt-[2rem] pl-[2rem]">
                 <ul>
                   <li className="mb-[2rem]">
-                    <a href="https://shop.cambriausa.com/collections/samples" className="footer-list-item">
+                    <a
+                      target="_blank"
+                      href="https://shop.cambriausa.com/collections/samples"
+                      className="footer-list-item">
                       Order a Sample
                     </a>
                   </li>
                   <li className="mb-[2rem]">
-                    <a href="https://shop.cambriausa.com/collections/home-decor" className="footer-list-item">
+                    <a
+                      target="_blank"
+                      href="https://shop.cambriausa.com/collections/home-decor"
+                      className="footer-list-item">
                       Shop Home Decor
                     </a>
                   </li>
@@ -339,6 +353,7 @@ const Footer = () => {
                 <ul>
                   <li className="mb-[2rem]">
                     <a
+                      target="_blank"
                       href="https://cambriausa.widencollective.com/portals/zybivkom/cambriaportal"
                       className="footer-list-item">
                       Trade Portal
@@ -346,13 +361,14 @@ const Footer = () => {
                   </li>
                   <li className="mb-[2rem]">
                     <a
+                      target="_blank"
                       href="https://cambriausa.widencollective.com/portals/view/access-code/?portalShortcode=cnm8kccc&returnUri=%2Fportals%2Fcnm8kccc%2FPremierDealerPortal"
                       className="footer-list-item">
                       Premier Partner Portal
                     </a>
                   </li>
                   <li className="mb-[2rem]">
-                    <a href="https://commerce.cambriausa.com/" className="footer-list-item">
+                    <a target="_blank" href="https://commerce.cambriausa.com/" className="footer-list-item">
                       The CambriaExchange
                     </a>
                   </li>
@@ -422,7 +438,7 @@ const Footer = () => {
               <div className="mb-[2.8125rem]">
                 <div className="footer-subtext-items">Get the Cambria AR App</div>
                 <div className="flex mt-[0.5rem]">
-                  <a href="https://apps.apple.com/us/app/cambria-ar/id1280782938?ls=1">
+                  <a target="_blank" href="https://apps.apple.com/us/app/cambria-ar/id1280782938?ls=1">
                     <img width={107} src={appStoreIcon} />
                   </a>
                 </div>
@@ -430,37 +446,37 @@ const Footer = () => {
               <div className="flex flex-col w-fit items-center">
                 <div className="footer-subtext-items w-full lg:ml-[0.5rem]">Follow</div>
                 <div className="flex mt-[0.5rem] items-center">
-                  <a href="https://www.instagram.com/cambriasurfaces/">
+                  <a target="_blank" href="https://www.instagram.com/cambriasurfaces/">
                     <img
                       className="mr-[2.5rem] w-[1.25rem]"
                       src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-instagram.svg"
                     />
                   </a>
-                  <a href="https://www.facebook.com/CambriaSurfaces">
+                  <a target="_blank" href="https://www.facebook.com/CambriaSurfaces">
                     <img
                       className="mr-[2.5rem] w-[1.25rem]"
                       src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-facebook.svg"
                     />
                   </a>
-                  <a href="https://www.linkedin.com/company/cambria">
+                  <a target="_blank" href="https://www.linkedin.com/company/cambria">
                     <img
                       className="mr-[2.5rem] w-[1.25rem]"
                       src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-linkedin.svg"
                     />
                   </a>
-                  <a href="https://x.com/CambriaSurfaces">
+                  <a target="_blank" href="https://x.com/CambriaSurfaces">
                     <img
                       className="mr-[2.5rem] w-[1.25rem]"
                       src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-twitter-x.svg"
                     />
                   </a>
-                  <a href="https://www.youtube.com/channel/UCrNUaYClqpTTJEDkKIH2vKw">
+                  <a target="_blank" href="https://www.youtube.com/channel/UCrNUaYClqpTTJEDkKIH2vKw">
                     <img
                       className="mr-[2.5rem] w-[1.25rem]"
                       src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-youtube.svg"
                     />
                   </a>
-                  <a href="https://www.pinterest.com/cambriasurfaces/">
+                  <a target="_blank" href="https://www.pinterest.com/cambriasurfaces/">
                     <img
                       className="w-[1.25rem]"
                       src="https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/non-cambria-logos/social-media/icon-pinterest.svg"

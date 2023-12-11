@@ -1,4 +1,4 @@
-export type MenuOption = { text: string; link: string };
+export type MenuOption = { text: string; link: string; openInNewTab?: boolean };
 export type DropdownPicture = { imageUrl?: string; imageLabel?: string; imageLink?: string };
 
 export const DropdownMenuOptions = {
@@ -56,8 +56,8 @@ export const DropdownMenuOptions = {
     { text: "Case Studies & Partnerships", link: "/professionals/case-studies" },
   ],
   whereToBuy: [
-    { text: "Order a Sample", link: "https://shop.cambriausa.com/collections/samples.html" },
     { text: "Find a Professional", link: "/dealer-locator" },
+    { text: "Order a Sample", link: "https://shop.cambriausa.com/collections/samples.html", openInNewTab: true },
   ],
 };
 
@@ -72,7 +72,7 @@ export const DropdownPictureOptions = {
     imageUrl:
       "https://s7d9.scene7.com//is/image/cambriacompanyllc/crop-skara-brae-carrick-kitchen-eymeric-widing-cs24-002-22",
     imageLabel: "Kitchen & Bath Inspiration",
-    imageLink: "/quartz-countertops/kitchens-baths",
+    imageLink: "/inspiration-gallery-residential?cusa-inspiration-images%5BrefinementList%5D%5BroomType%5D%5B0%5D=kitchen&cusa-inspiration-images%5BrefinementList%5D%5BroomType%5D%5B1%5D=bathroom",
   },
   uniqueInstalls: {
     imageUrl:

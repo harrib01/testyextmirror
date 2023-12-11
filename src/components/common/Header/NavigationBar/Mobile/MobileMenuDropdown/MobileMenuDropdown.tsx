@@ -21,7 +21,7 @@ const MobileMenuDropdown = ({ dropdownLabel, dropdownOptions, boldLabel }: Mobil
               {dropdownOptions.map((option: MenuOption, i) => {
                 return (
                   <li key={i} className="mobile-menu-dropdown-list-item">
-                    <a href={option.link}>{option.text}</a>
+                    <a target={option.openInNewTab ? "_blank" : ""} href={option.link}>{option.text}</a>
                   </li>
                 );
               })}
