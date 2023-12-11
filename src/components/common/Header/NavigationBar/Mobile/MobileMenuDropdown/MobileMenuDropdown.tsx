@@ -19,18 +19,9 @@ const MobileMenuDropdown = ({ dropdownLabel, dropdownOptions, boldLabel }: Mobil
           <div className="w-full dropdown-body-container">
             <ul className="mobile-menu-dropdown-list w-full">
               {dropdownOptions.map((option: MenuOption, i) => {
-                if (option.openInNewTab) {
-                  return (
-                    <li key={i} className="mobile-menu-dropdown-list-item">
-                      <a target="_blank" href={option.link} rel="noreferrer">
-                        {option.text}
-                      </a>
-                    </li>
-                  );
-                }
                 return (
                   <li key={i} className="mobile-menu-dropdown-list-item">
-                    <a href={option.link}>{option.text}</a>
+                    <a target={option.openInNewTab ? "_blank" : ""} href={option.link}>{option.text}</a>
                   </li>
                 );
               })}

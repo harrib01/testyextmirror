@@ -98,18 +98,9 @@ const DesktopNavigationBar = () => {
               <div className="dropdown-body-list-container">
                 <ul className="dropdown-list">
                   {activeDropdownOptions.map((option: MenuOption, i) => {
-                    if (option.openInNewTab) {
-                      return (
-                        <li key={i} className="navigation-item">
-                          <a target="_blank" href={option.link} rel="noreferrer">
-                            {option.text}
-                          </a>
-                        </li>
-                      );
-                    }
                     return (
                       <li key={i} className="navigation-item">
-                        <a href={option.link}>{option.text}</a>
+                        <a target={option.openInNewTab ? "_blank" : ""} href={option.link}>{option.text}</a>
                       </li>
                     );
                   })}
