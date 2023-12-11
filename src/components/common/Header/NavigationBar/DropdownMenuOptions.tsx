@@ -1,4 +1,4 @@
-export type MenuOption = { text: string; link: string };
+export type MenuOption = { text: string; link: string; openInNewTab?: boolean };
 export type DropdownPicture = { imageUrl?: string; imageLabel?: string; imageLink?: string };
 
 export const DropdownMenuOptions = {
@@ -56,8 +56,8 @@ export const DropdownMenuOptions = {
     { text: "Case Studies & Partnerships", link: "/professionals/case-studies" },
   ],
   whereToBuy: [
-    { text: "Order a Sample", link: "https://shop.cambriausa.com/collections/samples.html" },
     { text: "Find a Professional", link: "/dealer-locator" },
+    { text: "Order a Sample", link: "https://shop.cambriausa.com/collections/samples.html", openInNewTab: true },
   ],
 };
 
