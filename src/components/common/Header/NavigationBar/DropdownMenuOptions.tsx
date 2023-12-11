@@ -98,7 +98,7 @@ export const DropdownPictureOptions = {
   commercial: {
     imageUrl: "https://s7d9.scene7.com//is/image/cambriacompanyllc/crop-seacourt-salon-dodd-001-23",
     imageLabel: "Commercial Resources",
-    imageLink: "/professionals/commercial/technical-resources",
+    imageLink: "/professionals/commercial",
   },
   whereToBuy: {
     imageUrl: "https://s7d9.scene7.com//is/image/cambriacompanyllc/crop-3x3-samples-006-23",
