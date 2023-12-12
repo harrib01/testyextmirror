@@ -20,3 +20,9 @@
     max-width: none !important;
   }
 }
+
+.mobile-nav-margin {
+  @media (max-width: 640px) {
+    margin-top: 4.063rem;
+  }
+}

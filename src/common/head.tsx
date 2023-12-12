@@ -1,6 +1,5 @@
 import type { TemplateRenderProps, HeadConfig, Tag } from "@yext/pages";
 import { SchemaBuilder } from "src/common/schema";
-import favicon from "src/assets/images/favicon.ico";
 import { GoogleTagManagerHead } from "src/common/googleTagManager";
 import { vwoScriptTags } from "./vwoScript";
 
@@ -63,10 +62,7 @@ const defaultHeadTags: Tag[] = [
   },
 ];
 
-export function defaultHeadConfig(
-  data: TemplateRenderProps,
-  additionalTags?: Tag[]
-): HeadConfig {
+export function defaultHeadConfig(data: TemplateRenderProps, additionalTags?: Tag[]): HeadConfig {
   const logoTags: Tag[] = data.document?.logo
     ? [
         {
@@ -149,14 +145,6 @@ export function defaultHeadConfig(
           href: canonicalUrl(data),
         },
       },
-      {
-        type: "link",
-        attributes: {
-          rel: "shortcut icon",
-          type: "image/ico",
-          href: `${data.relativePrefixToRoot}favicon-e9b099f8.ico`,
-        },
-      },
       ...logoTags,
       ...defaultHeadTags,
       ...geoTags,
@@ -167,7 +155,9 @@ export function defaultHeadConfig(
     other:
       SchemaBuilder(data) +
       GoogleTagManagerHead(data.document._site?.c_googleTagManager) +
-      vwoScriptTags(),
+      vwoScriptTags() +
+      "<link href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined' rel='stylesheet' />" +
+      "<link rel='icon' href='https://publish-p108958-e1076754.adobeaemcloud.com/content/dam/cusa/logos-icons/logos/favicon/cambria-dragon-favicon.png' type='image/x-icon'>",
   };
 }
 
@@ -187,9 +177,7 @@ function metaDescription(data: TemplateRenderProps): string {
   // 2. Check for breadcrumbs
   const { dm_directoryParents } = data.document;
   if (dm_directoryParents) {
-    return `${dm_directoryParents
-      .map((crumb: { name: string }) => crumb.name)
-      .join(", ")}.`;
+    return `${dm_directoryParents.map((crumb: { name: string }) => crumb.name).join(", ")}.`;
   }
 
   return "";
@@ -219,9 +207,7 @@ function canonicalUrl(data: TemplateRenderProps, locale?: string): string {
 
 function alternates(data: TemplateRenderProps): Tag[] {
   const thisLocale = data.document.locale;
-  const alternateLocales: string[] = Object.keys(
-    data.document?.alternateLanguageFields || {}
-  );
+  const alternateLocales: string[] = Object.keys(data.document?.alternateLanguageFields || {});
   const alternateLinks: Tag[] = alternateLocales
     .filter((locale) => locale !== thisLocale)
     .map((locale) => ({
