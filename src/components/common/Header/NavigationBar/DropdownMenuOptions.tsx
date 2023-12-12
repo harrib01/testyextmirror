@@ -34,7 +34,6 @@ export const DropdownMenuOptions = {
   planningAndCare: [
     { text: "What to Expect", link: "/quartz-countertops/planning" },
     { text: "Project Planning Tools", link: "/quartz-countertops/planning/tools" },
-    { text: "Finance by Cambria", link: "/quartz-countertops/planning/finance-by-cambria" },
     { text: "Product Care", link: "/quartz-countertops/product-care" },
     { text: "Warranty", link: "/warranty" },
   ],
